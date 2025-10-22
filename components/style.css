@@ -2,8 +2,8 @@
     --color-primario: #ff7b00;
     --color-texto: #fff;
     --fuente-principal: 'Poppins', sans-serif;
-    --hero-titulo:black;
-    --hero-subtitulo:orange;
+    --inicio-titulo:black;
+    --inicio-subtitulo:orange;
 }
 
 /*reset universal*/
@@ -13,22 +13,36 @@
     box-sizing: border-box;
 }
 
-body, html {
-    height: 100%;
+body{
     font-family: var(--fuente-principal);
-}
-
-main {
+    background-size: cover;
+    background-image: linear-gradient(rgba(182, 178, 178, 0.5), rgba(187, 173, 173, 0.5)), url('../assets/imagenes/photo-1517601278517-456741619dad.jpeg');
+    background-repeat: no-repeat;
     height: 100vh;
 }
 
-.hero {
-    background-image: linear-gradient(rgba(182, 178, 178, 0.5), rgba(187, 173, 173, 0.5)), url('assets/imagenes/photo-1517601278517-456741619dad.jpeg');
+
+.header{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(3,1fr);
+    place-items: center;
+}
+.header_logo{
+
+    grid-column: 2/2;
+    grid-row: 2/2;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+}
+.inicio {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,7 +55,7 @@ main {
 
 
 
-.hero__contenido {
+.inicio__contenido {
     background: rgba(0, 0, 0, 0.4);
     padding: 2rem;
     border-radius: 1rem;
@@ -51,32 +65,33 @@ main {
 }
 
 
-.hero__titulo {
+.inicio__titulo {
     color:var(--hero-subtitulo);
+    margin-bottom: 20px;
 
 }
-.hero__boton {
+.inicio__boton {
     background-color: var(--color-primario);
     border: none;
     padding: 0.8rem 1.5rem;
     border-radius: 0.5rem;
-    color: #fff;
+    color: var(--color-texto);
     font-weight: bold;
     cursor: pointer;
     transition: background 0.3s, transform 0.3s;
     font-size: 1.1rem;
 }
 
-.hero__boton:hover {
+.inicio__boton:hover {
     background-color: #ffa733;
     transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
-    .hero__titulo {
+    .inicio__titulo {
         font-size: 1.8rem;
     }
-    .hero__boton {
+    .inicio__boton {
         font-size: 1rem;
         padding: 0.6rem 1.2rem;
     }
