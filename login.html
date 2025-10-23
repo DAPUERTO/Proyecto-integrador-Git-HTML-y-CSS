@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento - Login / Selección de rol</title>
+
+    <!-- Hoja de estilos específica para la página de login -->
+    <link rel="stylesheet" href="components/login.css">
+
+    <!-- Google Fonts: preconexiones y carga de fuentes.
+         Nota: hay enlaces repetidos a fonts.googleapis.com y fonts.gstatic.com;
+         conservar solo una llamada reduce peticiones HTTP. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=VT323&display=swap" rel="stylesheet">
+
+    <!-- Si necesitas Poppins, mantén esta segunda carga; si no, eliminarla para evitar duplicados. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=VT323&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- HEADER: contenedor del logo.
+         - Se usa <header> por semántica (marca la cabecera de la página).
+         - La clase .header se estiliza con CSS Grid para centrar el logo. -->
+    <header class="header">
+        <!-- Imagen del logo:
+             - alt describe la imagen para lectores de pantalla.
+             - usar width/height en CSS para controlar tamaño y responsividad. -->
+        <img src="assets/imagenes/logo.png" alt="logo pizzasoft" class="header__logo">
+    </header>
+
+    <!-- MAIN: contenido principal de la página (landmark semántico obligatorio).
+         - Mantener un solo <main> por documento. -->
+    <main class="main">
+        <!-- H1: título principal de la app.
+             - Importante para accesibilidad y SEO; solo debe haber un H1 visible. -->
+        <h1 class="main__titulo">pizzasoft</h1>
+
+        <!-- SECCIÓN inicio: área de selección de rol.
+             - <section> es apropiado si el contenido representa un bloque temático. -->
+        <section class="inicio">
+            <div class="inicio__contenido">
+                <!-- Subtítulo de la sección:
+                     - usa <h2> porque está por debajo del h1 en la jerarquía. -->
+                <h2 class="inicio__subtitulo">Seleccione Rol:</h2>
+
+                <!-- Botones de rol:
+                     - Si cada opción navega a otra página, considera usar <a href="..."> en lugar de <button>.
+                     - Si envías datos, envuelve en <form> con method/action.
+                     - Añadir atributos aria-label si el texto no es suficientemente descriptivo. -->
+                <button class="inicio__boton" type="button" aria-label="Ingresar como Administrador">Administrador</button>
+                <button class="inicio__boton" type="button" aria-label="Ingresar en Punto de Venta">Punto de Venta</button>
+                <button class="inicio__boton" type="button" aria-label="Ingresar como Mesero">Mesero</button>
+
+                <!-- Sugerencia:
+                     - Añadir manejo de teclado (focus styles) en CSS para accesibilidad.
+                     - Si quieres separar visualmente los botones, usar <div class="roles"> con gap o margin. -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Nota final:
+         - Revisar rutas de assets (assets/imagenes/...) y existencia de archivos.
+         - Comprimir/optimizar la imagen del logo para mejorar carga. -->
+</body>
+</html>

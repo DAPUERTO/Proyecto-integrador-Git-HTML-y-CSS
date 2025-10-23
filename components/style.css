@@ -1,27 +1,29 @@
+/* Variables globales (colores y tipografías) */
 :root {
     --color-primario: #ff7b00;
     --color-texto: #fff;
     --fuente-principal: 'Poppins', sans-serif;
-    --inicio-titulo:black;
-    --inicio-subtitulo:orange;
+    --inicio-titulo: orange;  /* color pensado para subtítulos en la sección inicio */
 }
 
-/*reset universal*/
+/* Reset universal: elimina márgenes/paddings por defecto y establece box-sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilos base del body y fondo */
 body{
     font-family: var(--fuente-principal);
     background-size: cover;
+    /* gradiente + imagen de fondo (ruta relativa) */
     background-image: linear-gradient(rgba(182, 178, 178, 0.5), rgba(187, 173, 173, 0.5)), url('../assets/imagenes/photo-1517601278517-456741619dad.jpeg');
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 100vh; /* ocupa toda la altura de la ventana */
 }
 
-
+/* Bloque: header */
 .header{
     display: grid;
     justify-items: center;
@@ -30,14 +32,27 @@ body{
     grid-template-columns: repeat(3,1fr);
     place-items: center;
 }
-.header_logo{
 
+.header__logo{
+    /* Nota: grid-column: 2/2 y grid-row: 2/2 no posicionan; para ocupar la columna/row 2 usar 2/3 */
     grid-column: 2/2;
     grid-row: 2/2;
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     border-radius: 20px;
 }
+
+/* Bloque: main */
+.main__titulo{
+    font-size: 50px;
+    text-align: center;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #000000;
+}
+
+/* Bloque: inicio */
 .inicio {
     background-size: cover;
     background-position: center;
@@ -48,38 +63,36 @@ body{
     align-items: center;
     justify-content: center;
     text-align: center;
-
-    color: var(--color-texto);
-    padding: 2rem;
+    color: var(--color-texto); /* color del texto dentro de la sección */
+    padding: 4rem;
+    transform: translateY(40px);
 }
-
-
 
 .inicio__contenido {
     background: rgba(0, 0, 0, 0.4);
-    padding: 2rem;
+    padding: 3.5rem;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-
 .inicio__titulo {
-    color:var(--hero-subtitulo);
-    margin-bottom: 20px;
-
+    color: var(--inicio-titulo); 
+    margin-bottom: 50px;
+    font-size: 35px;
 }
+
 .inicio__boton {
     background-color: var(--color-primario);
     border: none;
-    padding: 0.8rem 1.5rem;
+    padding: 1.5rem 1.8rem;
     border-radius: 0.5rem;
     color: var(--color-texto);
     font-weight: bold;
     cursor: pointer;
     transition: background 0.3s, transform 0.3s;
-    font-size: 1.1rem;
+    font-size: 2rem;
 }
 
 .inicio__boton:hover {
@@ -87,6 +100,7 @@ body{
     transform: scale(1.05);
 }
 
+/* Responsive: ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
     .inicio__titulo {
         font-size: 1.8rem;
@@ -96,4 +110,3 @@ body{
         padding: 0.6rem 1.2rem;
     }
 }
-
