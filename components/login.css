@@ -84,6 +84,7 @@ body{
 /* Estilos de los botones de rol:
    - Colores y tamaño prominente para facilitar interacción táctil. */
 .inicio__boton{
+    
     background-color: var(--color-boton);
     border: none;
     padding: 1.5rem 1.8rem;
@@ -95,6 +96,11 @@ body{
     font-size: 2rem;
 }
 
+.inicio__boton__link{
+   text-decoration: none;
+   color:var(--color-texto);
+}
+
 /* Estado hover del botón:
    - Cambio de color y ligero escalado para feedback visual. */
 .inicio__boton:hover {
@@ -102,9 +108,5 @@ body{
     transform: scale(1.05);
 }
 
-/* Notas y recomendaciones:
-   - Considera añadir reglas @media para adaptar tamaños en pantallas pequeñas y grandes.
-   - Revisa la accesibilidad: añade :focus visible para teclado (outline) y atributos aria en HTML.
-   - Si el logo se ve demasiado grande en pantallas pequeñas, aplica max-width o media queries. */
 
 

@@ -1,0 +1,164 @@
+/* Variables globales (nombres en español) */
+:root {
+    --color-primario: #ff7b00;            /* color principal del proyecto */
+    --color-texto: #ffffff;               /* color principal del texto sobre fondos oscuros */
+    --color-texto-oscuro: #333333;        /* color de texto oscuro (labels, subtítulos) */
+    --fuente-principal: 'Poppins', sans-serif;
+    --color-boton: #85D1E8;               /* color de los botones */
+    --color-boton-hover: #b0cbd4;         /* color hover de los botones */
+    --color-fondo-caja: #ffffff;          /* fondo de cajas (login-caja) */
+    --color-input-fondo: #b0e0e6;         /* fondo de inputs */
+    --sombra: 0 4px 8px rgba(0,0,0,0.1);   /* sombra estándar */
+    --radio-bordes: 10px;                 /* border-radius general */
+    --logo-size: 250px;                   /* tamaño del logo en header */
+    --overlay-grad-start: rgba(182, 178, 178, 0.5);
+    --overlay-grad-end: rgba(187, 173, 173, 0.5);
+}
+
+/* Reset universal */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos base del body y fondo */
+body{
+    font-family: var(--fuente-principal);
+    background-size: cover;
+    /* gradiente + imagen de fondo (ruta relativa a este archivo CSS) */
+    background-image: linear-gradient(var(--overlay-grad-start), var(--overlay-grad-end)), url('../assets/imagenes/photo-1517601278517-456741619dad.jpeg');
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Contenedor header: uso de CSS Grid para centrar logo */
+.header{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(3,1fr);
+    place-items: center;
+}
+
+/* Logo en el header: usa la variable --logo-size */
+.header__logo{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    width: var(--logo-size);
+    height: var(--logo-size);
+    border-radius: 20px;
+}
+
+/* Título principal de la app */
+.main__titulo{
+    font-family: "Pacifico", cursive;
+    font-size: 50px;
+    text-align: center;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--color-texto-oscuro);
+}
+
+/* Caja de login: usa variables para fondo, sombra y radio */
+.login-caja {
+    background: var(--color-fondo-caja);
+    padding: 40px;
+    border-radius: var(--radio-bordes);
+    box-shadow: var(--sombra);
+    text-align: center;
+    width: 350px;
+}
+
+/* Encabezados dentro de la caja */
+h2 {
+    margin-bottom: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-texto-oscuro);
+}
+
+.subtitulo {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: var(--color-texto-oscuro);
+}
+
+/* Inputs con fondo definido por variable */
+.input-grupo{
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input-grupo__label {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-weight: bold;
+    color: var(--color-texto-oscuro);
+    z-index: 2;
+}
+
+.input-grupo__input {
+    width: 100%;
+    padding: 30px 15px 10px 15px;
+    border: none;
+    background-color: var(--color-input-fondo);
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    outline: none;
+    height: 70px;
+}
+
+/* Enlace "Olvido su contraseña" */
+.olvido-contrasena {
+    display: block;
+    text-align: right;
+    margin-bottom: 30px;
+    font-size: 12px;
+    color: #888;
+    text-decoration: none;
+}
+
+/* Grupo de botones: layout y espaciado */
+.botones {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* Botones: usan variables para color, texto y transiciones */
+.boton {
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.15s;
+}
+
+/* Variantes de botón reutilizan la variable --color-boton */
+.boton-atras {
+    background-color: var(--color-boton);
+    color: var(--color-texto-oscuro);
+}
+
+.boton-ingresar {
+    background-color: var(--color-boton);
+    color: var(--color-texto-oscuro);
+}
+
+/* Hover global para botones usando la variable --color-boton-hover */
+.boton:hover {
+    background-color: var(--color-boton-hover);
+    transform: translateY(-2px);
+}

@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documento - Login / Selección de rol</title>
+    <title>Rol-admin</title>
 
     <!-- Hoja de estilos específica para la página de login -->
-    <link rel="stylesheet" href="components/login.css">
+    <link rel="stylesheet" href="components/administrador.css">
 
     <!-- Google Fonts: preconexiones y carga de fuentes.
          Nota: hay enlaces repetidos a fonts.googleapis.com y fonts.gstatic.com;
@@ -18,9 +19,12 @@
     <!-- Si necesitas Poppins, mantén esta segunda carga; si no, eliminarla para evitar duplicados. -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=VT323&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=VT323&display=swap"
+        rel="stylesheet">
 
 </head>
+
 <body>
     <!-- HEADER: contenedor del logo.
          - Se usa <header> por semántica (marca la cabecera de la página).
@@ -41,24 +45,41 @@
 
         <!-- SECCIÓN inicio: área de selección de rol.
              - <section> es apropiado si el contenido representa un bloque temático. -->
-        <section class="inicio">
-            <div class="inicio__contenido">
-                <!-- Subtítulo de la sección:
-                     - usa <h2> porque está por debajo del h1 en la jerarquía. -->
-                <h2 class="inicio__subtitulo">Seleccione Rol:</h2>
+        <div class="login-contenedor">
+            <div class="login-caja">
+                <h2>Bienvenido</h2>
+                <p class="subtitulo">Administrador</p>
+                <p>Ingrese sus datos de acesso</p>
 
-                <!-- Botones de rol:
-                     - Si cada opción navega a otra página, considera usar <a href="..."> en lugar de <button>.
-                     - Si envías datos, envuelve en <form> con method/action.
-                     - Añadir atributos aria-label si el texto no es suficientemente descriptivo. -->
-                <button class="inicio__boton" type="button" aria-label="Ingresar como Administrador"><a class="inicio__boton__link" href="administrador.html">Administrador</a></button>
-                <button class="inicio__boton" type="button" aria-label="Ingresar en Punto de Venta">Punto de Venta</button>
-                <button class="inicio__boton" type="button" aria-label="Ingresar como Mesero">Mesero</button>
+                <form action="#" method="POST">
 
-               
+                    <div class="input-grupo">
+                        <label class="input-grupo__label" for="usuario">Usuario</label>
+                        <input class="input-grupo__input" type="text" id="usuario" name="usuario"required >
+                    </div>
+
+                    <div class="input-grupo">
+                        <label class="input-grupo__label" for="contrasena">Contraseña</label>
+                        <input class="input-grupo__input" type="password" id="contrasena" name="contrasena" required>
+                    </div>
+
+                    <a href="#" class="olvido-contrasena"> Olvido su contraseña?</a>
+
+                    <div class="botones">
+                        <button type="boton" class="boton boton-atras">Atras</button>
+                        <button type="submit" class="boton boton-ingresar">Ingresar</button>
+                    </div>
+
+                </form>
+
+
             </div>
-        </section>
+
+
+        </div>
+
     </main>
 
 </body>
+
 </html>
