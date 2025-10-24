@@ -49,18 +49,19 @@
                 <!-- Formulario:
                      - action="#" es un placeholder; reemplazar por la ruta real en producción.
                      - method="POST" está bien para enviar datos; considerar validación cliente/servidor.
-                     
+                     - Añadir role/aria-* si el flujo requiere ayuda adicional para lectores de pantalla. -->
                 <form action="#" class="input-grupo" method="POST">
 
                         <!-- Label asociado correctamente al input mediante for/id -->
                         <label class="input-grupo__label" for="usuario">Correo</label>
 
                         <!-- Input:
-                             
-                             - mantener required para obligar ingreso;  -->
-                        <input class="input-grupo__input" type="email" id="usuario" name="usuario" required >
+                             - se recomienda type="email" para validación automática en navegadores
+                             - mantener required para obligar ingreso; agregar aria-describedby si hay mensajes de error -->
+                        <input class="input-grupo__input" type="text" id="usuario" name="usuario" required >
 
                         <!-- Botón enviar:
+                             - type="submit" envía el formulario.-->
                              
                         <button type="submit" class="input-grupo__boton">Enviar</button>
 
@@ -75,7 +76,11 @@
         <p class="mi-footer-text">Version 1.0</p>
     </footer>
 
-   
+    <!-- Recomendaciones rápidas:
+         - Añadir manejo de errores y mensajes visibles cerca del input (aria-live para lectores de pantalla).
+         - Incluir estilos :focus visibles para inputs y botones (accesibilidad teclado).
+         - Comprimir imágenes y usar formatos modernos (webp) para mejorar rendimiento. -->
+
 </body>
 
 </html>
