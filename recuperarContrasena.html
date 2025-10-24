@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rol-admin</title>
+
+    <!-- Hoja de estilos específica para la página de recuperar contraseña -->
+    <link rel="stylesheet" href="components/recuperarContrasena.css">
+
+    <!-- Google Fonts: preconexión y carga de fuentes.
+         Nota: evita duplicar llamadas a Google Fonts para reducir peticiones. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=VT323&display=swap" rel="stylesheet">
+
+    <!-- Si necesitas Poppins, carga una sola vez y con las familias requeridas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=VT323&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- HEADER: contiene el logo.
+         - <header> es semántico y ayuda a identificar la cabecera del documento.
+         - Asegúrate de que assets/imagenes/logo.png exista y esté optimizado. -->
+    <header class="header">
+        <img src="assets/imagenes/logo.png" alt="logo pizzasoft" class="header__logo">
+    </header>
+
+    <!-- MAIN: landmark principal del documento (solo uno por página) -->
+    <main class="main">
+        <!-- H1: título principal de la aplicación; importante para accesibilidad/SEO -->
+        <h1 class="main__titulo">pizzasoft</h1>
+
+        <!-- Contenedor principal del formulario de recuperación -->
+      <div class="login-contenedor">
+                
+                <!-- Título y subtítulos de la caja:
+                     - Usar h2/h3 mantiene la jerarquía semántica (h1 > h2 > h3). -->
+                <h2 class="login-contenedor__titulo">Bienvenido</h2>
+                <p class="login-contenedor__subtitulo">recuperarContraseña</p>
+                <p class="login-contenedor__subtitulo">Ingrese su correo</p>
+
+                <!-- Formulario:
+                     - action="#" es un placeholder; reemplazar por la ruta real en producción.
+                     - method="POST" está bien para enviar datos; considerar validación cliente/servidor.
+                     
+                <form action="#" class="input-grupo" method="POST">
+
+                        <!-- Label asociado correctamente al input mediante for/id -->
+                        <label class="input-grupo__label" for="usuario">Correo</label>
+
+                        <!-- Input:
+                             
+                             - mantener required para obligar ingreso;  -->
+                        <input class="input-grupo__input" type="email" id="usuario" name="usuario" required >
+
+                        <!-- Botón enviar:
+                             
+                        <button type="submit" class="input-grupo__boton">Enviar</button>
+
+                </form>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER: información de versión o enlaces secundarios -->
+    <footer class="mi-footer">
+        <p class="mi-footer-text">Version 1.0</p>
+    </footer>
+
+   
+</body>
+
+</html>
+

@@ -1,0 +1,189 @@
+/* =========================================================
+   recuperarContrasena.css
+   Comentarios en español explicando cada bloque y buenas prácticas
+   ========================================================= */
+
+/* Variables globales (nombres en español)
+   - Mantener variables en :root facilita cambios de tema y mantenimiento.
+   - Evitar duplicados entre archivos; considera un archivo global de variables. */
+:root {
+    --color-primario: #ff7b00;            /* color principal del proyecto */
+    --color-texto: #ffffff;               /* color principal del texto sobre fondos oscuros */
+    --color-texto-oscuro: #333333;        /* color de texto oscuro (labels, subtítulos) */
+    --fuente-principal: 'Poppins', sans-serif; /* fuente base del proyecto */
+    --color-boton: #85D1E8;               /* color de los botones */
+    --color-boton-hover: #b0cbd4;         /* color hover de los botones */
+    --color-fondo-caja: #ffffff;          /* fondo de cajas (login-caja) */
+    --color-input-fondo: #b0e0e6;         /* fondo de inputs */
+    --sombra: 0 4px 8px rgba(0,0,0,0.1);   /* sombra estándar reutilizable */
+    --radio-bordes: 10px;                 /* border-radius general */
+    --logo-size: 250px;                   /* tamaño del logo en header */
+    --overlay-grad-start: rgba(182, 178, 178, 0.5); /* inicio del degradado */
+    --overlay-grad-end: rgba(187, 173, 173, 0.5);   /* fin del degradado */
+    --primary-color: #6aabc9; /* color alterno (hover) */
+    --light-blue: #a3d2e6;    /* color claro para botones */
+    --shadow-color: rgba(0, 0, 0, 0.2); /* sombra alternativa */
+}
+
+/* Reset universal:
+   - Elimina márgenes y paddings por defecto.
+   - box-sizing: border-box simplifica cálculos de ancho/alto. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos base del body y fondo:
+   - Se usa un gradiente encima de la imagen para mejorar contraste.
+   - display:flex centra verticalmente la estructura principal (header + main). */
+body{
+    font-family: var(--fuente-principal);
+    background-size: cover;
+    /* gradiente + imagen de fondo (ruta relativa a este archivo CSS) */
+    background-image: linear-gradient(var(--overlay-grad-start), var(--overlay-grad-end)), url('../assets/imagenes/photo-1517601278517-456741619dad.jpeg');
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Contenedor header:
+   - Uso de CSS Grid para centrar el logo dentro del header.
+   - place-items: center es un atajo para centrar en ambos ejes. */
+.header{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(3,1fr);
+    place-items: center;
+}
+
+/* Logo en el header:
+   - Usamos las variables para tamaño y mantener consistencia.
+   - grid-column/row colocan el logo en la celda central. Ajustar si se desea otro posicionamiento. */
+.header__logo{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    width: var(--logo-size);
+    height: var(--logo-size);
+    border-radius: 20px;
+    object-fit: contain; /* mantiene proporciones si la imagen tiene otros tamaños */
+}
+
+/* Título principal de la app:
+   - Fuente decorativa para el branding; mantener contraste con el fondo. */
+.main__titulo{
+    font-family: "Pacifico", cursive;
+    font-size: 50px;
+    text-align: center;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--color-texto-oscuro);
+}
+
+/* Caja principal del formulario / contenedor:
+   - Usa variables para fondo, sombra y radio de bordes.
+   - Ajustar el padding/width en @media para responsividad. */
+.login-contenedor {
+    background: var(--color-fondo-caja);
+    padding: 70px;
+    border-radius: var(--radio-bordes);
+    box-shadow: var(--sombra);
+    text-align: center;
+    width: 500px;
+}
+
+/* Encabezados dentro de la caja:
+   - Mantener jerarquía semántica en HTML (h1, h2, etc.). */
+.login-contenedor__titulo{
+    margin-bottom: 0px;
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--color-texto-oscuro);
+}
+
+.login-contenedor__subtitulo {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: var(--color-texto-oscuro);
+}
+
+/* Grupo de inputs: posicionamiento relativo para labels flotantes */
+.input-grupo{
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Label posicionado sobre el input (estilo flotante simple) */
+.input-grupo__label {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-weight: bold;
+    color: var(--color-texto-oscuro);
+    z-index: 2;
+}
+
+/* Estilo de los inputs:
+   - background-color variable para consistencia visual.
+   - height suficiente para entrada táctil en móviles. */
+.input-grupo__input {
+    width: 100%;
+    padding: 30px 15px 10px 15px;
+    border: none;
+    background-color: var(--color-input-fondo);
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    outline: none;
+    height: 70px;
+}
+
+/* Botón principal dentro del grupo:
+   - Ocupa todo el ancho del contenedor y tiene transición en hover. */
+.input-grupo__boton{
+    margin-top:20px;
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: 60px; /* Altura del botón */
+    background-color: var(--light-blue); /* Color base */
+    color: white; /* Color del texto */
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none; /* Sin borde predeterminado */
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer; /* Indicador de clic */
+    transition: background-color 0.3s;
+}
+
+/* Estado hover del botón:
+   - Cambia a un color más oscuro definido en variables. */
+.input-grupo__boton:hover{
+    background-color: var(--primary-color);
+}
+
+/* Hover global para otros botones que compartan la clase .boton:
+   - Usa variable de hover definida arriba para coherencia. */
+.boton:hover {
+    background-color: var(--color-boton-hover);
+    transform: translateY(-2px);
+}
+
+/* Footer de la página:
+   - Separado visualmente con padding; usar color de texto definido. */
+.mi-footer {
+    text-align: center;
+    padding: 50px 0; /* Espacio arriba y abajo */
+    color: var(--color-texto); /* Color de texto claro sobre fondo oscuro */
+    font-size: 14px;
+    transform: translateY(80px); /* Ajuste visual: considerar reemplazar por margin */
+}
+
+/* Recomendaciones adicionales (no código):
+   - Añadir reglas @media para ajustar .login-contenedor, .header__logo y fuentes en pantallas pequeñas.
+   - Añadir :focus visible a inputs y botones para accesibilidad (outline o box-shadow).
+   - Considerar separar variables comunes en un archivo shared.css para evitar duplicación. */
