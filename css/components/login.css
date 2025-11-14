@@ -1,0 +1,209 @@
+/* ==========================================
+   VARIABLES GLOBALES
+   ========================================== */
+:root {
+    /* Colores */
+    --color-primario: #ff7b00;
+    --color-texto: #1a1a1a;
+    --color-boton: #3A9FBF;
+    --color-boton-hover: #2d7a96;
+    
+    /* Tipografía */
+    --fuente-principal: 'Poppins', sans-serif;
+    --fuente-display: 'Pacifico', cursive;
+    
+    /* Espaciado */
+    --espaciado-sm: 1rem;
+    --espaciado-md: 2rem;
+    --espaciado-lg: 3rem;
+    
+    /* Tamaños */
+    --ancho-max-contenido: 400px;
+    --radio-esquinas: 0.5rem;
+}
+
+/* ==========================================
+   RESET Y BASE
+   ========================================== */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    background-image: 
+        linear-gradient(rgba(131, 126, 126, 0.3), rgba(138, 135, 135, 0.3)), 
+        url('../assets/imagenes/photo-1517601278517-456741619dad.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax suave */
+    min-height: 100vh;
+    
+    /* Layout: Header arriba, Main centrado */
+    display: flex;
+    flex-direction: column;
+    padding: var(--espaciado-sm);
+}
+
+/* ==========================================
+   HEADER (minimalista)
+   ========================================== */
+.header {
+    text-align: center;
+    padding: var(--espaciado-md) 0;
+}
+
+.header__logo {
+    width: min(200px, 180px); /* Más compacto */
+    height: auto;
+    border-radius: var(--radio-esquinas);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.header__logo:hover {
+    transform: scale(1.05); /* Interacción sutil */
+}
+
+/* ==========================================
+   MAIN (centrado automático)
+   ========================================== */
+.main {
+    /* Ocupa espacio restante y centra contenido */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--espaciado-md);
+    
+    /* Contenedor con ancho máximo */
+    width: 100%;
+    max-width: var(--ancho-max-contenido);
+    margin: 0 auto;
+}
+
+/* Títulos con tamaños fluidos */
+.main__titulo {
+    font-family: var(--fuente-display);
+    font-size: clamp(2.5rem, 10vw, 4rem); /* 40px-64px */
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.5),
+        0 0 10px rgba(255, 123, 0, 0.3); /* Glow sutil */
+    letter-spacing: 0.05em;
+}
+
+.main__subtitulo {
+    font-family: var(--fuente-principal);
+    font-size: clamp(1.5rem, 5vw, 2rem); /* 24px-32px */
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* ==========================================
+   NAVEGACIÓN DE ROLES
+   ========================================== */
+.roles {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaciado-sm);
+    width: 100%;
+}
+
+.roles__boton {
+    /* Apariencia */
+    display: block;
+    background-color: var(--color-boton);
+    color: var(--color-texto);
+    text-decoration: none;
+    text-align: center;
+    
+    /* Tipografía */
+    font-size: clamp(1.25rem, 4vw, 1.75rem); /* 20px-28px */
+    font-weight: 500;
+    
+    /* Espaciado */
+    padding: clamp(1rem, 3vw, 1.5rem) var(--espaciado-md);
+    border-radius: var(--radio-esquinas);
+    
+    /* Efectos */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Estados interactivos */
+.roles__boton:hover {
+    background-color: var(--color-boton-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.roles__boton:focus {
+    outline: 3px solid var(--color-primario);
+    outline-offset: 4px;
+}
+
+.roles__boton:active {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================
+   RESPONSIVIDAD
+   ========================================== */
+
+/* Tablets y móviles horizontal */
+@media (max-width: 768px) {
+    .header {
+        padding: var(--espaciado-sm) 0;
+    }
+    
+    .main {
+        gap: var(--espaciado-sm);
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    body {
+        padding: 0.5rem;
+    }
+    
+    .header__logo {
+        width: min(150px, 50vw);
+    }
+    
+    .roles {
+        gap: 0.75rem;
+    }
+}
+
+/* Pantallas muy anchas */
+@media (min-width: 1200px) {
+    .main {
+        gap: var(--espaciado-lg);
+    }
+}
+
+/* Optimización para táctil */
+@media (hover: none) and (pointer: coarse) {
+    .roles__boton {
+        padding: 1.25rem var(--espaciado-md); /* Área más grande */
+    }
+}
+
+/* Preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}

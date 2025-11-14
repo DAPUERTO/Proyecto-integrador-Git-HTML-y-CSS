@@ -103,7 +103,10 @@ body{
     font-size: 40px;
     font-weight: bold;
     color: var(--color-texto-oscuro);
+
 }
+
+
 
 .login-contenedor__subtitulo {
     margin-top: 0;
