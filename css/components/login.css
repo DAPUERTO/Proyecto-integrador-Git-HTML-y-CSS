@@ -37,7 +37,7 @@ body {
     font-family: var(--fuente-principal);
     background-image: 
         linear-gradient(rgba(131, 126, 126, 0.3), rgba(138, 135, 135, 0.3)), 
-        url('../assets/imagenes/photo-1517601278517-456741619dad.jpeg');
+        url('../../assets/imagenes/photo-1517601278517-456741619dad.jpeg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Parallax suave */

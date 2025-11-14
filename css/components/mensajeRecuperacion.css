@@ -30,7 +30,7 @@
 body{
     font-family: var(--fuente-principal);
     background-size: cover;
-    background-image: linear-gradient(var(--overlay-grad-start), var(--overlay-grad-end)), url('../assets/imagenes/photo-1517601278517-456741619dad.jpeg');
+    background-image: linear-gradient(var(--overlay-grad-start), var(--overlay-grad-end)), url('../../assets/imagenes/photo-1517601278517-456741619dad.jpeg');
     background-repeat: no-repeat;
     height: 100vh;
     display: flex;
