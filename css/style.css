@@ -24,7 +24,7 @@ body {
     align-items: center;
     height: 20vh; /* ✅ 20% de la altura de la ventana */
     margin:20px;
-}
+} 
 
 .header__logo {
     width: min(200px, 180px); /* Más compacto */
