@@ -3,36 +3,7 @@
    Comentarios en español explicando cada bloque y buenas prácticas
    ========================================================= */
 
-/* Variables globales (nombres en español)
-   - Mantener variables en :root facilita cambios de tema y mantenimiento.
-   - Evitar duplicados entre archivos; considera un archivo global de variables. */
-:root {
-    --color-primario: #ff7b00;            /* color principal del proyecto */
-    --color-texto: #ffffff;               /* color principal del texto sobre fondos oscuros */
-    --color-texto-oscuro: #333333;        /* color de texto oscuro (labels, subtítulos) */
-    --fuente-principal: 'Poppins', sans-serif; /* fuente base del proyecto */
-    --color-boton: #85D1E8;               /* color de los botones */
-    --color-boton-hover: #b0cbd4;         /* color hover de los botones */
-    --color-fondo-caja: #ffffff;          /* fondo de cajas (login-caja) */
-    --color-input-fondo: #b0e0e6;         /* fondo de inputs */
-    --sombra: 0 4px 8px rgba(0,0,0,0.1);   /* sombra estándar reutilizable */
-    --radio-bordes: 10px;                 /* border-radius general */
-    --logo-size: 250px;                   /* tamaño del logo en header */
-    --overlay-grad-start: rgba(182, 178, 178, 0.5); /* inicio del degradado */
-    --overlay-grad-end: rgba(187, 173, 173, 0.5);   /* fin del degradado */
-    --primary-color: #6aabc9; /* color alterno (hover) */
-    --light-blue: #a3d2e6;    /* color claro para botones */
-    --shadow-color: rgba(0, 0, 0, 0.2); /* sombra alternativa */
-}
-
-/* Reset universal:
-   - Elimina márgenes y paddings por defecto.
-   - box-sizing: border-box simplifica cálculos de ancho/alto. */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import "../global.css";
 
 /* Estilos base del body y fondo:
    - Se usa un gradiente encima de la imagen para mejorar contraste.
