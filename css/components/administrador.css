@@ -1,26 +1,4 @@
-/* Variables globales (nombres en español) */
-:root {
-    --color-primario: #ff7b00;            /* color principal del proyecto */
-    --color-texto: #ffffff;               /* color principal del texto sobre fondos oscuros */
-    --color-texto-oscuro: #333333;        /* color de texto oscuro (labels, subtítulos) */
-    --fuente-principal: 'Poppins', sans-serif;
-    --color-boton: #85D1E8;               /* color de los botones */
-    --color-boton-hover: #b0cbd4;         /* color hover de los botones */
-    --color-fondo-caja: #ffffff;          /* fondo de cajas (login-caja) */
-    --color-input-fondo: #b0e0e6;         /* fondo de inputs */
-    --sombra: 0 4px 8px rgba(0,0,0,0.1);   /* sombra estándar */
-    --radio-bordes: 10px;                 /* border-radius general */
-    --logo-size: 250px;                   /* tamaño del logo en header */
-    --overlay-grad-start: rgba(182, 178, 178, 0.5);
-    --overlay-grad-end: rgba(187, 173, 173, 0.5);
-}
-
-/* Reset universal */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import "../global.css";
 
 /* Estilos base del body y fondo */
 body{

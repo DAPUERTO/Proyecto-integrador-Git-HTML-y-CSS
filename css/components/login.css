@@ -1,37 +1,4 @@
-/* ==========================================
-   VARIABLES GLOBALES
-   ========================================== */
-:root {
-    /* Colores */
-    --color-primario: #ff7b00;
-    --color-texto: #1a1a1a;
-    --color-boton: #3A9FBF;
-    --color-boton-hover: #2d7a96;
-    
-    /* Tipografía */
-    --fuente-principal: 'Poppins', sans-serif;
-    --fuente-display: 'Pacifico', cursive;
-    
-    /* Espaciado */
-    --espaciado-sm: 1rem;
-    --espaciado-md: 2rem;
-    --espaciado-lg: 3rem;
-    
-    /* Tamaños */
-    --ancho-max-contenido: 400px;
-    --radio-esquinas: 0.5rem;
-}
-
-/* ==========================================
-   RESET Y BASE
-   ========================================== */
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import "../global.css";
 
 body {
     font-family: var(--fuente-principal);
@@ -120,8 +87,8 @@ body {
 .roles__boton {
     /* Apariencia */
     display: block;
-    background-color: var(--color-boton);
-    color: var(--color-texto);
+    background-color: var(--color-boton-roles);
+    color: var(--color-texto-contraste);
     text-decoration: none;
     text-align: center;
     
@@ -141,7 +108,7 @@ body {
 
 /* Estados interactivos */
 .roles__boton:hover {
-    background-color: var(--color-boton-hover);
+    background-color: var(--color-boton-roles-hover);
     transform: translateY(-3px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }

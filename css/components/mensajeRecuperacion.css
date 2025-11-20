@@ -3,28 +3,7 @@
    Comentarios en español explicando cada bloque y buenas prácticas
    ========================================================= */
 
-/* Variables globales (limpias y usadas) */
-:root {
-    --color-texto: #ffffff;
-    --color-texto-oscuro: #333333;
-    --fuente-principal: 'Poppins', sans-serif;
-    --color-boton-hover: #b0cbd4;
-    --color-fondo-caja: #ffffff;
-    --sombra: 0 4px 8px rgba(0,0,0,0.1);
-    --radio-bordes: 10px;
-    --logo-size: 250px;
-    --overlay-grad-start: rgba(182, 178, 178, 0.5);
-    --overlay-grad-end: rgba(187, 173, 173, 0.5);
-    --primary-color: #6aabc9;
-    --light-blue: #a3d2e6;
-}
-
-/* Reset universal */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import "../global.css";
 
 /* Estilos base del body y fondo */
 body{

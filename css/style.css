@@ -1,26 +1,11 @@
-/* Variables globales */
-:root {
-    --color-primario: #ff7b00;
-    --color-primario-hover: #ffa733;
-    --color-texto: #fff;
-    --color-titulo: orange;
-    --fuente-principal: "Pacifico", cursive;
-    --espaciado-lg: 2rem;
-    --border-radius: 1rem;
-}
+@import "./global.css";
 
-/* Reset universal */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 /* Estilos base del body */
 body {
-    font-family: var(--fuente-principal);
+    font-family: var(--fuente-display);
     background-image: linear-gradient(rgba(141, 139, 139, 0.5), rgba(114, 108, 108, 0.5)), 
-                      url('../assets/imagenes/photo-1517601278517-456741619dad.jpeg');
+    url('../assets/imagenes/photo-1517601278517-456741619dad.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -112,6 +97,8 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
 }
+
+
 
 .inicio__boton:hover {
     background-color: var(--color-primario-hover);

@@ -1,0 +1,74 @@
+/* Variables y reglas globales compartidas */
+:root {
+  --color-primario: #ff7b00;
+  --color-primario-hover: #ffa733;
+  --color-titulo: orange;
+
+  --color-texto: #ffffff;
+  --color-texto-contraste: #1a1a1a;
+  --color-texto-oscuro: #333333;
+
+  --fuente-principal: 'Poppins', sans-serif;
+  --fuente-display: 'Pacifico', cursive;
+
+  --color-boton: #85D1E8;
+  --color-boton-hover: #b0cbd4;
+  --color-boton-roles: #3A9FBF;
+  --color-boton-roles-hover: #2d7a96;
+
+  --color-fondo-caja: #ffffff;
+  --color-input-fondo: #b0e0e6;
+
+  --sombra: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --shadow-color: rgba(0, 0, 0, 0.2);
+
+  --radio-esquinas: 0.5rem;
+  --radio-bordes: 10px;
+  --border-radius: 1rem;
+
+  --espaciado-sm: 1rem;
+  --espaciado-md: 2rem;
+  --espaciado-lg: 3rem;
+
+  --ancho-max-contenido: 400px;
+  --logo-size: 250px;
+
+  --overlay-grad-start: rgba(182, 178, 178, 0.5);
+  --overlay-grad-end: rgba(187, 173, 173, 0.5);
+  --primary-color: #6aabc9;
+  --light-blue: #a3d2e6;
+
+  /* Paleta específica para la vista de pedidos de mesero */
+  --color-primary: #2d5f89;
+  --color-background: #e6e6e6;
+  --color-topbar: #c7c7c7;
+  --color-form-panel: #5c7c99;
+  --color-table-bg: #f5f5f5;
+  --color-table-header: #d6d6d6;
+  --color-border: #bbb;
+  --color-border-light: #aaa;
+  --color-text-dark: #444;
+  --color-text-light: #fff;
+  --color-icon-dark: #333;
+  --color-btn-agregar: #f3b333;
+  --color-btn-editar: #e46c5e;
+  --color-btn-eliminar: #4d8ed9;
+  --color-btn-limpiar: #6dbbdf;
+  --color-btn-pagar: #8bc34a;
+  --color-btn-ver-ventas: #09a9f9;
+  --color-btn-anular: #f44336;
+  --color-refresh: #e44;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.boton_provisional{
+    text-decoration: none;
+    color: var(--color-texto);
+}
