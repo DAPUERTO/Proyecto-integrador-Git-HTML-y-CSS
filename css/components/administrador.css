@@ -27,20 +27,26 @@ body{
 .header__logo{
     grid-column: 2/3;
     grid-row: 2/3;
-    width: var(--logo-size);
-    height: var(--logo-size);
-    border-radius: 20px;
+    width: min(200px, 180px); /* Más compacto */
+    height: auto;
+    border-radius: var(--radio-esquinas);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
 }
 
 /* Título principal de la app */
-.main__titulo{
-    font-family: "Pacifico", cursive;
-    font-size: 50px;
-    text-align: center;
+.main__titulo {
+    font-family: var(--fuente-display);
+    font-size: clamp(2.5rem, 10vw, 4rem); /* 40px-64px */
     font-weight: 400;
-    font-style: normal;
-    color: var(--color-texto-oscuro);
+    color: #fff;
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.5),
+        0 0 10px rgba(255, 123, 0, 0.3); /* Glow sutil */
+    letter-spacing: 0.05em;
+    text-align: center;
 }
+
 
 /* Caja de login: usa variables para fondo, sombra y radio */
 .login-caja {

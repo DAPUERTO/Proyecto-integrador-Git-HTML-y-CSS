@@ -1,83 +1,92 @@
 /* =========================================================
    recuperarContrasena.css
-   Comentarios en español explicando cada bloque y buenas prácticas
    ========================================================= */
 
 @import "../global.css";
 
-/* Estilos base del body y fondo:
-   - Se usa un gradiente encima de la imagen para mejorar contraste.
-   - display:flex centra verticalmente la estructura principal (header + main). */
-body{
+/* Estilos base del body y fondo */
+body {
     font-family: var(--fuente-principal);
     background-size: cover;
-    /* gradiente + imagen de fondo (ruta relativa a este archivo CSS) */
     background-image: linear-gradient(var(--overlay-grad-start), var(--overlay-grad-end)), url('../../assets/imagenes/photo-1517601278517-456741619dad.jpeg');
     background-repeat: no-repeat;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-/* Contenedor header:
-   - Uso de CSS Grid para centrar el logo dentro del header.
-   - place-items: center es un atajo para centrar en ambos ejes. */
-.header{
+    /* Usamos Grid en todo el layout */
     display: grid;
-    justify-items: center;
-    align-items: center;
-    grid-template-rows: repeat(2,1fr);
-    grid-template-columns: repeat(3,1fr);
-    place-items: center;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-rows: auto 1fr auto; /* Header, Main (contenido) y Footer */
+    grid-template-columns: 1fr; /* Solo una columna */
+    align-items: center; /* Centra todo el contenido verticalmente */
+    justify-items: center; /* Centra todo el contenido horizontalmente */
 }
 
-/* Logo en el header:
-   - Usamos las variables para tamaño y mantener consistencia.
-   - grid-column/row colocan el logo en la celda central. Ajustar si se desea otro posicionamiento. */
-.header__logo{
-    grid-column: 2/3;
-    grid-row: 2/3;
-    width: var(--logo-size);
-    height: var(--logo-size);
-    border-radius: 20px;
-    object-fit: contain; /* mantiene proporciones si la imagen tiene otros tamaños */
+/* ========================================== 
+   HEADER (usando Grid)
+   ========================================== */
+.header {
+    grid-area: header;
+    display: grid;
+    place-items: center; /* Centra el contenido (logo) */
 }
 
-/* Título principal de la app:
-   - Fuente decorativa para el branding; mantener contraste con el fondo. */
-.main__titulo{
-    font-family: "Pacifico", cursive;
-    font-size: 50px;
-    text-align: center;
+/* Logo en el header */
+.header__logo {
+    width: clamp(120px, 20vw, 180px); /* Tamaño flexible */
+    height: auto;
+    border-radius: var(--radio-esquinas);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    object-fit: contain;
+    margin: 15px;
+}
+
+/* ========================================== 
+   MAIN (contenido del formulario)
+   ========================================== */
+.main {
+    grid-area: main;
+    display: grid;
+    place-items: center; /* Centra todo el contenido dentro de main */
+    gap: var(--espaciado-md); /* Espacio entre los elementos */
+    width: 90%; /* Ajustable en pantallas pequeñas */
+    max-width: 500px; /* Máximo ancho */
+}
+
+/* Título principal */
+.main__titulo {
+    font-family: var(--fuente-display);
+    font-size: clamp(2.5rem, 10vw, 4rem); /* 40px-64px */
     font-weight: 400;
-    font-style: normal;
-    color: var(--color-texto-oscuro);
+    color: #fff;
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.5),
+        0 0 10px rgba(255, 123, 0, 0.3); /* Glow sutil */
+    letter-spacing: 0.05em;
+    text-align: center;
 }
 
-/* Caja principal del formulario / contenedor:
-   - Usa variables para fondo, sombra y radio de bordes.
-   - Ajustar el padding/width en @media para responsividad. */
+/* Caja principal del formulario */
 .login-contenedor {
     background: var(--color-fondo-caja);
     padding: 70px;
     border-radius: var(--radio-bordes);
     box-shadow: var(--sombra);
     text-align: center;
-    width: 500px;
+    width: 100%; /* Responsivo */
+    max-width: 500px; /* Tamaño máximo */
 }
 
-/* Encabezados dentro de la caja:
-   - Mantener jerarquía semántica en HTML (h1, h2, etc.). */
-.login-contenedor__titulo{
+/* Encabezados dentro del contenedor */
+.login-contenedor__titulo {
     margin-bottom: 0px;
     font-size: 40px;
     font-weight: bold;
     color: var(--color-texto-oscuro);
-
 }
-
-
 
 .login-contenedor__subtitulo {
     margin-top: 0;
@@ -86,13 +95,13 @@ body{
     color: var(--color-texto-oscuro);
 }
 
-/* Grupo de inputs: posicionamiento relativo para labels flotantes */
-.input-grupo{
+/* Grupo de inputs */
+.input-grupo {
     margin-bottom: 20px;
     position: relative;
 }
 
-/* Label posicionado sobre el input (estilo flotante simple) */
+/* Label flotante */
 .input-grupo__label {
     display: block;
     position: absolute;
@@ -103,9 +112,7 @@ body{
     z-index: 2;
 }
 
-/* Estilo de los inputs:
-   - background-color variable para consistencia visual.
-   - height suficiente para entrada táctil en móviles. */
+/* Estilo de los inputs */
 .input-grupo__input {
     width: 100%;
     padding: 30px 15px 10px 15px;
@@ -118,46 +125,37 @@ body{
     height: 70px;
 }
 
-/* Botón principal dentro del grupo:
-   - Ocupa todo el ancho del contenedor y tiene transición en hover. */
-.input-grupo__boton{
-    margin-top:20px;
-    width: 100%; /* Ocupa todo el ancho del contenedor */
-    height: 60px; /* Altura del botón */
-    background-color: var(--light-blue); /* Color base */
-    color: white; /* Color del texto */
+/* Botón principal */
+.input-grupo__boton {
+    margin-top: 20px;
+    width: 100%; /* Ocupa todo el ancho */
+    height: 60px;
+    background-color: var(--light-blue);
+    color: white;
     font-size: 1.2em;
     font-weight: bold;
-    border: none; /* Sin borde predeterminado */
-    border-radius: 8px; /* Bordes redondeados */
-    cursor: pointer; /* Indicador de clic */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
     transition: background-color 0.3s;
 }
 
-/* Estado hover del botón:
-   - Cambia a un color más oscuro definido en variables. */
-.input-grupo__boton:hover{
+/* Hover del botón */
+.input-grupo__boton:hover {
     background-color: var(--primary-color);
 }
 
-/* Hover global para otros botones que compartan la clase .boton:
-   - Usa variable de hover definida arriba para coherencia. */
-.boton:hover {
-    background-color: var(--color-boton-hover);
-    transform: translateY(-2px);
-}
-
-/* Footer de la página:
-   - Separado visualmente con padding; usar color de texto definido. */
+/* ========================================== 
+   FOOTER (usando Grid)
+   ========================================== */
 .mi-footer {
+    grid-area: footer;
     text-align: center;
-    padding: 50px 0; /* Espacio arriba y abajo */
-    color: var(--color-texto); /* Color de texto claro sobre fondo oscuro */
+    padding:10px 0;
+    color: var(--color-texto);
     font-size: 14px;
-    transform: translateY(80px); /* Ajuste visual: considerar reemplazar por margin */
+    margin-top: 50px; /* Mejora el espaciado */
 }
 
-/* Recomendaciones adicionales (no código):
-   - Añadir reglas @media para ajustar .login-contenedor, .header__logo y fuentes en pantallas pequeñas.
-   - Añadir :focus visible a inputs y botones para accesibilidad (outline o box-shadow).
-   - Considerar separar variables comunes en un archivo shared.css para evitar duplicación. */
+
+

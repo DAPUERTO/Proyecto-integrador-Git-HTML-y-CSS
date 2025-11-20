@@ -1,101 +1,130 @@
 /* =========================================================
    recuperarContrasena.css
-   Comentarios en español explicando cada bloque y buenas prácticas
    ========================================================= */
 
 @import "../global.css";
 
-/* Estilos base del body y fondo */
-body{
+/* Estilos base */
+body {
     font-family: var(--fuente-principal);
     background-size: cover;
-    background-image: linear-gradient(var(--overlay-grad-start), var(--overlay-grad-end)), url('../../assets/imagenes/photo-1517601278517-456741619dad.jpeg');
+    background-image: linear-gradient(
+        var(--overlay-grad-start),
+        var(--overlay-grad-end)
+    ),
+    url('../../assets/imagenes/photo-1517601278517-456741619dad.jpeg');
     background-repeat: no-repeat;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    min-height: 100vh;
 
-/* Contenedor header */
-.header{
     display: grid;
-    justify-items: center;
-    align-items: center;
-    grid-template-rows: repeat(2,1fr);
-    grid-template-columns: repeat(3,1fr);
-    place-items: center;
+
+    /* Corrección clave */
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
 }
 
-/* Logo en el header */
-.header__logo{
-    grid-column: 2/3;
-    grid-row: 2/3;
+/* Header */
+.header {
+    grid-area: header;
+    display: grid;
+    place-items: center;
+    height: var(--alto_header);
+    padding: 20px 0;
+}
+
+.header__logo {
     width: var(--logo-size);
     height: var(--logo-size);
     border-radius: 20px;
+     width: min(200px, 180px); /* Más compacto */
+    height: auto;
+    border-radius: var(--radio-esquinas);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
     object-fit: contain;
+    margin: 0 20px;
+}
+
+/* Main */
+main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: var(--alto_main);
+    
 }
 
 /* Títulos */
 .main__titulo{
-    font-family: "Pacifico", cursive;
-    font-size: 50px;
-    text-align: center;
-    color: var(--color-texto-oscuro);
+    font-family: var(--fuente-display);
+    font-size: clamp(2.5rem, 10vw, 4rem); /* 40px-64px */
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.5),
+        0 0 10px rgba(255, 123, 0, 0.3); /* Glow sutil */
+    letter-spacing: 0.05em;
 }
 
-.main__subtitulo{
-    font-family: "Pacifico", cursive;
-    font-size: 50px;
-    text-align: center;
-    color: var(--color-texto-oscuro);
+
+.main__subtitulo {
+    font-family: var(--fuente-principal);
+  
 }
 
-/* Caja principal del mensaje */
+/* Caja del mensaje */
 .recovery-message {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     background: var(--color-fondo-caja);
     border-radius: var(--radio-bordes);
     box-shadow: var(--sombra);
+
     text-align: center;
     width: 630px;
     height: 215px;
 }
 
 .recovery-message__text {
-    margin-top: 0;
-    margin-bottom: 10px;
+    margin: 0 0 10px 0;
     font-size: 20px;
     color: var(--color-texto-oscuro);
 }
 
-/* Botón principal */
-.recovery-form__button{
-    width: 20%;
-    height: 20%;
+/* Botón */
+.recovery-form__button {
+    padding: 10px 25px;
     background-color: var(--light-blue);
     color: var(--color-texto);
+
     font-size: 1.2em;
     font-weight: bold;
+
     border: none;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-.recovery-form__button:hover{
+.recovery-form__button:hover {
     background-color: var(--primary-color);
 }
 
 /* Footer */
 .footer {
+    grid-area: footer;
     text-align: center;
-    padding: 50px 0;
+    padding: 20px 0;
     color: var(--color-texto);
     font-size: 14px;
-    transform: translateY(80px);
 }

@@ -1,58 +1,90 @@
 @import "../global.css";
 
-/* Estilos base del body y fondo */
-body{
+/* ===============================
+   LAYOUT BASE (TODO CON GRID)
+================================= */
+body {
     font-family: var(--fuente-principal);
     background-size: cover;
-    /* gradiente + imagen de fondo (ruta relativa a este archivo CSS) */
-    background-image: linear-gradient(var(--overlay-grad-start), var(--overlay-grad-end)), url('../../assets/imagenes/photo-1517601278517-456741619dad.jpeg');
+    background-image: linear-gradient(var(--overlay-grad-start), var(--overlay-grad-end)),
+                      url('../../assets/imagenes/photo-1517601278517-456741619dad.jpeg');
     background-repeat: no-repeat;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-/* Contenedor header: uso de CSS Grid para centrar logo */
-.header{
+    /* TODO EL LAYOUT EN GRID */
     display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
     justify-items: center;
-    align-items: center;
-    grid-template-rows: repeat(2,1fr);
-    grid-template-columns: repeat(3,1fr);
+}
+
+/* ===============================
+   HEADER (GRID LIMPIO Y CENTRADO)
+================================= */
+.header {
+    grid-area: header;
+    display: grid;
     place-items: center;
+    width: 100%;
 }
 
-/* Logo en el header: usa la variable --logo-size */
-.header__logo{
-    grid-column: 2/3;
-    grid-row: 2/3;
-    width: var(--logo-size);
-    height: var(--logo-size);
-    border-radius: 20px;
+.header__logo {
+    width: clamp(120px, 20vw, 180px);
+    height: auto;
+    border-radius: var(--radio-esquinas);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    margin: 15px 0;
 }
 
-/* Título principal de la app */
-.main__titulo{
-    font-family: "Pacifico", cursive;
-    font-size: 50px;
-    text-align: center;
+/* ===============================
+   MAIN (CENTRADO CON GRID)
+================================= */
+.main {
+    grid-area: main;
+
+    display: grid;
+    place-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.main__titulo {
+    font-family: var(--fuente-display);
+    font-size: clamp(2.5rem, 10vw, 4rem);
     font-weight: 400;
-    font-style: normal;
-    color: var(--color-texto-oscuro);
+    color: #fff;
+    text-shadow:
+        2px 2px 4px rgba(0, 0, 0, 0.5),
+        0 0 10px rgba(255, 123, 0, 0.3);
+    letter-spacing: 0.05em;
+    text-align: center;
 }
 
-/* Caja de login: usa variables para fondo, sombra y radio */
+/* ===============================
+   LOGIN-CAJA (GRID INTERNO)
+================================= */
 .login-caja {
     background: var(--color-fondo-caja);
-    padding: 40px;
+    padding: 30px;
     border-radius: var(--radio-bordes);
     box-shadow: var(--sombra);
     text-align: center;
-    width: 350px;
+
+    display: grid;
+    gap: 20px;
+
+    width: 90%;
+    max-width: 350px;
 }
 
-/* Encabezados dentro de la caja */
+/* ===============================
+   TEXTOS / SUBTÍTULOS
+================================= */
 h2 {
     margin-bottom: 5px;
     font-size: 24px;
@@ -60,21 +92,27 @@ h2 {
     color: var(--color-texto-oscuro);
 }
 
+.formulario{
+    display: grid;
+    gap: 10px;
+}
+
 .subtitulo {
-    margin-top: 0;
-    margin-bottom: 10px;
+    margin: 0 0 10px 0;
     font-size: 16px;
     color: var(--color-texto-oscuro);
 }
 
-/* Inputs con fondo definido por variable */
-.input-grupo{
-    margin-bottom: 20px;
+/* ===============================
+   INPUT GRUPOS (GRID SIMPLE)
+================================= */
+.input-grupo {
+    display: grid;
     position: relative;
+    width: 100%;
 }
 
 .input-grupo__label {
-    display: block;
     position: absolute;
     top: 10px;
     left: 15px;
@@ -86,69 +124,61 @@ h2 {
 .input-grupo__input {
     width: 100%;
     padding: 30px 15px 10px 15px;
-    border: none;
     background-color: var(--color-input-fondo);
     border-radius: 5px;
-    box-sizing: border-box;
+    border: none;
     font-size: 16px;
-    outline: none;
     height: 70px;
+    outline: none;
+    box-sizing: border-box;
 }
 
-/* Enlace "Olvido su contraseña" */
+/* ===============================
+   ENLACE: OLVIDO CONTRASEÑA
+================================= */
 .olvido-contrasena {
-    display: block;
-    text-align: right;
-    margin-bottom: 30px;
+    justify-self: end;
     font-size: 12px;
-    color: #888;
     text-decoration: none;
+    color: #888;
+    margin-bottom: 10px;
 }
 
-/* Grupo de botones: layout y espaciado */
+/* ===============================
+   BOTONES (GRID: 2 COLUMNAS)
+================================= */
 .botones {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 10px;
+    width: 100%;
 }
 
-/* Botones: usan variables para color, texto y transiciones */
 .boton {
-    flex: 1;
     padding: 15px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
     font-size: 16px;
+    background-color: var(--color-boton);
+    color: var(--color-texto-oscuro);
     transition: background-color 0.3s, transform 0.15s;
 }
 
-/* Variantes de botón reutilizan la variable --color-boton */
-.boton-atras {
-    background-color: var(--color-boton);
-    color: var(--color-texto-oscuro);
-}
-
-.boton-ingresar {
-    background-color: var(--color-boton);
-    color: var(--color-texto-oscuro);
-}
-
-/* Hover global para botones usando la variable --color-boton-hover */
 .boton:hover {
     background-color: var(--color-boton-hover);
     transform: translateY(-2px);
 }
 
-
-
+/* ===============================
+   FOOTER (GRID)
+================================= */
 .mi-footer {
-
-    text-align: center; 
-    padding: 50px 0; /* Espacio arriba y abajo */
-    color:var(--color-texto); /* Color de texto gris */
+    grid-area: footer;
+    text-align: center;
+    padding: 40px 0;
+    color: var(--color-texto);
     font-size: 14px;
-    transform: translateY(80px);
-
 }
+

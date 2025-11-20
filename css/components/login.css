@@ -32,9 +32,7 @@ body {
     transition: transform 0.3s ease;
 }
 
-.header__logo:hover {
-    transform: scale(1.05); /* Interacción sutil */
-}
+
 
 /* ==========================================
    MAIN (centrado automático)

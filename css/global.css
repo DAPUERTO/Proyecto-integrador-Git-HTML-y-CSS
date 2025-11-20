@@ -24,7 +24,7 @@
 
   --radio-esquinas: 0.5rem;
   --radio-bordes: 10px;
-  --border-radius: 1rem;
+  --border-radius: 20px;
 
   --espaciado-sm: 1rem;
   --espaciado-md: 2rem;
@@ -38,6 +38,9 @@
   --primary-color: #6aabc9;
   --light-blue: #a3d2e6;
 
+  --alto_header:200px;
+  --alto_main: calc(100vh - var(--alto_header))+ var(--alto_footer);
+  --alto_footer:100px;
   /* Paleta específica para la vista de pedidos de mesero */
   --color-primary: #2d5f89;
   --color-background: #e6e6e6;
