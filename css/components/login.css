@@ -25,7 +25,7 @@ body {
 }
 
 .header__logo {
-    width: min(200px, 180px); /* Más compacto */
+    width: 230px; 
     height: auto;
     border-radius: var(--radio-esquinas);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
