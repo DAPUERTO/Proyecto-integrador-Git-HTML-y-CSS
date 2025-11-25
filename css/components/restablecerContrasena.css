@@ -1,4 +1,4 @@
-@import "../global.css";
+@import "variablesGlobales/global.css";
 
 /* Estilos base del body y fondo:
    - Se usa un gradiente encima de la imagen para mejorar contraste.

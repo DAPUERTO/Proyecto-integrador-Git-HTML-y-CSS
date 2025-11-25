@@ -1,4 +1,4 @@
-@import "../global.css";
+@import "variablesGlobales/global.css";
 
 body {
     font-family: var(--fuente-principal);

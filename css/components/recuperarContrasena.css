@@ -2,7 +2,7 @@
    recuperarContrasena.css
    ========================================================= */
 
-@import "../global.css";
+@import "variablesGlobales/global.css";
 
 /* Estilos base del body y fondo */
 body {

@@ -61,6 +61,23 @@
   --color-btn-ver-ventas: #09a9f9;
   --color-btn-anular: #f44336;
   --color-refresh: #e44;
+
+  /* Paleta específica para Reporte de Inventario */
+  --inventory-bg: #6f849c;
+  --inventory-header-bg: #9b9291;
+  --inventory-surface: #bfb9b8;
+  --inventory-panel: #728aa6;
+  --inventory-search-bg: #c7c4c4;
+  --inventory-btn-register: #f6b24b;
+  --inventory-btn-edit: #e6ad63;
+  --inventory-btn-delete: #78a8c7;
+  --inventory-btn-text: #744c2d;
+  --inventory-table-header: #bbb3b2;
+  --inventory-table-border: #6f6666;
+  --inventory-table-body: #f6eded;
+  --inventory-footer-bg: #6b7f96;
+  --inventory-excel-bg: #d1cfce;
+  --inventory-excel-text: #e23d2f;
 }
 
 *,
@@ -74,4 +91,6 @@
 .boton_provisional{
     text-decoration: none;
     color: var(--color-texto);
+
+  
 }
