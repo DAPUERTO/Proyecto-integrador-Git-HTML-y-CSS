@@ -37,7 +37,7 @@ body {
 /* ==========================================
    MAIN (centrado automático)
    ========================================== */
-.main {
+.page-main {
     /* Ocupa espacio restante y centra contenido */
     flex: 1;
     display: flex;
@@ -53,7 +53,7 @@ body {
 }
 
 /* Títulos con tamaños fluidos */
-.main__titulo {
+.page-main__titulo {
     font-family: var(--fuente-display);
     font-size: clamp(2.5rem, 10vw, 4rem); /* 40px-64px */
     font-weight: 400;
@@ -64,7 +64,7 @@ body {
     letter-spacing: 0.05em;
 }
 
-.main__subtitulo {
+.page-main__subtitulo {
     font-family: var(--fuente-principal);
     font-size: clamp(1.5rem, 5vw, 2rem); /* 24px-32px */
     font-weight: 700;

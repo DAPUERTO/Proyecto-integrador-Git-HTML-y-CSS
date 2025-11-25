@@ -1,113 +1,117 @@
 @import "variablesGlobales/global.css";
 
-/* ===============================
-   LAYOUT BASE (TODO CON GRID)
-================================= */
+/* =========================================
+   BODY EN GRID (Layout estable)
+========================================= */
 body {
     font-family: var(--fuente-principal);
-    background-size: cover;
+
     background-image: linear-gradient(var(--overlay-grad-start), var(--overlay-grad-end)),
                       url('../../assets/imagenes/photo-1517601278517-456741619dad.jpeg');
+    background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    background-position: center;
+    background-attachment: fixed;
 
-    /* TODO EL LAYOUT EN GRID */
+    min-height: 100vh;
+
     display: grid;
     grid-template-areas:
         "header"
         "main"
         "footer";
     grid-template-rows: auto 1fr auto;
-    grid-template-columns: 1fr;
-    justify-items: center;
+    width: 100%;
 }
 
-/* ===============================
-   HEADER (GRID LIMPIO Y CENTRADO)
-================================= */
-.header {
+/* =========================================
+   HEADER
+========================================= */
+.site-header {
     grid-area: header;
     display: grid;
     place-items: center;
     width: 100%;
+    padding: 15px 0;
 }
 
-.header__logo {
-    width: 230px;
-    height: auto;
+.site-header__logo {
+    width: 150px;
+    height: 150px;
     border-radius: var(--radio-esquinas);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
-    margin: 15px 0;
 }
 
-/* ===============================
-   MAIN (CENTRADO CON GRID)
-================================= */
-.main {
+/* =========================================
+   MAIN
+========================================= */
+.page-main {
     grid-area: main;
-
     display: grid;
     place-items: center;
     gap: 20px;
     width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.main__titulo {
+.page-main__titulo {
     font-family: var(--fuente-display);
     font-size: clamp(2.5rem, 10vw, 4rem);
     font-weight: 400;
     color: #fff;
+    text-align: center;
     text-shadow:
         2px 2px 4px rgba(0, 0, 0, 0.5),
         0 0 10px rgba(255, 123, 0, 0.3);
-    letter-spacing: 0.05em;
-    text-align: center;
 }
 
-/* ===============================
-   LOGIN-CAJA (GRID INTERNO)
-================================= */
+/* =========================================
+   LOGIN CAJA
+========================================= */
 .login-caja {
     background: var(--color-fondo-caja);
     padding: 30px;
     border-radius: var(--radio-bordes);
     box-shadow: var(--sombra);
-    text-align: center;
 
-    display: grid;
-    gap: 20px;
-
-    width: 500px;
+    display: flex;
+    flex-direction: column;
     
+
+    
+    box-sizing: border-box;
+    text-align: center;
+    height: 499px;
+    width: 623px;
 }
 
-/* ===============================
-   TEXTOS / SUBTÍTULOS
-================================= */
-h2 {
-    margin-bottom: 5px;
-    font-size: 24px;
-    font-weight: bold;
-    color: var(--color-texto-oscuro);
-}
 
-.formulario{
-    display: grid;
-    gap: 10px;
+.login-contenedor{
+    height: 499px;
+    width: 623px;
 }
 
 .subtitulo {
-    margin: 0 0 10px 0;
     font-size: 16px;
     color: var(--color-texto-oscuro);
+    margin-bottom: 10px;
 }
 
-/* ===============================
-   INPUT GRUPOS (GRID SIMPLE)
-================================= */
-.input-grupo {
+/* =========================================
+   FORMULARIO
+========================================= */
+.formulario {
     display: grid;
+    gap: 15px;
+}
+
+/* =========================================
+   INPUTS
+========================================= */
+.input-grupo {
+    margin-top: 10px;
     position: relative;
     width: 100%;
 }
@@ -118,12 +122,12 @@ h2 {
     left: 15px;
     font-weight: bold;
     color: var(--color-texto-oscuro);
-    z-index: 2;
+    pointer-events: none;
 }
 
 .input-grupo__input {
     width: 100%;
-    padding: 30px 15px 10px 15px;
+    padding: 30px 15px 10px;
     background-color: var(--color-input-fondo);
     border-radius: 5px;
     border: none;
@@ -133,38 +137,40 @@ h2 {
     box-sizing: border-box;
 }
 
-/* ===============================
-   ENLACE: OLVIDO CONTRASEÑA
-================================= */
+/* =========================================
+   OLVIDO CONTRASEÑA
+========================================= */
 .olvido-contrasena {
     justify-self: end;
     font-size: 12px;
-    text-decoration: none;
     color: #888;
-    margin-bottom: 10px;
+    text-decoration: none;
 }
 
-/* ===============================
-   BOTONES (GRID: 2 COLUMNAS)
-================================= */
+/* =========================================
+   BOTONES
+========================================= */
+
 .botones {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0px;
     width: 100%;
 }
 
 .boton {
-    padding: 15px 20px;
-    border: none;
+    padding: 15px;
     border-radius: 5px;
+    border: none;
     cursor: pointer;
     font-weight: bold;
     font-size: 16px;
     background-color: var(--color-boton);
-    color: var(--color-texto-oscuro);
+    color: var(--color-text-light);
     transition: background-color 0.3s, transform 0.15s;
-    width: 440px;
+    width: 100%;
+}
+
+.boton-atras {
+    margin-top: 10px;
+    text-decoration: none;
 }
 
 .boton:hover {
@@ -172,19 +178,18 @@ h2 {
     transform: translateY(-2px);
 }
 
-.boton_provisional{
+.boton_provisional {
     text-decoration: none;
     color: var(--color-texto-oscuro);
 }
 
-/* ===============================
-   FOOTER (GRID)
-================================= */
+/* =========================================
+   FOOTER
+========================================= */
 .mi-footer {
     grid-area: footer;
     text-align: center;
-    padding: 40px 0;
+    padding: 20px 0;
     color: var(--color-texto);
     font-size: 14px;
 }
-

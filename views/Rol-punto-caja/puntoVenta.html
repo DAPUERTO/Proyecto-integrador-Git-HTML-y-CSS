@@ -4,92 +4,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rol-punto-venta</title>
+    <title>Caja</title>
 
-    <!-- Hoja de estilos específica para la página de login -->
+    <!-- Estilos -->
     <link rel="stylesheet" href="../../css/components/puntoVenta.css">
 
-    <!-- Google Fonts: preconexiones y carga de fuentes.
-         Nota: hay enlaces repetidos a fonts.googleapis.com y fonts.gstatic.com;
-         conservar solo una llamada reduce peticiones HTTP. -->
+    <!-- Google Fonts (optimizado sin duplicados) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=VT323&display=swap" rel="stylesheet">
-
-    <!-- Si necesitas Poppins, mantén esta segunda carga; si no, eliminarla para evitar duplicados. -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=VT323&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@100;300;400;600;700;900&family=VT323&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!-- HEADER: contenedor del logo.
-         - Se usa <header> por semántica (marca la cabecera de la página).
-         - La clase .header se estiliza con CSS Grid para centrar el logo. -->
-    <header class="header">
-        <!-- Imagen del logo:
-             - alt describe la imagen para lectores de pantalla.
-             - usar width/height en CSS para controlar tamaño y responsividad. -->
-        <img src="../../assets/imagenes/logo.png" alt="logo pizzasoft" class="header__logo">
+
+  
+    <header class="site-header">
+        <img src="../../assets/imagenes/logo.png"
+             alt="Logo oficial de Pizzasoft"
+             class="site-header__logo">
     </header>
 
-    <!-- MAIN: contenido principal de la página (landmark semántico obligatorio).
-         - Mantener un solo <main> por documento. -->
-    <main class="main">
-        <!-- H1: título principal de la app.
-             - Importante para accesibilidad y SEO; solo debe haber un H1 visible. -->
-        <h1 class="main__titulo">pizzasoft</h1>
 
-        <!-- SECCIÓN inicio: área de selección de rol.
-             - <section> es apropiado si el contenido representa un bloque temático. -->
-        <div class="login-contenedor">
+   
+    <main class="page-main">
+
+        <!-- Título principal -->
+        <h1 class="page-main__titulo">Pizzasoft</h1>
+
+        <!-- Contenedor del login -->
+        
+
             <div class="login-caja">
-                <h2>Bienvenido</h2>
-                <p class="subtitulo">Punto de venta</p>
-                <p>Ingrese sus datos de acesso</p>
 
+                <h2>Bienvenido</h2>
+                <p class="subtitulo">Punto de Venta</p>
+                <p>Ingrese sus datos de acceso</p>
+
+                <!-- Formulario -->
                 <form action="#" method="POST" class="formulario">
 
+                    <!-- Usuario -->
                     <div class="input-grupo">
-                        <label class="input-grupo__label" for="usuario">Usuario</label>
-                        <input class="input-grupo__input" type="text" id="usuario" name="usuario"required >
+                        <label for="usuario" class="input-grupo__label">Usuario</label>
+                        <input 
+                            type="text"
+                            id="usuario"
+                            name="usuario"
+                            class="input-grupo__input"
+                            required>
                     </div>
 
+                    <!-- Contraseña -->
                     <div class="input-grupo">
-                        <label class="input-grupo__label" for="contrasena">Contraseña</label>
-                        <input class="input-grupo__input" type="password" id="contrasena" name="contrasena" required>
+                        <label for="contrasena" class="input-grupo__label">Contraseña</label>
+                        <input 
+                            type="password"
+                            id="contrasena"
+                            name="contrasena"
+                            class="input-grupo__input"
+                            required>
                     </div>
 
-                    <a href="#" class="olvido-contrasena"> Olvido su contraseña?</a>
+                    <!-- Link olvidar contraseña -->
+                    <a href="#" class="olvido-contrasena">¿Olvidó su contraseña?</a>
 
+                    <!-- Botón Ingresar -->
                     <div class="botones">
-                        
                         <button type="submit" class="boton boton-ingresar">Ingresar</button>
                     </div>
 
                 </form>
-                
-                <button type="boton" class="boton boton-atras"><a class="boton_provisional" href="../login.html">Atras</a></button>   
 
+                <!-- Botón atrás (correcto, sin usar <button><a>) -->
+                <a href="../login.html" class="boton boton-atras">Atrás</a>
 
             </div>
 
-
-        </div>
+       
 
     </main>
 
+
+    <!-- ====================================
+         FOOTER
+    ===================================== -->
     <footer class="mi-footer">
-        <p class="mi-footer-text">Version 1.0</p>
+        <p class="mi-footer-text">Versión 1.0</p>
     </footer>
 
-
-
-
 </body>
-
 
 </html>
