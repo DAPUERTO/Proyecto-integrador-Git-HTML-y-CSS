@@ -32,7 +32,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px; /* Se mantiene */
+    
 }
 
 .header__logo {
@@ -115,6 +115,13 @@ body {
     transition: all 0.3s ease;
 }
 
+.boton_provisional{
+    text-decoration: none;
+    color: var(--color-texto);
+
+  
+}
+
 .inicio__boton:hover {
     background-color: var(--color-primario-hover);
     transform: scale(1.05);
@@ -132,12 +139,24 @@ body {
 /* ----------------------------- */
 /*  RESPONSIVE */
 /* ----------------------------- */
+@media (max-width: 480px) {
+    body {
+        padding: 1rem;
+    }
+    
+    .header__logo {
+        width: min(150px, 50vw);
+    }
+    
+
+}
 
 @media (max-width: 768px) {
     .header {
         height: auto;
         margin: 10px;
     }
+
 
     .inicio {
         padding: 1.5rem;
@@ -146,7 +165,27 @@ body {
     .inicio__contenido {
         padding: 1.8rem;
     }
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px; /* Se mantiene */
 }
+
+.header__logo {
+    padding: 16px;
+    width: 180px;
+    height: auto;
+    border-radius: var(--radio-esquinas);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+
+
+}
+
 
 @media (min-width: 1920px) {
     .header__logo {
@@ -165,4 +204,6 @@ body {
     .inicio__boton {
         font-size: 2.5rem;
     }
+
+    
 }

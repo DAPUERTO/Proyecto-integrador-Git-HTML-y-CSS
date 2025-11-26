@@ -20,7 +20,6 @@
   --color-input-fondo: #b0e0e6;
 
   --sombra: 0 4px 8px rgba(0, 0, 0, 0.1);
-  --shadow-color: rgba(0, 0, 0, 0.2);
 
   --radio-esquinas: 0.5rem;
   --radio-bordes: 10px;
@@ -78,6 +77,26 @@
   --inventory-footer-bg: #6b7f96;
   --inventory-excel-bg: #d1cfce;
   --inventory-excel-text: #e23d2f;
+
+  
+    --color-fondo: #ddd;
+    
+
+    --color-header: #c6bebc;
+    --color-header-borde: #b9b2b0;
+
+    --rojo: #b73c3c;
+    --verde: #7e8f40;
+    --amarillo: #cac740;
+    --azul: #3f4b77;
+    --azul2: #243e70;
+    --naranja: #d08335;
+
+    --panel-bg: #f4f4f4;
+    --icon-size: 40px;
+
+
+
 }
 
 *,
@@ -88,9 +107,4 @@
   box-sizing: border-box;
 }
 
-.boton_provisional{
-    text-decoration: none;
-    color: var(--color-texto);
 
-  
-}
