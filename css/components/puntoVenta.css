@@ -50,7 +50,7 @@ body {
     grid-area: main;
     display: grid;
     place-items: center;
-    gap: 20px;
+    gap: 10px;
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
