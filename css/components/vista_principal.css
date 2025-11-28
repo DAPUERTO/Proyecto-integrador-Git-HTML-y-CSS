@@ -84,7 +84,7 @@ body {
     gap: 10px;
     border: none;
     padding: 18px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     border-radius: 10px;
     cursor: pointer;
@@ -100,7 +100,9 @@ body {
 
 .rojo { background: var(--rojo); }
 .verde { background: var(--verde); }
+.verde2{background: var(--verde2);}
 .amarillo { background: var(--amarillo); }
+.amarillo2{background: var(--amarillo2);}
 .azul { background: var(--azul); }
 .azul2 { background: var(--azul2); }
 .naranja { background: var(--naranja); }
