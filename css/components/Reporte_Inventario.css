@@ -102,8 +102,14 @@
   box-shadow: var(--sombra);
 }
 
+
 .inventory-meta__item {
   margin: 0;
+}
+
+.inventory-meta__item__fecha,
+.inventory-meta__item__hora{
+justify-self: end;
 }
 
 .inventory-meta__value {

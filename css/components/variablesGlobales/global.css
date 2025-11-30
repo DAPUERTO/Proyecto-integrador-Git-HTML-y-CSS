@@ -99,6 +99,24 @@
 
 
 
+
+    --color-primary: #6a839e; /* fondo principal del mockup */
+    --color-secondary: #bdb9b9; /* fondo del filtro */
+    --color-input-border: #6d6d6d;
+    --color-header-bg: #c3bfc0; /* encabezado tabla */
+    --color-header-border: #6d6d6d;
+    --color-filter-btn: #5ba3ca;
+    --color-filter-icon-bg: #db4d4d;
+    --color-excel-bg: #d6d2cd;
+    --color-excel-text: #d83333;
+
+    --radius: 6px;
+    --transition: .2s ease;
+
+
+
+
+
 }
 
 *,
