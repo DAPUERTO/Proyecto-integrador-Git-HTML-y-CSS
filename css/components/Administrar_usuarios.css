@@ -125,6 +125,24 @@ body {
 
 
 
+
+.admin-users__moddy {
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.648);
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+
+
+
+
 /*genera la vista sobrepuesta */
 #check-add:checked ~ .admin-users__form { 
     visibility: visible;
@@ -133,6 +151,12 @@ body {
 }
 
 
+
+#check-modi:checked ~ .admin-users__moddy { 
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
 
 
 
@@ -251,3 +275,31 @@ body {
 
 
 
+@media (min-width:1080px ){
+    .admin-users__action {
+        width: 150px;
+        height: 150px;
+    }
+
+    .admin-users__action-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+
+    .admin-users__stats{
+        width: 50rem;
+        height: 50rem;
+
+    }
+
+    .admin-users__form-section{
+        width: 700px;
+        height: 940px;
+
+
+    }
+
+
+
+}

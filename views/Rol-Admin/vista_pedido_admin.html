@@ -1,47 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Toma de pedidos</title>
-  <link rel="stylesheet" href="/css/components/vista_pedidos_admin.css">
-</head>
-<body class="app">
-  <header class="topbar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toma de pedidos</title>
+    <link rel="stylesheet" href="/css/components/vista_pedidos_admin.css" />
+  </head>
+  <body class="app">
+    <header class="topbar">
       <section class="topbar-left">
-        <img src="../../assets/icons/imagen-user.png" alt="Icono de usuario" class="icon-img">
+        <img
+          src="../../assets/icons/imagen-user.png"
+          alt="Icono de usuario"
+          class="icon-img"
+        />
         <div>
           <strong>Administrador</strong>
         </div>
       </section>
       <h1 class="topbar-title">TOMA DE PEDIDOS</h1>
       <aside class="topbar-right">
-        <time datetime="2025-10-31T17:32:01" aria-label="Fecha y hora de referencia">
+        <time
+          datetime="2025-10-31T17:32:01"
+          aria-label="Fecha y hora de referencia"
+        >
           <div>Fecha : 31-10-2025</div>
           <div>Hora : 17:32:01</div>
         </time>
-
 
         <!-- <button class="circle-btn" aria-label="Actualizar">
           <img src="../../assets/icons/cerrar-sesion.png" alt="Actualizar vista" class="icon-img">
         </button> -->
 
         <a class="circle-btn" href="../Rol-Admin/vista_principal.html">
-        
-        <img src="../../assets/icons/cerrar-sesion.png" alt="cerrar sesión" class="icon-img">
-    </a>
-
-
-
-
-
-
-
-
+          <img
+            src="../../assets/icons/cerrar-sesion.png"
+            alt="cerrar sesión"
+            class="icon-img"
+          />
+        </a>
       </aside>
-  </header>
+    </header>
 
-  <main role="main">
+    <main role="main">
       <section class="header-info" aria-labelledby="factura-actual">
         <h2 id="factura-actual" class="sr-only">Factura en curso</h2>
         <p>Factura no : <span>1</span></p>
@@ -59,7 +60,7 @@
 
           <div class="form-group">
             <label for="cantidad">Cantidad:</label>
-            <input type="number" id="cantidad" name="cantidad" class="small">
+            <input type="number" id="cantidad" name="cantidad" class="small" />
           </div>
 
           <div class="form-group">
@@ -71,24 +72,50 @@
 
           <div class="form-group">
             <label for="disponible">Disponible :</label>
-            <input type="text" id="disponible" name="disponible" class="small" disabled>
+            <input
+              type="text"
+              id="disponible"
+              name="disponible"
+              class="small"
+              disabled
+            />
           </div>
 
-          <nav class="actions" id="acciones-formulario" aria-label="Acciones del pedido">
+          <nav
+            class="actions"
+            id="acciones-formulario"
+            aria-label="Acciones del pedido"
+          >
             <button type="button" class="btn-icon btn-agregar">
-              <img src="../../assets/icons/agregar-producto (1).png" alt="Agregar" class="icon-img">
+              <img
+                src="../../assets/icons/agregar-producto (1).png"
+                alt="Agregar"
+                class="icon-img"
+              />
               Agregar
             </button>
             <button type="button" class="btn-icon btn-editar">
-              <img src="../../assets/icons/curriculum.png" alt="Editar" class="icon-img">
+              <img
+                src="../../assets/icons/curriculum.png"
+                alt="Editar"
+                class="icon-img"
+              />
               Editar
             </button>
             <button type="button" class="btn-icon btn-eliminar">
-              <img src="../../assets/icons/eliminar.png" alt="Eliminar" class="icon-img">
+              <img
+                src="../../assets/icons/eliminar.png"
+                alt="Eliminar"
+                class="icon-img"
+              />
               Eliminar
             </button>
             <button type="button" class="btn-icon btn-limpiar">
-              <img src="../../assets/icons/limpieza-de-datos.png" alt="Limpiar" class="icon-img">
+              <img
+                src="../../assets/icons/limpieza-de-datos.png"
+                alt="Limpiar"
+                class="icon-img"
+              />
               Limpiar
             </button>
           </nav>
@@ -113,21 +140,33 @@
           </tbody>
         </table>
       </section>
-  </main>
+    </main>
 
-  <footer class="footer-bar" aria-labelledby="acciones-finales">
+    <footer class="footer-bar" aria-labelledby="acciones-finales">
       <h2 id="acciones-finales" class="sr-only">Acciones finales</h2>
       <nav class="footer-actions" aria-label="Gestion de pago">
         <button type="button" class="btn-footer btn-pagar">
-          <img src="../../assets/icons/billete-de-banco.png" alt="Pagar" class="icon-img-footer">
+          <img
+            src="../../assets/icons/billete-de-banco.png"
+            alt="Pagar"
+            class="icon-img-footer"
+          />
           Pagar
         </button>
         <button type="button" class="btn-footer btn-ver-ventas">
-          <img src="../../assets/icons/mirar.png" alt="Ver Ventas" class="icon-img-footer">
+          <img
+            src="../../assets/icons/mirar.png"
+            alt="Ver Ventas"
+            class="icon-img-footer"
+          />
           Ver Ventas
         </button>
         <button type="button" class="btn-footer btn-anular">
-          <img src="../../assets/icons/anularVenta.png" alt="Anular" class="icon-img-footer">
+          <img
+            src="../../assets/icons/anularVenta.png"
+            alt="Anular"
+            class="icon-img-footer"
+          />
           Anular Venta
         </button>
       </nav>
@@ -136,6 +175,6 @@
         <span>Total a Pagar :</span>
         <output name="total" for="cantidad producto">0.00</output>
       </section>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>

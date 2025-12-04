@@ -1,34 +1,39 @@
 /* IMPORTANTE: VARIABLES */
+/* Importa variables globales (colores, tamaños, etc.) usadas en este archivo */
 @import url("../components/variablesGlobales/global.css");
 
 /* ----------- RESET ----------- */
+/* Normaliza márgenes, padding y box-sizing para todos los elementos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif; /* tipografía por defecto */
 }
 
 /* ----------- BODY GRID ----------- */
+/* Estructura principal: header en fila superior y resto del contenido ocupa el espacio restante */
 body {
     display: grid;
     grid-template-rows: auto 1fr;
     height: 100vh;
 
-    background: var(--color-fondo);
-    color: var(--color-texto);
+    background: var(--color-fondo); /* color de fondo desde variables */
+    color: var(--color-texto); /* color de texto principal */
 }
 
 /* ---------- HEADER ---------- */
+/* Header con 3 columnas: sección izquierda (admin), título centrado, sección derecha (logout) */
 .header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 15px;
     align-items: center;
     background: var(--color-header);
-    border-bottom: 3px solid var(--color-header-borde);
+    border-bottom: 3px solid var(--color-header-borde); /* línea inferior del header */
 }
 
+/* Sección del administrador (izquierda) */
 .admin-section{
     display: flex;
     align-items: center;
@@ -36,17 +41,17 @@ body {
     justify-content: start;
 }
 
-
+/* Icono dentro de la sección admin (tamaño definido por variable) */
 .admin-section_icon{
     width: var(--icon-size);
 }
 
+/* Subtítulo en la sección admin (color oscuro para contraste) */
 .admin-section_subtitulo{
     color: var(--color-texto-oscuro);
 }
 
-
-
+/* Sección de cierre de sesión / acciones en la parte derecha del header */
 .logout {
     display: flex;
     align-items: center;
@@ -54,6 +59,7 @@ body {
     justify-content: end;
 }
 
+/* Título central del header */
 .header .titulo {
     text-align: center;
     font-size: 32px;
@@ -62,15 +68,17 @@ body {
 }
 
 /* ---------- LAYOUT PRINCIPAL -------- */
+/* Contenedor principal con tres columnas: panel izquierdo, contenido central y panel derecho */
 .container {
     display: grid;
-    grid-template-columns: 250px 1fr 250px;
+    grid-template-columns: 250px 1fr 250px; /* ancho fijo para paneles laterales */
     height: 100%;
     gap: 20px;
     padding: 20px;
 }
 
 /* -------- PANEL IZQUIERDO Y DERECHO -------- */
+/* Estilos comunes para paneles laterales */
 .left-panel,
 .right-panel {
     display: flex;
@@ -78,6 +86,7 @@ body {
     gap: 25px;
 }
 
+/* Botón genérico usado en paneles (estilo visual y de interacción) */
 .btn {
     display: flex;
     align-items: center;
@@ -89,25 +98,29 @@ body {
     border-radius: 10px;
     cursor: pointer;
     color: white;
-
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* efecto hover suave */
 }
 
+/* Hover que escala ligeramente y aplica sombra */
 .btn:hover {
     transform: scale(1.04);
     box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
 }
 
+/* Variantes de color para botones (valores vienen de variables globales) */
 .rojo { background: var(--rojo); }
 .verde { background: var(--verde); }
 .verde2{background: var(--verde2);}
-.amarillo { background: var(--amarillo); }
+.verde-oscuro{background: var(--verde-oscuro);}
+.amarillo1 { background: var(--amarillo1); }
 .amarillo2{background: var(--amarillo2);}
 .azul { background: var(--azul); }
-.azul2 { background: var(--azul2); }
+.morado { background: var(--morado); }
 .naranja { background: var(--naranja); }
 
 /* -------- PANEL CENTRAL -------- */
+/* Panel central: caja card con sombra y contenido centrado */
 .center-panel {
     background: var(--panel-bg);
     border: none;
@@ -124,17 +137,20 @@ body {
     gap: 20px;
 }
 
+/* Logo en panel central */
 .logo {
     width: 260px;
     height: auto;
     border-radius: 10px;
 }
 
+/* Texto informativo destacado */
 .info {
     font-size: 30px;
     color: #555;
 }
 
+/* Pie de la sección central */
 .footer {
     margin-top: 60px;
     font-size: 15px;
@@ -142,11 +158,13 @@ body {
 }
 
 /* ------ ÍCONOS ------ */
+/* Tamaño de iconos reutilizables */
 .icon,
 .icon-btn {
     width: var(--icon-size);
 }
 
+/* Footer principal de la página (área inferior) */
 .mi-footer {
     grid-area: footer;
     text-align: center;
