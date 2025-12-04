@@ -1,0 +1,253 @@
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+}
+
+.admin-users__header {
+    display: flex;
+    background-color: var(--background-header);
+    justify-content: space-between;
+    height: 90px;
+    padding: 10px 50px 10px 50px;
+    align-items: center;
+    color: var(--color-text-title);
+    font-family:var(--fuente-letra);
+    grid-column: 1/1;
+    grid-row: 1/2;
+}
+
+
+.admin-users__title {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.admin-users__header-item {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+.admin-users__logo-image{
+    width: 49px;
+    height: 49px;
+}
+
+.admin-users__main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--background-main);
+}
+
+
+.admin-users__stats{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 62rem;
+    height: 60rem;
+    justify-self: center;
+    align-self: center;
+    background-color: white;
+    border: 1px solid black;
+}
+
+
+
+
+.admin-users__stat-text {
+    background-color: var(--background-title-table);
+    height: 61px;
+    font-family: var(--fuente-letra);
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--color-text-title);
+    text-align: center;
+    padding: 15px 0px 0px 0px;
+    border: 1px solid black;
+
+}
+
+
+
+
+.admin-users__actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.admin-users__action {
+    width: 20rem;
+    height: 20rem;
+    justify-self: center;
+    align-self: center;
+    cursor:pointer;
+    border-radius:15px;
+}
+
+
+.admin-users__action-icon {
+    width: 128px;
+    height: 128px;
+}
+
+.admin-users__action-label {
+    font-size: 25px;
+    font-family: var(--fuente-letra);
+    font-weight: bold;
+}
+
+
+.admin-users__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.648);
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.admin-checked__add {
+    display: none;
+}
+
+
+
+/*genera la vista sobrepuesta */
+#check-add:checked ~ .admin-users__form { 
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+
+
+
+
+
+.admin-users__form-section {
+    display: hidden;
+    flex-direction: column;
+    width: 787px;
+    height: 1024px;
+    background-color: var(--background-main);
+    box-shadow: 2px 2px 4px 1px;
+}
+
+
+
+.admin-users__form-header {
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    background-color: var(--background-header);
+    height: 80px;
+}
+
+.admin-users__form-title{
+    font-family: var(--fuente-letra);
+    font-size: 50px;
+    font-weight: bold;
+    align-self: center;
+    justify-self: center;
+    margin-left: 110px;
+}
+
+.admin-users__form-close {
+    justify-self: center;
+    align-self: center;
+}
+
+.admin-users__form-main {
+    display: flex;
+    justify-content: center;
+}
+
+
+.admin-users__form-body {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding: 100px 30px 30px 30px;
+}
+
+.admin-users__form-field {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.admin-users__form-label {
+    font-size: 50px;
+    font-family: var(--fuente-letra);
+    font-weight: bold;
+    color: white;
+}
+
+.admin-users__form-input{
+    width: 462px;
+    height: 59px;
+    border-radius:10px ;
+    border: 1px solid black;
+    font-size: 25px;
+    padding-left: 10px;
+
+}
+
+.admin-users__form-input:focus{
+    outline: none;
+}
+
+.admin-users__form-option{
+    font-size: 25px;
+    padding-left: 10px;
+}
+
+.admin-users__form-select {
+    width: 462px;
+    padding-left: 10px;
+    height: 59px;
+    font-size: 25px;
+}
+
+.admin-users__form-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 30px;
+    width: 462px;
+    height: 61px;
+    border-radius: 10px;
+}
+
+
+.admin-users__form-close-icon {
+    width: 49px;
+    height: 49px;
+}
+
+
+
+
+
+.admin-users__form-button-icon {
+    width: 47px;
+    height: 47px;
+}
+
+
+
+

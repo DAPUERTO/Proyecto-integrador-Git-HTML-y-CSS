@@ -1,5 +1,11 @@
 /* Variables y reglas globales compartidas */
 :root {
+
+  --background-header: #929292;
+  --color-text-title: #504D4D;
+  --background-main: #79B2E0;
+  --background-title-table: #D9D9D9;
+  
   --color-primario: #ff7b00;
   --color-primario-hover: #ffa733;
   --color-titulo: orange;
@@ -10,7 +16,9 @@
 
   --fuente-principal: 'Poppins', sans-serif;
   --fuente-display: 'Pacifico', cursive;
+  --fuente-letra:  "Inter", sans-serif;
 
+  
   --color-boton: #85D1E8;
   --color-boton-hover: #b0cbd4;
   --color-boton-roles: #3A9FBF;
