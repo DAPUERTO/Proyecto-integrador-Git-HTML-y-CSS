@@ -243,6 +243,7 @@ tbody tr {
   gap: 5px;
 }
 
+
 .btn-pagar       { background: var(--color-btn-pagar); color: #000; }
 .btn-ver-ventas  { background: var(--color-btn-ver-ventas); }
 .btn-anular      { background: var(--color-btn-anular); color: var(--color-text-light); }

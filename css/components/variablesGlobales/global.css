@@ -52,21 +52,23 @@
   --color-primary: #2d5f89;
   --color-background: #e6e6e6;
   --color-topbar: #c7c7c7;
-  --color-form-panel: #5c7c99;
+  --color-form-panel: #A3A5A6;
   --color-table-bg: #f5f5f5;
   --color-table-header: #d6d6d6;
   --color-border: #bbb;
   --color-border-light: #aaa;
-  --color-text-dark: #444;
+  --color-text-dark: #504D4D;
   --color-text-light: #fff;
   --color-icon-dark: #333;
   --color-btn-agregar: #f3b333;
   --color-btn-editar: #e46c5e;
   --color-btn-eliminar: #4d8ed9;
   --color-btn-limpiar: #6dbbdf;
-  --color-btn-pagar: #8bc34a;
+  --color-btn:#D9D9D9;
+  --color-btn-text:#504747;
+  /* --color-btn-pagar: #8bc34a;
   --color-btn-ver-ventas: #09a9f9;
-  --color-btn-anular: #f44336;
+  --color-btn-anular: #f44336; */
   --color-refresh: #e44;
 
   /* Paleta específica para Reporte de Inventario */
@@ -95,15 +97,18 @@
 
     --rojo: #b73c3c;
     --verde: #7e8f40;
+    --amarillo: #BCBA3C;
     --verde2:#3CBC4F;
     --verde-oscuro:#159774;
-    --amarillo1:#E0C738;
-    --amarillo: #cac740;
-    --amarillo2:#cfcc1c;
-    --morado:#8A8EC0;
+    --azul-claro:#5C6478;
+    --morado:#AB91CE;
+    --naranja:#D6893E;
+    --azul-oscuro:#284284;
+
     
-    --naranja: #d08335;
-    --morado:#8A8EC0;
+  
+    
+    
 
     --panel-bg: #f4f4f4;
     --icon-size: 40px;

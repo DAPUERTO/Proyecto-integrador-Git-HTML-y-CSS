@@ -52,6 +52,27 @@
   text-transform: uppercase;
 }
 
+/* Sección de cierre de sesión / acciones en la parte derecha del header */
+.logout {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: end;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .inventory-header__logout {
   justify-self: end;
   background: var(--inventory-btn-delete);

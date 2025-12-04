@@ -109,15 +109,21 @@ body {
 }
 
 /* Variantes de color para botones (valores vienen de variables globales) */
-.rojo { background: var(--rojo); }
-.verde { background: var(--verde); }
-.verde2{background: var(--verde2);}
-.verde-oscuro{background: var(--verde-oscuro);}
-.amarillo1 { background: var(--amarillo1); }
-.amarillo2{background: var(--amarillo2);}
-.azul { background: var(--azul); }
-.morado { background: var(--morado); }
-.naranja { background: var(--naranja); }
+.rojo { background: var(--rojo); }      /*TOMA DE PEDIDOS*/
+.verde { background: var(--verde); }    /*CONTROL INVENTARIO*/
+.amarillo{background: var(--amarillo);}  /*AGREGAR CLIENTES*/
+.verde2{background: var(--verde2);} /*PROVEERDOR*/
+.verde-oscuro{background: var(--verde-oscuro);} /*COMPRAS*/
+.azul-claro{background: var(--azul-claro);} /*REPORTES*/
+.morado{background: var(--morado) ;} /*GASTOS*/
+.naranja{background: var(--naranja);} /*USUARIOS*/
+.azul-oscuro{background: var(--azul-oscuro);} /*CONFIGURACION*/
+
+
+
+
+
+
 
 /* -------- PANEL CENTRAL -------- */
 /* Panel central: caja card con sombra y contenido centrado */

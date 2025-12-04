@@ -9,7 +9,7 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: var(--color-primary);
+    background: var(--color-form-panel);
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
@@ -135,8 +135,8 @@ body {
 .table-container {
     background: #f7f3f3;
     margin-top: 25px;
-    padding: 10px;
     border-radius: 4px;
+    height: 500px;
 }
 
 .table {
