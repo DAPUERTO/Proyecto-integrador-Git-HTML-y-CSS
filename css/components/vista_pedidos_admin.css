@@ -155,6 +155,7 @@ body {
   font-weight: bold;
   color: var(--color-text-light);
   min-width: 70px;
+  text-decoration: none;
 }
 
 .btn-agregar { background: var(--color-btn-agregar); }
@@ -268,4 +269,67 @@ tbody tr {
   border: 1px solid var(--color-border-light);
   text-align: right;
   background: white;
+}
+
+
+
+
+
+
+
+
+/*
+===============================================================================*/
+
+
+/* Fondo oscuro */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Mostrar popup */
+#popup-editar:target {
+    display: flex;
+}
+
+/* Caja */
+.popup-content {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+    animation: aparecer 0.2s ease;
+    text-align: center;
+}
+
+/* Botones */
+.buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ok, .cancel {
+    padding: 8px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.ok { background: #4CAF50; }
+.cancel { background: #d9534f; }
+
+/* Animación */
+@keyframes aparecer {
+    from { transform: scale(0.8); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
 }

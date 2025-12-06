@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ventas Realizadas</title>
+    <title>Anular Factura</title>
 
     <!-- HOJA DE ESTILOS -->
-    <link rel="stylesheet" href="/css/components/Ventas-Realizadas.css" />
+    <link rel="stylesheet" href="/css/components/Anular_Venta.css" />
   </head>
 
   <body>
@@ -15,19 +15,18 @@
       <!-- Espaciador para que el título quede centrado -->
       <div class="header__spacer"></div>
 
-      <h1 class="header__title">Ventas Realizadas</h1>
-
-      
+      <h1 class="header__title">Anular Factura</h1>
 
       <!-- Botón de salir -->
-      <!-- <button class="header__exit" aria-label="Salir">
+      <!--
+      <button class="header__exit" aria-label="Salir">
         <img
           src="/assets/icons/cerrar-sesion.png"
           alt="Salir"
           class="header__exit-icon"
         />
-      </button> -->
-
+      </button>
+      -->
 
       <a class="header__exit" href="vista_pedido_admin.html" aria-label="salir">
         <img
@@ -36,19 +35,6 @@
           class="header__exit-icon"
         />
       </a>
-
-
-
-
-
-
-
-
-
-
-
-
-
     </header>
 
     <!-- CONTENIDO PRINCIPAL -->
@@ -92,9 +78,7 @@
           <tbody>
             <tr class="sales-table__row sales-table__row--empty">
               <td class="sales-table__cell" colspan="6">
-                <span class="sales-table__empty"
-                  >No hay registros disponibles.</span
-                >
+                <span class="sales-table__empty">No hay registros disponibles.</span>
               </td>
             </tr>
           </tbody>
@@ -102,33 +86,45 @@
       </section>
     </main>
 
+    <!-- FOOTER -->
     <footer class="sales-footer" aria-label="Acciones secundarias">
-      <button class="sales-footer__button" type="button">
-        <img
-          class="sales-footer__button-icon"
-          src="../../assets/icons/excel-logo.png"
-          alt="Icono Excel"
-        />
-        <span class="sales-footer__button-text">editar en excel</span>
-      </button>
-
-      <nav class="sales-pagination" aria-label="Paginacion">
+      <nav class="sales-pagination" aria-label="Paginación">
         <button
           class="sales-pagination__control"
           type="button"
-          aria-label="Pagina anterior"
+          aria-label="Página anterior"
         >
           &#8249;
         </button>
-        <span class="sales-pagination__info">Pagina 1 de 1</span>
+
+        <span class="sales-pagination__info">Página 1 de 1</span>
+
         <button
           class="sales-pagination__control"
           type="button"
-          aria-label="Pagina siguiente"
+          aria-label="Página siguiente"
         >
           &#8250;
         </button>
       </nav>
+
+      <button class="sales-footer__button" type="button">
+        <img
+          class="sales-footer__button-icon"
+          src="../../assets/icons/anularVenta.png"
+          alt="Icono Anular venta"
+        />
+        <span class="sales-footer__button-text">Anular Venta</span>
+      </button>
+
+      <button class="sales-footer__button" type="button">
+        <img
+          class="sales-footer__button-icon"
+          src="../../assets/icons/factura.png"
+          alt="Icono Ver ventas"
+        />
+        <span class="sales-footer__button-text">Ver Facturas Anuladas</span>
+      </button>
     </footer>
   </body>
 </html>
