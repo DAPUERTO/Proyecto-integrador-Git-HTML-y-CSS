@@ -16,7 +16,7 @@
   gap: 1rem;
   padding: 1rem 2rem;
   background: var(--inventory-header-bg);
-  color: var(--color-texto-oscuro, #3f3b3b);
+  color: var(--color-texto-oscuro);
   position: relative;
 }
 
@@ -253,7 +253,6 @@ justify-self: end;
 .inventory-table {
   background: var(--inventory-panel);
   border-radius: 4px;
-  padding: 1rem;
   box-shadow: var(--sombra);
   display: grid;
 }
@@ -409,6 +408,141 @@ justify-self: end;
   border: 0;
 }
 
+/* ============================================================= */
+
+
+/* Ocultar el checkbox */
+.admin-checked__add {
+    display: none;
+}
+
+/* Ventana superpuesta (fondo oscuro) */
+.admin-users__form {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.25s ease;
+}
+
+/* Cuando se marca el checkbox → mostrar modal */
+#check-add:checked ~ .admin-users__form {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Ventana interna */
+.admin-users__form-section {
+    display: flex;
+    flex-direction: column;
+    width: 787px;
+    height: 1024px;
+    background-color: var(--background-main);
+    box-shadow: 2px 2px 4px 1px;
+}
+
+/* Cabecera */
+.admin-users__form-header {
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    background-color: var(--background-header);
+    height: 80px;
+}
+
+.admin-users__form-title {
+    font-family: var(--fuente-letra);
+    font-size: 50px;
+    font-weight: bold;
+    align-self: center;
+    justify-self: center;
+    margin-left: 110px;
+}
+
+.admin-users__form-close {
+    justify-self: center;
+    align-self: center;
+    cursor: pointer;
+}
+
+/* Cuerpo */
+.admin-users__form-main {
+    display: flex;
+    justify-content: center;
+}
+
+.admin-users__form-body {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px 30px 30px 30px;
+}
+
+.admin-users__form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-users__form-label {
+    font-size: 30px;
+    font-family: var(--fuente-letra);
+    font-weight: bold;
+    color: white;
+}
+
+.admin-users__form-input,
+.admin-users__form-select {
+    width: 462px;
+    height: 59px;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-size: 25px;
+    padding-left: 10px;
+}
+
+.admin-users__form-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 30px;
+    width: 462px;
+    height: 61px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+.admin-users__form-close-icon {
+    width: 49px;
+    height: 49px;
+}
+
+
+
+
+
+.admin-users__form-button-icon {
+    width: 47px;
+    height: 47px;
+}
+
+
+
+
+
+
+/* ============================================================= */
 @media (max-width: 900px) {
   .inventory-header {
     grid-template-columns: 1fr auto;

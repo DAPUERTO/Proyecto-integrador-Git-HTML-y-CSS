@@ -73,15 +73,15 @@
 
   /* Paleta específica para Reporte de Inventario */
   --inventory-bg: #6f849c;
-  --inventory-header-bg: #9b9291;
-  --inventory-surface: #bfb9b8;
+  --inventory-header-bg: #929292;
+  --inventory-surface: #A3A5A6;
   --inventory-panel: #728aa6;
   --inventory-search-bg: #c7c4c4;
   --inventory-btn-register: #f6b24b;
   --inventory-btn-edit: #e6ad63;
   --inventory-btn-delete: #78a8c7;
   --inventory-btn-text: #744c2d;
-  --inventory-table-header: #bbb3b2;
+  --inventory-table-header: #929292;
   --inventory-table-border: #6f6666;
   --inventory-table-body: #f6eded;
   --inventory-footer-bg: #6b7f96;
