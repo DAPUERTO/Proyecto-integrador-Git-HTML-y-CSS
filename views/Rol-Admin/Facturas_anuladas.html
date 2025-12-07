@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facturas Anuladas</title>
+
+    <!-- HOJA DE ESTILOS -->
+    <link rel="stylesheet" href="/css/components/Facturas_anuladas.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <!-- Espaciador para que el título quede centrado -->
+      <div class="header__spacer"></div>
+
+      <h1 class="header__title">Facturas Anuladas</h1>
+
+     
+
+      <a class="header__exit" href="vista_pedido_admin.html" aria-label="salir">
+        <img
+          src="/assets/icons/cerrar-sesion.png"
+          alt="Salir"
+          class="header__exit-icon"
+        />
+      </a>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container">
+    
+
+        
+      </section>
+
+      <!-- ==================== TABLA ==================== -->
+      <section class="table-container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th class="table__header">Factura</th>
+              <th class="table__header">Cliente</th>
+              <th class="table__header">Total</th>
+              <th class="table__header">Fecha</th>
+              <th class="table__header">Hora</th>
+              <th class="table__header">Cajero</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr class="sales-table__row sales-table__row--empty">
+              <td class="sales-table__cell" colspan="6">
+                <span class="sales-table__empty">No hay registros disponibles.</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="sales-footer" aria-label="Acciones secundarias">
+      <nav class="sales-pagination" aria-label="Paginación">
+        <button
+          class="sales-pagination__control"
+          type="button"
+          aria-label="Página anterior"
+        >
+          &#8249;
+        </button>
+
+        <span class="sales-pagination__info">Página 1 de 1</span>
+
+        <button
+          class="sales-pagination__control"
+          type="button"
+          aria-label="Página siguiente"
+        >
+          &#8250;
+        </button>
+      </nav>
+    </footer>
+  </body>
+</html>
