@@ -48,8 +48,8 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column: 1/2;
     grid-row: 1/2;
-    width: 62rem;
-    height: 60rem;
+    /* width: 62rem;
+    height: 60rem; */
     justify-self: center;
     align-self: center;
     background-color: white;
@@ -165,8 +165,8 @@ body {
 .admin-users__form-section {
     display: hidden;
     flex-direction: column;
-    width: 787px;
-    height: 1024px;
+    /* width: 787px;
+    height: 1024px; */
     background-color: var(--background-main);
     box-shadow: 2px 2px 4px 1px;
 }

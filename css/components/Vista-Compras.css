@@ -383,7 +383,7 @@ justify-self: end;
   grid-template-columns: 1fr;
   align-items: center;
   gap: 1rem;
-  padding: 1rem 1.5rem;
+  padding: 0.5rem 0.5rem;
   background: var(--inventory-footer-bg);
   color: var(--color-text-light, #fff);
 }
