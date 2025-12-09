@@ -130,10 +130,19 @@
   <footer class="footer-bar" aria-labelledby="acciones-finales">
     <h2 id="acciones-finales" class="sr-only">Acciones finales</h2>
     <nav class="footer-actions" aria-label="Gestion de pago">
-      <button type="button" class="btn-footer btn-pagar">
+      
+<!--=============================================================================================-->      
+      <!-- <button type="button" class="btn-footer btn-pagar">
         <img src="/assets/icons/billete-de-banco.png" alt="Pagar" class="icon-img-footer" />
         Pagar
-      </button>
+      </button> -->
+
+      <label for="check-payment" class="btn-footer btn-pagar">
+  <img class="icon-img-footer" src="/assets/icons/billete-de-banco.png" alt="Icono pagar" />
+  Pagar
+</label>
+
+<!--==============================================================================================-->
 
 
       <!-- <button type="button" class="btn-footer btn-ver-ventas">
@@ -188,6 +197,49 @@
     </div>
   </div>
   <!-- ==================================== -->
+
+  <!-- ================PAGAR ============================-->
+
+  <!-- Checkbox controlador del modal para el botón realizar pago (oculto) -->
+<input type="checkbox" id="check-payment" class="admin-checked__payment">
+
+<div class="payment-modal">
+  <section class="payment-modal__section">
+    <header class="payment-modal__header">
+      <h1 class="payment-modal__title">Realizar pago</h1>
+
+      <!-- Botón cerrar -->
+      <label for="check-payment" class="payment-modal__close">
+        <img class="payment-modal__close-icon" src="/assets/icons/cerrar-sesion.png" alt="Cerrar">
+      </label>
+    </header>
+
+    <main class="payment-modal__main">
+      <form class="payment-modal__form">
+
+        <!-- Total a pagar -->
+        <div class="payment-modal__total-box">
+          <h2 class="payment-modal__total-label">Total a pagar : </h2>
+        </div>
+
+        <!-- Campo de dinero dado -->
+        <div class="payment-modal__field">
+          <label class="payment-modal__label">Ingrese el monto de dinero dado por el cliente</label>
+          <input class="payment-modal__input" type="number" placeholder="0" />
+        </div>
+
+        <!-- Botón confirmar -->
+        <button class="payment-modal__button">
+          <img class="payment-modal__button-icon" src="/assets/icons/billete-de-banco.png" alt="">
+          <span class="payment-modal__button-text">Confirmar Pago</span>
+        </button>
+      </form>
+    </main>
+  </section>
+</div>
+
+
+  <!-- ==================================================-->
 
 
 </body>
