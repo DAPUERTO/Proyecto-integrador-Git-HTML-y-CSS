@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Clientes</title>
+  <title>Compras</title>
   <link rel="stylesheet" href="../../css/components/variablesGlobales/global.css" />
-  <link rel="stylesheet" href="../../css/components/Vista_AgregarClientes.css" />
+  <link rel="stylesheet" href="../../css/components/Vista-Compras.css" />
 </head>
 
 <body class="inventory">
@@ -16,7 +16,7 @@
       <span class="inventory-header__role">Administrador</span>
     </div>
 
-    <h1 class="inventory-header__title">CLIENTES</h1>
+    <h1 class="inventory-header__title">COMPRAS</h1>
 
     <!-- <button -->
     <a class="logout" href="vista_principal.html" class="inventory-header__logout" type="button"
@@ -103,25 +103,51 @@
 
 <!--========================================================================================================-->
     <section class="inventory-table" aria-label="Tabla de inventario">
+        
 
 <!--========================================================================================================-->
- 
+   
     <div class="inventory-extra">
-        <label class="inventory-extra__label">Nombre:</label>
-        <input class="inventory-extra__input" type="text">
 
-        <label class="inventory-extra__label">Cedula:</label>
-        <input class="inventory-extra__input" type="text">
+    <h2>Registrar pedidos</h2>
 
-        <label class="inventory-extra__label">Celular:</label>
-        <input class="inventory-extra__input" type="text">
+    <label class="inventory-extra__label">N° Pedido:</label>
+    <input class="inventory-extra__input" type="text" value="1" readonly>
 
-        <label class="inventory-extra__label">Direccion:</label>
-        <input class="inventory-extra__input" type="text">
+    <label class="inventory-extra__label">Proveedor:</label>
+    <select class="inventory-extra__input">
+        <option value="">Seleccione proveedor</option>
+        <option>Postobon</option>
+        <option>Coca cola </option>
+    </select>
 
-        <label class="inventory-extra__label">Correo:</label>
-        <input class="inventory-extra__input" type="text">
+    <label class="inventory-extra__label">Producto:</label>
+    <select class="inventory-extra__input">
+        <option value="">Seleccione producto</option>
+        <option>Hit</option>
+        <option>cocacola mini</option>
+    </select>
+
+    <label class="inventory-extra__label">Precio:</label>
+    <input class="inventory-extra__input" type="text">
+
+    <label class="inventory-extra__label">Costo:</label>
+    <input class="inventory-extra__input" type="text">
+
+    <div class="row">
+        <div class="col">
+            <label class="inventory-extra__label">Nueva Cant:</label>
+            <input class="inventory-extra__input" type="text">
+        </div>
+
+        <div class="col">
+            <label class="inventory-extra__label">Stock:</label>
+            <input class="inventory-extra__input" type="text">
+        </div>
     </div>
+
+</div>
+
 
 <!--======================================================================================================-->
       <div class="inventory-table__wrapper">
@@ -193,7 +219,7 @@
         <form class="admin-users__form-body">
 
           <div class="admin-users__form-field">
-            <a class="admin-users__form-label">Cliente agregado correctamente</a>
+            <a class="admin-users__form-label">Pedido agregado correctamente</a>
             
           </div>
 
@@ -209,51 +235,78 @@
 
 
   <!-- ====================================================================================== -->
-<!-- Checkbox oculto controlador del modal -->
+<!-- Checkbox oculto controlador del modal --> 
 <input type="checkbox" id="check-edit2" class="modal-edit2__checker">
 
 <div class="modal-edit2__overlay">
   <section class="modal-edit2__window">
 
     <header class="modal-edit2__header">
-      <h1 class="modal-edit2__title">Modificar cliente</h1>
+      <h1 class="modal-edit2__title">Modificar pedido</h1>
 
       <label for="check-edit2" class="modal-edit2__close-btn">
-        <img class="modal-edit2__close-icon" src="/assets/icons/cerrar-sesion.png" alt="">
+        <img class="modal-edit2__close-icon" src="/assets/icons/cerrar-sesion.png" alt="cerrar-ventana">
       </label>
     </header>
 
     <main class="modal-edit2__main">
       <form class="modal-edit2__form">
 
+        <!-- N° Pedido -->
         <div class="modal-edit2__field">
-          <label class="modal-edit2__label-input">Nombre:</label>
-          <input class="modal-edit2__input" type="text" />
+          <label class="modal-edit2__label-input">N° Pedido:</label>
+          <input class="modal-edit2__input" type="text" value="1" readonly />
         </div>
 
+        <!-- Proveedor -->
         <div class="modal-edit2__field">
-          <label class="modal-edit2__label-input">Cedula:</label>
-          <input class="modal-edit2__input" type="text" />
+          <label class="modal-edit2__label-input">Proveedor:</label>
+          <select class="modal-edit2__input">
+            <option></option>
+            <option>postobon</option>
+            <option>coca cola</option>
+            <option>alpina</option>
           </select>
         </div>
 
+        <!-- Producto -->
         <div class="modal-edit2__field">
-          <label class="modal-edit2__label-input">Celular:</label>
+          <label class="modal-edit2__label-input">Producto:</label>
+          <select class="modal-edit2__input">
+            <option></option>
+            <option>piña</option>
+            <option>pepsi</option>
+          </select>
+        </div>
+
+        <!-- Precio -->
+        <div class="modal-edit2__field">
+          <label class="modal-edit2__label-input">Precio:</label>
           <input class="modal-edit2__input" type="text" />
         </div>
 
-         <div class="modal-edit2__field">
-          <label class="modal-edit2__label-input">Direccion:</label>
+        <!-- Costo -->
+        <div class="modal-edit2__field">
+          <label class="modal-edit2__label-input">Costo:</label>
           <input class="modal-edit2__input" type="text" />
         </div>
 
-       <div class="modal-edit2__field">
-          <label class="modal-edit2__label-input">Correo:</label>
-          <input class="modal-edit2__input" type="text" />
+        <!-- FILA - NUEVA CANT Y STOCK -->
+        <div class="modal-edit2__field-row">
+
+          <div class="modal-edit2__mini-field">
+            <label class="modal-edit2__label-mini">Nueva Cant:</label>
+            <input class="modal-edit2__input-mini" type="text">
+          </div>
+
+          <div class="modal-edit2__mini-field">
+            <label class="modal-edit2__label-mini">Stock:</label>
+            <input class="modal-edit2__input-mini" type="text" value="16">
+          </div>
+
         </div>
 
-        
-
+        <!-- BOTÓN -->
         <button class="modal-edit2__button">
           <img class="modal-edit2__button-icon" src="/assets/icons/guardar.png" alt="agregar">
           <span class="modal-edit2__button-text">Agregar</span>
@@ -264,6 +317,7 @@
 
   </section>
 </div>
+
 
 
 <!-- ELIMINAR -->
