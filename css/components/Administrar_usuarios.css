@@ -21,7 +21,7 @@ body {
 
 
 .admin-users__title {
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
 }
 
@@ -204,7 +204,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 100px;
-    padding: 100px 30px 30px 30px;
+    padding: 30px 30px 30px 30px;
 }
 
 .admin-users__form-field {
@@ -272,7 +272,192 @@ body {
 /*=============PERMISOS==================================*/
 
 
+.admin-checked__permissions {
+    display: none;
+}
 
+/* Modal oculto por defecto */
+.permissions-modal {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Cuando se marca el checkbox → mostrar modal */
+#check-permissions:checked ~ .permissions-modal {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Ventana interna */
+.permissions-modal__section {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    background-color: var(--background-main, #5a6c7d);
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+/* Cabecera */
+.permissions-modal__header {
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    background-color: var(--background-header, #4a5c6d);
+    height: 80px;
+    padding: 0 20px;
+}
+
+.permissions-modal__title {
+    font-family: var(--fuente-letra, Arial, sans-serif);
+    font-size: 30px;
+    font-weight: bold;
+    align-self: center;
+    justify-self: start;
+    color: var(--color-text-title);
+}
+
+.permissions-modal__close {
+    justify-self: center;
+    align-self: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.permissions-modal__close:hover {
+    transform: scale(1.1);
+}
+
+.permissions-modal__close-icon {
+    width: 49px;
+    height: 49px;
+}
+
+/* Cuerpo del modal */
+.permissions-modal__main {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(135deg, #5dade2 0%, #85c1e9 100%);
+    padding: 40px 30px;
+}
+
+.permissions-modal__form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+}
+
+/* Grid de permisos (2 columnas) */
+.permissions-modal__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.permissions-modal__column {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+/* Campo individual con checkbox */
+.permissions-modal__field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.permissions-modal__label {
+    font-size: 22px;
+    font-family: var(--fuente-letra, Arial, sans-serif);
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.permissions-modal__checkbox {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    
+}
+
+/* Contenedor de botones */
+.permissions-modal__actions {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Botones de acción */
+.permissions-modal__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 26px;
+    font-weight: bold;
+    width: 220px;
+    height: 61px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    font-family: var(--fuente-letra, Arial, sans-serif);
+}
+
+/* Botón Guardar (blanco con icono azul) */
+.permissions-modal__button--save {
+    background-color: white;
+    color: #2c3e50;
+}
+
+.permissions-modal__button--save:hover {
+    
+    /* transform: translateY(-2px); */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Botón Cancelar (blanco con X roja) */
+.permissions-modal__button--cancel {
+    background-color: white;
+    color: #2c3e50;
+}
+
+.permissions-modal__button--cancel:hover {
+    /* transform: translateY(-2px); */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.permissions-modal__button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.permissions-modal__button-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.permissions-modal__button-text {
+    font-family: var(--fuente-letra, Arial, sans-serif);
+}
 
 
 /*=========================================================*/

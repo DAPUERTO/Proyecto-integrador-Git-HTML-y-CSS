@@ -85,14 +85,10 @@
           <p class="admin-users__action-label">Permisos</p>
         </button> -->
  <button class="admin-users__action">
-	<label for="check-permisos">
-          <img
-            class="admin-users__action-icon"
-            src="/assets/icons/permisos.png"
-            alt="permisos"
-          />
-          <p class="admin-users__action-label">Permisos</p>
-	</label>
+	<label for="check-permissions" class="admin-users__action-icon">
+  <img class="admin-users__action-icon" src="/assets/icons/permisos.png" alt="Icono permisos" />
+  <p class="admin-users__action-label">Configurar Permisos</p>
+</label>
         </button>
 
      
@@ -232,7 +228,109 @@
 
     <!--=======================PERMISOS MODAL============================================-->
 
+<!-- Checkbox controlador del modal para configurar permisos (oculto) -->
+<input type="checkbox" id="check-permissions" class="admin-checked__permissions">
 
+<div class="permissions-modal">
+  <section class="permissions-modal__section">
+    <header class="permissions-modal__header">
+      <h1 class="permissions-modal__title">Configurar Permisos para admin</h1>
+
+      <!-- Botón cerrar -->
+      <label for="check-permissions" class="permissions-modal__close">
+        <img class="permissions-modal__close-icon" src="/assets/icons/cerrar-sesion.png" alt="Cerrar">
+      </label>
+    </header>
+
+    <main class="permissions-modal__main">
+      <form class="permissions-modal__form">
+
+        <!-- Grid de permisos -->
+        <div class="permissions-modal__grid">
+          
+          <!-- Columna izquierda -->
+          <div class="permissions-modal__column">
+            
+            <!-- Toma de pedidos -->
+            <div class="permissions-modal__field">
+              <label class="permissions-modal__label">Toma de pedidos</label>
+              <input class="permissions-modal__checkbox" type="checkbox" />
+            </div>
+
+            <!-- Control de inventario -->
+            <div class="permissions-modal__field">
+              <label class="permissions-modal__label">Control de inventario</label>
+              <input class="permissions-modal__checkbox" type="checkbox" />
+            </div>
+
+            <!-- Agregar Clientes -->
+            <div class="permissions-modal__field">
+              <label class="permissions-modal__label">Agregar Clientes</label>
+              <input class="permissions-modal__checkbox" type="checkbox" />
+            </div>
+
+            <!-- Proveedor -->
+            <div class="permissions-modal__field">
+              <label class="permissions-modal__label">Proveedor</label>
+              <input class="permissions-modal__checkbox" type="checkbox" />
+            </div>
+
+            <!-- Clientes -->
+            <div class="permissions-modal__field">
+              <label class="permissions-modal__label">Clientes</label>
+              <input class="permissions-modal__checkbox" type="checkbox" />
+            </div>
+
+          </div>
+
+          <!-- Columna derecha -->
+          <div class="permissions-modal__column">
+            
+            <!-- Reportes -->
+            <div class="permissions-modal__field">
+              <label class="permissions-modal__label">Reportes</label>
+              <input class="permissions-modal__checkbox" type="checkbox" />
+            </div>
+
+            <!-- Gastos -->
+            <div class="permissions-modal__field">
+              <label class="permissions-modal__label">Gastos</label>
+              <input class="permissions-modal__checkbox" type="checkbox" />
+            </div>
+
+            <!-- Usuarios -->
+            <div class="permissions-modal__field">
+              <label class="permissions-modal__label">Usuarios</label>
+              <input class="permissions-modal__checkbox" type="checkbox" />
+            </div>
+
+            <!-- Configuracion -->
+            <div class="permissions-modal__field">
+              <label class="permissions-modal__label">Configuracion</label>
+              <input class="permissions-modal__checkbox" type="checkbox" />
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Botones de acción -->
+        <div class="permissions-modal__actions">
+          <button type="button" class="permissions-modal__button permissions-modal__button--save">
+            <img class="permissions-modal__button-icon" src="/assets/icons/guardar.png" alt="guardar">
+            <span class="permissions-modal__button-text">Guardar</span>
+          </button>
+
+          <label for="check-permissions" class="permissions-modal__button permissions-modal__button--cancel">
+            <img class="permissions-modal__button-icon" src="/assets/icons/cerrar.png" alt="cancelar">
+            <span class="permissions-modal__button-text">Cancelar</span>
+          </label>
+        </div>
+
+      </form>
+    </main>
+  </section>
+</div>
 
     <!--====================================================================-->
   </body>
