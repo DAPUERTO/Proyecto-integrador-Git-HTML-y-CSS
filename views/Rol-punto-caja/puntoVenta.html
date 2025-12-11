@@ -1,93 +1,90 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Caja</title>
+<!-- =============================================
+     LOGIN PUNTO DE VENTA (CAJA)
+     Página de autenticación para el rol de Cajero
+     Permite acceso al dashboard de caja
+     ============================================= -->
 
-    <!-- Estilos -->
-    <link rel="stylesheet" href="../../css/components/puntoVenta.css" />
+<head>
+  <!-- =============================================
+         META INFORMACIÓN Y ESTILOS
+         ============================================= -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caja</title>
 
-    <!-- Google Fonts (optimizado sin duplicados) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@100;300;400;600;700;900&family=VT323&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+  <!-- Estilos específicos del login caja -->
+  <link rel="stylesheet" href="../../css/components/puntoVenta.css" />
 
-  <body>
-    <header class="site-header">
-      <img
-        src="../../assets/imagenes/logo.png"
-        alt="Logo oficial de Pizzasoft"
-        class="site-header__logo"
-      />
-    </header>
+  <!-- =============================================
+         FUENTES DE GOOGLE FONTS
+         ============================================= -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@100;300;400;600;700;900&family=VT323&display=swap"
+    rel="stylesheet" />
+</head>
 
-    <main class="page-main">
-      <!-- Título principal -->
-      <h1 class="page-main__titulo">Pizzasoft</h1>
+<body>
+  <!-- =============================================
+         HEADER - Logo de la aplicación
+         ============================================= -->
+  <header class="site-header">
+    <img src="../../assets/imagenes/logo.png" alt="Logo oficial de Pizzasoft" class="site-header__logo" />
+  </header>
 
-      <!-- Contenedor del login -->
+  <!-- =============================================
+         MAIN - Contenido principal
+         Contiene el formulario de login
+         ============================================= -->
 
-      <div class="login-caja">
-        <h2>Bienvenido</h2>
-        <p class="subtitulo">Punto de Venta</p>
-        <p>Ingrese sus datos de acceso</p>
+  <main class="page-main">
+    <!-- Título principal -->
+    <h1 class="page-main__titulo">Pizzasoft</h1>
 
-        <!-- Formulario -->
-        <form action="#" method="POST" class="formulario">
-          <!-- Usuario -->
-          <div class="input-grupo">
-            <label for="usuario" class="input-grupo__label">Usuario</label>
-            <input
-              type="text"
-              id="usuario"
-              name="usuario"
-              class="input-grupo__input"
-              required
-            />
-          </div>
+    <!-- Contenedor del login -->
 
-          <!-- Contraseña -->
-          <div class="input-grupo">
-            <label for="contrasena" class="input-grupo__label"
-              >Contraseña</label
-            >
-            <input
-              type="password"
-              id="contrasena"
-              name="contrasena"
-              class="input-grupo__input"
-              required
-            />
-          </div>
+    <div class="login-caja">
+      <h2>Bienvenido</h2>
+      <p class="subtitulo">Punto de Venta</p>
+      <p>Ingrese sus datos de acceso</p>
 
-         
-          <!-- Botón Ingresar -->
-          <div class="botones">
-            <button type="submit" class="boton boton-ingresar">
-              <a
-                href="../Rol-punto-caja/vista_principal.html"
-                class="botones_ingresar"
-                >Ingresar</a
-              >
-            </button>
-          </div>
-        </form>
+      <!-- Formulario -->
+      <form action="#" method="POST" class="formulario">
+        <!-- Usuario -->
+        <div class="input-grupo">
+          <label for="usuario" class="input-grupo__label">Usuario</label>
+          <input type="text" id="usuario" name="usuario" class="input-grupo__input" required />
+        </div>
 
-        <!-- Botón atrás (correcto, sin usar <button><a>) -->
-        <a href="../login.html" class="boton boton-atras">Atrás</a>
-      </div>
-    </main>
+        <!-- Contraseña -->
+        <div class="input-grupo">
+          <label for="contrasena" class="input-grupo__label">Contraseña</label>
+          <input type="password" id="contrasena" name="contrasena" class="input-grupo__input" required />
+        </div>
 
-    <!-- ====================================
+
+        <!-- Botón Ingresar -->
+        <div class="botones">
+          <button type="submit" class="boton boton-ingresar">
+            <a href="../Rol-punto-caja/vista_principal.html" class="botones_ingresar">Ingresar</a>
+          </button>
+        </div>
+      </form>
+
+      <!-- Botón atrás (correcto, sin usar <button><a>) -->
+      <a href="../login.html" class="boton boton-atras">Atrás</a>
+    </div>
+  </main>
+
+  <!-- ====================================
          FOOTER
     ===================================== -->
-    <footer class="mi-footer">
-      <p class="mi-footer-text">Versión 1.0</p>
-    </footer>
-  </body>
+  <footer class="mi-footer">
+    <p class="mi-footer-text">Versión 1.0</p>
+  </footer>
+</body>
+
 </html>

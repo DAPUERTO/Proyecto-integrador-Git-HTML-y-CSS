@@ -1,10 +1,21 @@
+/* =============================================
+   VISTA DE PEDIDOS - ADMINISTRADOR
+   Pantalla de toma de pedidos y facturación
+   Contiene: Topbar, formulario, tabla, footer, modales
+   ============================================= */
+
 @import "variablesGlobales/global.css";
 
+/* -------------------------
+   BODY - Layout principal
+   ------------------------- */
 body {
   background: var(--color-primary);
   font-family: Arial, Helvetica, sans-serif;
   min-height: 100vh;
 }
+
+/* Clase para elementos de accesibilidad (ocultos visualmente) */
 
 .sr-only {
   position: absolute;
@@ -512,4 +523,400 @@ tbody tr {
 @keyframes aparecer {
     from { transform: scale(0.8); opacity: 0; }
     to   { transform: scale(1); opacity: 1; }
+}
+
+/* ============================================
+   MEDIA QUERIES - RESPONSIVE DESIGN
+   ============================================ */
+
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .topbar {
+        padding: 8px 15px;
+    }
+
+    .topbar-title {
+        font-size: 22px;
+    }
+
+    .topbar-right {
+        font-size: 13px;
+        gap: 10px;
+    }
+
+    .form-panel {
+        margin: 0 15px 10px;
+        padding: 12px;
+    }
+
+    .form-row {
+        gap: 12px;
+    }
+
+    .form-group select,
+    .form-group input {
+        min-width: 100px;
+        font-size: 12px;
+    }
+
+    .btn-icon {
+        padding: 6px 10px;
+        font-size: 11px;
+        min-width: 60px;
+    }
+
+    .icon-img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .table-container {
+        margin: 0 15px;
+        min-height: 250px;
+    }
+
+    th, td {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .footer-bar {
+        margin: 8px 15px 12px;
+    }
+
+    .btn-footer {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .total-pagar output {
+        width: 100px;
+        font-size: 13px;
+    }
+
+    /* Modal de pago en tablet */
+    .payment-modal__section {
+        width: 90%;
+        max-width: 500px;
+    }
+
+    .payment-modal__title {
+        font-size: 28px;
+        margin-left: 30px;
+    }
+
+    .payment-modal__main {
+        padding: 25px 40px;
+    }
+
+    .payment-modal__total-label {
+        font-size: 26px;
+    }
+
+    .payment-modal__input {
+        height: 50px;
+        font-size: 24px;
+    }
+
+    .payment-modal__button {
+        height: 55px;
+        font-size: 24px;
+    }
+}
+
+/* Celular (hasta 767px) */
+@media (max-width: 767px) {
+    .app {
+        border-width: 2px;
+    }
+
+    .topbar {
+        padding: 8px 10px;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .topbar-left {
+        gap: 8px;
+    }
+
+    .user-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .topbar-title {
+        font-size: 18px;
+    }
+
+    .topbar-right {
+        font-size: 11px;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .circle-btn {
+        width: 24px;
+        height: 24px;
+    }
+
+    .header-info {
+        padding: 4px 10px;
+        font-size: 12px;
+    }
+
+    .form-panel {
+        margin: 0 10px 8px;
+        padding: 10px;
+    }
+
+    .form-row {
+        gap: 8px;
+        margin-bottom: 8px;
+    }
+
+    .form-group {
+        flex-wrap: wrap;
+        gap: 3px;
+    }
+
+    .form-group label {
+        font-size: 12px;
+    }
+
+    .form-group select,
+    .form-group input {
+        min-width: 80px;
+        padding: 2px 4px;
+        font-size: 11px;
+    }
+
+    .form-group input.small {
+        width: 50px;
+    }
+
+    .actions {
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .btn-icon {
+        padding: 6px 8px;
+        font-size: 10px;
+        min-width: 55px;
+    }
+
+    .icon-img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .table-container {
+        margin: 0 10px;
+        min-height: 200px;
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 500px;
+    }
+
+    th, td {
+        padding: 4px 3px;
+        font-size: 11px;
+    }
+
+    tbody {
+        height: 180px;
+    }
+
+    .footer-bar {
+        margin: 8px 10px 10px;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .footer-actions {
+        gap: 6px;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .btn-footer {
+        padding: 6px 10px;
+        font-size: 11px;
+    }
+
+    .icon-img-footer {
+        width: 16px;
+        height: 16px;
+    }
+
+    .total-pagar {
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .total-pagar output {
+        width: 100px;
+        font-size: 12px;
+    }
+
+    .popup-content {
+        width: 90%;
+        max-width: 280px;
+        padding: 15px 20px;
+    }
+
+    /* Modal de pago en celular */
+    .payment-modal__section {
+        width: 95%;
+        max-width: 350px;
+    }
+
+    .payment-modal__header {
+        grid-template-columns: 1fr 60px;
+        height: 60px;
+    }
+
+    .payment-modal__title {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    .payment-modal__close-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .payment-modal__main {
+        padding: 20px 20px;
+    }
+
+    .payment-modal__form {
+        gap: 25px;
+    }
+
+    .payment-modal__total-box {
+        padding: 20px;
+    }
+
+    .payment-modal__total-label {
+        font-size: 22px;
+    }
+
+    .payment-modal__label {
+        font-size: 18px;
+    }
+
+    .payment-modal__input {
+        height: 45px;
+        font-size: 20px;
+    }
+
+    .payment-modal__button {
+        height: 50px;
+        font-size: 20px;
+        gap: 10px;
+    }
+
+    .payment-modal__button-icon {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Celular pequeño (hasta 480px) */
+@media (max-width: 480px) {
+    .topbar {
+        padding: 6px 8px;
+    }
+
+    .topbar-title {
+        font-size: 16px;
+    }
+
+    .topbar-right {
+        font-size: 10px;
+    }
+
+    .form-panel {
+        margin: 0 8px 6px;
+        padding: 8px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .form-group {
+        justify-content: space-between;
+    }
+
+    .form-group select,
+    .form-group input {
+        flex: 1;
+        min-width: 60px;
+    }
+
+    .btn-icon {
+        padding: 5px 6px;
+        font-size: 9px;
+        min-width: 45px;
+    }
+
+    .icon-img {
+        width: 16px;
+        height: 16px;
+    }
+
+    table {
+        min-width: 400px;
+    }
+
+    th, td {
+        padding: 3px 2px;
+        font-size: 10px;
+    }
+
+    .btn-footer {
+        padding: 5px 8px;
+        font-size: 10px;
+    }
+
+    .total-pagar output {
+        width: 80px;
+        font-size: 11px;
+    }
+
+    .payment-modal__section {
+        max-width: 300px;
+    }
+
+    .payment-modal__title {
+        font-size: 16px;
+    }
+
+    .payment-modal__total-label {
+        font-size: 18px;
+    }
+
+    .payment-modal__label {
+        font-size: 16px;
+    }
+
+    .payment-modal__input {
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .payment-modal__button {
+        height: 45px;
+        font-size: 16px;
+    }
 }

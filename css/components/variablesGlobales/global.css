@@ -1,140 +1,200 @@
-/* Variables y reglas globales compartidas */
+/* =============================================
+   PIZZASOFT - VARIABLES GLOBALES CSS
+   Sistema de diseño centralizado
+   ============================================= */
+
 :root {
-
-  --background-header: #929292;
-  --color-text-title: #504D4D;
-  --background-main: #79B2E0;
-  --background-title-table: #D9D9D9;
+  /* =========================================
+     COLORES DE LAYOUT Y ESTRUCTURA
+     Fondos principales de la aplicación
+     ========================================= */
+  --background-header: #929292;       /* Fondo del header */
+  --background-main: #79B2E0;         /* Fondo principal de las vistas */
+  --background-title-table: #D9D9D9;  /* Encabezado de tablas */
+  --color-fondo: #ddd;                /* Fondo general */
+  --color-fondo-caja: #ffffff;        /* Fondo de cajas/cards */
   
-  --color-primario: #ff7b00;
-  --color-primario-hover: #ffa733;
-  --color-titulo: orange;
-
-  --color-texto: #ffffff;
-  --color-texto-contraste: #1a1a1a;
-  --color-texto-oscuro: #333333;
-
-  --fuente-principal: 'Poppins', sans-serif;
-  --fuente-display: 'Pacifico', cursive;
-  --fuente-letra:  "Inter", sans-serif;
-
+  /* =========================================
+     COLORES DE TEXTO
+     Tipografía y legibilidad
+     ========================================= */
+  --color-text-title: #504D4D;        /* Títulos principales */
+  --color-texto: #ffffff;             /* Texto claro (sobre fondos oscuros) */
+  --color-texto-contraste: #1a1a1a;   /* Texto de alto contraste */
+  --color-texto-oscuro: #333333;      /* Texto oscuro (sobre fondos claros) */
+  --color-text-dark: #504D4D;         /* Texto oscuro alternativo */
+  --color-text-light: #fff;           /* Texto blanco */
   
-  --color-boton: #85D1E8;
-  --color-boton-hover: #b0cbd4;
-  --color-boton-roles: #3A9FBF;
-  --color-boton-roles-hover: #2d7a96;
+  /* =========================================
+     COLORES PRIMARIOS Y ACENTOS
+     Identidad visual de la marca
+     ========================================= */
+  --color-primario: #ff7b00;          /* Naranja PizzaSoft */
+  --color-primario-hover: #ffa733;    /* Hover del color primario */
+  --color-titulo: orange;             /* Color de títulos destacados */
+  --primary-color: #6aabc9;           /* Azul primario */
+  --light-blue: #a3d2e6;              /* Azul claro */
 
-  --color-fondo-caja: #ffffff;
-  --color-input-fondo: #b0e0e6;
+  /* =========================================
+     TIPOGRAFÍAS
+     Fuentes utilizadas en el sistema
+     ========================================= */
+  --fuente-principal: 'Poppins', sans-serif;   /* UI y textos */
+  --fuente-display: 'Pacifico', cursive;       /* Logos y títulos decorativos */
+  --fuente-letra: "Inter", sans-serif;         /* Contenido y formularios */
 
-  --sombra: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-  --radio-esquinas: 0.5rem;
-  --radio-bordes: 10px;
-  --border-radius: 20px;
-
-  --espaciado-sm: 1rem;
-  --espaciado-md: 2rem;
-  --espaciado-lg: 3rem;
-
-  --ancho-max-contenido: 400px;
-  --logo-size: 250px;
-
-  --overlay-grad-start: rgba(182, 178, 178, 0.5);
-  --overlay-grad-end: rgba(187, 173, 173, 0.5);
-  --primary-color: #6aabc9;
-  --light-blue: #a3d2e6;
-
-  --alto_header:200px;
-  --alto_main: calc(100vh - var(--alto_header))+ var(--alto_footer);
-  --alto_footer:100px;
-  /* Paleta específica para la vista de pedidos de mesero */
-  --color-primary: #2d5f89;
-  --color-background: #e6e6e6;
-  --color-topbar: #c7c7c7;
-  --color-form-panel: #A3A5A6;
-  --color-table-bg: #f5f5f5;
-  --color-table-header: #d6d6d6;
-  --color-border: #bbb;
-  --color-border-light: #aaa;
-  --color-text-dark: #504D4D;
-  --color-text-light: #fff;
-  --color-icon-dark: #333;
-  --color-btn-agregar: #f3b333;
-  --color-btn-editar: #e46c5e;
-  --color-btn-eliminar: #4d8ed9;
-  --color-btn-limpiar: #6dbbdf;
-  --color-btn:#D9D9D9;
-  --color-btn-text:#504747;
-  /* --color-btn-pagar: #8bc34a;
-  --color-btn-ver-ventas: #09a9f9;
-  --color-btn-anular: #f44336; */
-  --color-refresh: #e44;
-
-  /* Paleta específica para Reporte de Inventario */
-  --inventory-bg: #6f849c;
-  --inventory-header-bg: #929292;
-  --inventory-surface: #A3A5A6;
-  --inventory-panel: #728aa6;
-  --inventory-search-bg: #c7c4c4;
-  --inventory-btn-register: #f6b24b;
-  --inventory-btn-edit: #e6ad63;
-  --inventory-btn-delete: #78a8c7;
-  --inventory-btn-text: #744c2d;
-  --inventory-table-header: #929292;
-  --inventory-table-border: #6f6666;
-  --inventory-table-body: #f6eded;
-  --inventory-footer-bg: #6b7f96;
-  --inventory-excel-bg: #d1cfce;
-  --inventory-excel-text: #e23d2f;
-
+  /* =========================================
+     COLORES DE BOTONES
+     Estados y variantes de botones
+     ========================================= */
+  --color-boton: #85D1E8;             /* Botón por defecto */
+  --color-boton-hover: #b0cbd4;       /* Hover del botón */
+  --color-boton-roles: #3A9FBF;       /* Botones de selección de rol */
+  --color-boton-roles-hover: #2d7a96; /* Hover botones de rol */
+  --color-btn: #D9D9D9;               /* Botón gris neutro */
+  --color-btn-text: #504747;          /* Texto de botones */
   
-    --color-fondo: #ddd;
-    
+  /* Botones de acción CRUD */
+  --color-btn-agregar: #f3b333;       /* Amarillo - Agregar */
+  --color-btn-editar: #e46c5e;        /* Rojo/Naranja - Editar */
+  --color-btn-eliminar: #4d8ed9;      /* Azul - Eliminar */
+  --color-btn-limpiar: #6dbbdf;       /* Azul claro - Limpiar */
+  --color-refresh: #e44;              /* Rojo - Refrescar */
 
-    --color-header: #c6bebc;
-    --color-header-borde: #b9b2b0;
-
-    --rojo: #b73c3c;
-    --verde: #7e8f40;
-    --amarillo: #BCBA3C;
-    --verde2:#3CBC4F;
-    --verde-oscuro:#159774;
-    --azul-claro:#5C6478;
-    --morado:#AB91CE;
-    --naranja:#D6893E;
-    --azul-oscuro:#284284;
-
-    
+  /* =========================================
+     COLORES DEL DASHBOARD PRINCIPAL
+     Botones del menú de navegación
+     ========================================= */
+  --rojo: #b73c3c;                    /* Toma de Pedidos */
+  --verde: #7e8f40;                   /* Control Inventario */
+  --amarillo: #BCBA3C;                /* Agregar Clientes */
+  --verde2: #3CBC4F;                  /* Proveedor */
+  --verde-oscuro: #159774;            /* Compras */
+  --azul-claro: #5C6478;              /* Reportes */
+  --morado: #AB91CE;                  /* Gastos */
+  --naranja: #D6893E;                 /* Usuarios */
+  --azul-oscuro: #284284;             /* Configuración */
   
-    
-    
+  /* =========================================
+     COLORES DE HEADER
+     Variantes del encabezado
+     ========================================= */
+  --color-header: #c6bebc;            /* Fondo del header */
+  --color-header-borde: #b9b2b0;      /* Borde inferior del header */
+  --color-header-bg: #c3bfc0;         /* Fondo alternativo */
+  --color-header-border: #6d6d6d;     /* Borde del header */
 
-    --panel-bg: #f4f4f4;
-    --icon-size: 40px;
+  /* =========================================
+     FORMULARIOS E INPUTS
+     Campos de entrada de datos
+     ========================================= */
+  --color-input-fondo: #b0e0e6;       /* Fondo de inputs */
+  --color-input-border: #6d6d6d;      /* Borde de inputs */
 
+  /* =========================================
+     TABLAS
+     Estilos de tablas de datos
+     ========================================= */
+  --color-table-bg: #f5f5f5;          /* Fondo de tabla */
+  --color-table-header: #d6d6d6;      /* Encabezado de tabla */
+  --color-border: #bbb;               /* Borde de celdas */
+  --color-border-light: #aaa;         /* Borde claro */
 
+  /* =========================================
+     PANELES Y SUPERFICIES
+     Áreas de contenido
+     ========================================= */
+  --panel-bg: #f4f4f4;                /* Fondo de paneles */
+  --color-topbar: #c7c7c7;            /* Barra superior */
+  --color-form-panel: #A3A5A6;        /* Panel de formularios */
+  --color-background: #e6e6e6;        /* Fondo general */
+  --color-secondary: #bdb9b9;         /* Color secundario */
 
+  /* =========================================
+     PALETA DE INVENTARIO
+     Colores específicos del módulo de inventario
+     ========================================= */
+  --inventory-bg: #6f849c;            /* Fondo principal */
+  --inventory-header-bg: #929292;     /* Header del inventario */
+  --inventory-surface: #A3A5A6;       /* Superficie de acciones */
+  --inventory-panel: #728aa6;         /* Paneles laterales */
+  --inventory-search-bg: #c7c4c4;     /* Campo de búsqueda */
+  --inventory-btn-register: #f6b24b;  /* Botón registrar */
+  --inventory-btn-edit: #e6ad63;      /* Botón editar */
+  --inventory-btn-delete: #78a8c7;    /* Botón eliminar */
+  --inventory-btn-text: #744c2d;      /* Texto de botones */
+  --inventory-table-header: #929292;  /* Encabezado de tabla */
+  --inventory-table-border: #6f6666;  /* Bordes de tabla */
+  --inventory-table-body: #f6eded;    /* Cuerpo de tabla */
+  --inventory-footer-bg: #6b7f96;     /* Footer */
+  --inventory-excel-bg: #d1cfce;      /* Botón Excel */
+  --inventory-excel-text: #e23d2f;    /* Texto Excel */
+  
+  /* =========================================
+     FILTROS Y REPORTES
+     Componentes de filtrado
+     ========================================= */
+  --color-filter-btn: #5ba3ca;        /* Botón filtrar */
+  --color-filter-icon-bg: #db4d4d;    /* Icono de filtro */
+  --color-excel-bg: #d6d2cd;          /* Fondo exportar Excel */
+  --color-excel-text: #d83333;        /* Texto exportar Excel */
 
-    --color-primary: #6a839e; /* fondo principal del mockup */
-    --color-secondary: #bdb9b9; /* fondo del filtro */
-    --color-input-border: #6d6d6d;
-    --color-header-bg: #c3bfc0; /* encabezado tabla */
-    --color-header-border: #6d6d6d;
-    --color-filter-btn: #5ba3ca;
-    --color-filter-icon-bg: #db4d4d;
-    --color-excel-bg: #d6d2cd;
-    --color-excel-text: #d83333;
+  /* =========================================
+     OVERLAYS Y GRADIENTES
+     Capas superpuestas
+     ========================================= */
+  --overlay-grad-start: rgba(182, 178, 178, 0.5);  /* Inicio gradiente */
+  --overlay-grad-end: rgba(187, 173, 173, 0.5);    /* Fin gradiente */
 
-    --radius: 6px;
-    --transition: .2s ease;
+  /* =========================================
+     SOMBRAS Y EFECTOS
+     Profundidad y dimensión
+     ========================================= */
+  --sombra: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra estándar */
 
+  /* =========================================
+     BORDES Y RADIOS
+     Esquinas y contornos
+     ========================================= */
+  --radio-esquinas: 0.5rem;           /* Radio pequeño */
+  --radio-bordes: 10px;               /* Radio medio */
+  --border-radius: 20px;              /* Radio grande */
+  --radius: 6px;                      /* Radio estándar */
 
+  /* =========================================
+     ESPACIADOS
+     Sistema de espaciado consistente
+     ========================================= */
+  --espaciado-sm: 1rem;               /* Pequeño (16px) */
+  --espaciado-md: 2rem;               /* Medio (32px) */
+  --espaciado-lg: 3rem;               /* Grande (48px) */
 
+  /* =========================================
+     DIMENSIONES
+     Tamaños fijos y máximos
+     ========================================= */
+  --ancho-max-contenido: 400px;       /* Ancho máximo de contenido */
+  --logo-size: 250px;                 /* Tamaño del logo */
+  --icon-size: 40px;                  /* Tamaño de iconos */
+  --alto_header: 200px;               /* Altura del header */
+  --alto_footer: 100px;               /* Altura del footer */
+  --alto_main: calc(100vh - var(--alto_header) + var(--alto_footer));
 
+  /* =========================================
+     TRANSICIONES
+     Animaciones y efectos de hover
+     ========================================= */
+  --transition: .2s ease;             /* Transición suave */
 
+  /* Colores duplicados (usados en diferentes contextos) */
+  --color-primary: #6a839e;           /* Fondo principal del mockup */
+  --color-icon-dark: #333;            /* Iconos oscuros */
 }
 
+/* =============================================
+   RESET CSS - Normalización de estilos
+   Elimina márgenes y padding por defecto
+   ============================================= */
 *,
 *::before,
 *::after {
@@ -142,5 +202,3 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-

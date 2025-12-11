@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
+<!-- =============================================
+     LOGIN ADMINISTRADOR
+     Página de autenticación para el rol de Administrador
+     Permite acceso al dashboard principal del sistema
+     ============================================= -->
 
 <head>
+    <!-- =============================================
+         META INFORMACIÓN
+         ============================================= -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administrador</title>
 
-    <!-- Estilos -->
+    <!-- =============================================
+         ESTILOS CSS
+         ============================================= -->
     <link rel="stylesheet" href="/css/components/administrador.css">
 
-    <!-- Google Fonts (optimizado sin duplicados) -->
+    <!-- =============================================
+         FUENTES DE GOOGLE FONTS
+         Pacifico: Títulos decorativos
+         Poppins: Texto general
+         ============================================= -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -18,77 +32,64 @@
 </head>
 
 <body>
-
-  
+    <!-- =============================================
+         HEADER - Logo de la aplicación
+         Muestra el logo de PizzaSoft en la parte superior
+         ============================================= -->
     <header class="site-header">
-        <img src="/assets/imagenes/logo.png"
-             alt="Logo oficial de Pizzasoft"
-             class="site-header__logo">
+        <img src="/assets/imagenes/logo.png" alt="Logo oficial de Pizzasoft" class="site-header__logo">
     </header>
 
-
-   
+    <!-- =============================================
+         MAIN - Contenido principal
+         Contiene el formulario de login
+         ============================================= -->
     <main class="page-main">
-
-        <!-- Título principal -->
+        <!-- Título principal de la aplicación -->
         <h1 class="page-main__titulo">Pizzasoft</h1>
 
-        <!-- Contenedor del login -->
-        
+        <!-- =========================================
+             CAJA DE LOGIN
+             Formulario de autenticación con campos:
+             - Usuario
+             - Contraseña
+             ========================================= -->
+        <div class="login-caja">
+            <!-- Mensaje de bienvenida -->
+            <h2>Bienvenido</h2>
+            <p class="subtitulo">Administrador</p>
+            <p>Ingrese sus datos de acceso</p>
 
-            <div class="login-caja">
+            <!-- Formulario de autenticación -->
+            <form action="#" method="POST" class="formulario">
+                <!-- Campo: Usuario -->
+                <div class="input-grupo">
+                    <label for="usuario" class="input-grupo__label">Usuario</label>
+                    <input type="text" id="usuario" name="usuario" class="input-grupo__input" required>
+                </div>
 
-                <h2>Bienvenido</h2>
-                <p class="subtitulo">Administrador</p>
-                <p>Ingrese sus datos de acceso</p>
+                <!-- Campo: Contraseña -->
+                <div class="input-grupo">
+                    <label for="contrasena" class="input-grupo__label">Contraseña</label>
+                    <input type="password" id="contrasena" name="contrasena" class="input-grupo__input" required>
+                </div>
 
-                <!-- Formulario -->
-                <form action="#" method="POST" class="formulario">
+                <!-- Botón: Ingresar - Navega al dashboard principal -->
+                <div class="botones">
+                    <button type="submit" class="boton boton-ingresar">
+                        <a href="/views/Rol-Admin/vista_principal.html" class="botones_ingresar">Ingresar</a>
+                    </button>
+                </div>
+            </form>
 
-                    <!-- Usuario -->
-                    <div class="input-grupo">
-                        <label for="usuario" class="input-grupo__label">Usuario</label>
-                        <input 
-                            type="text"
-                            id="usuario"
-                            name="usuario"
-                            class="input-grupo__input"
-                            required>
-                    </div>
-
-                    <!-- Contraseña -->
-                    <div class="input-grupo">
-                        <label for="contrasena" class="input-grupo__label">Contraseña</label>
-                        <input 
-                            type="password"
-                            id="contrasena"
-                            name="contrasena"
-                            class="input-grupo__input"
-                            required>
-                    </div>
-
-                    
-
-                    <!-- Botón Ingresar -->
-                    <div class="botones">
-                        <button type="submit" class="boton boton-ingresar"> <a href="/views/Rol-Admin/vista_principal.html" class="botones_ingresar">Ingresar</a>  </button>
-                    </div>
-
-                </form>
-
-                <!-- Botón atrás (correcto, sin usar <button><a>) -->
-                <a href="/views/login.html" class="boton boton-atras">Atrás</a>
-
-            </div>
-
-       
-
+            <!-- Botón: Atrás - Vuelve a la selección de rol -->
+            <a href="/views/login.html" class="boton boton-atras">Atrás</a>
+        </div>
     </main>
 
-
-    <!-- ====================================
-         FOOTER
-    ===================================== -->
+    <!-- =============================================
+         FOOTER - Información de versión
+         ============================================= -->
     <footer class="mi-footer">
         <p class="mi-footer-text">Versión 1.0</p>
     </footer>

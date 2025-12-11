@@ -1,29 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
+<!-- =============================================
+     GESTIÓN DE COMPRAS
+     Vista para registro de pedidos a proveedores
+     Funcionalidades: Registrar, Editar, Eliminar compras
+     ============================================= -->
 
 <head>
+  <!-- =============================================
+       META INFORMACIÓN Y ESTILOS
+       ============================================= -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Compras</title>
+
+  <!-- Variables globales CSS -->
   <link rel="stylesheet" href="../../css/components/variablesGlobales/global.css" />
+  <!-- Estilos específicos de compras -->
   <link rel="stylesheet" href="../../css/components/Vista-Compras.css" />
 </head>
 
 <body class="inventory">
+  <!-- =============================================
+       HEADER - Encabezado
+       Contiene: Rol del usuario, título y botón salir
+       ============================================= -->
   <header class="inventory-header" aria-label="Encabezado de control de inventarios">
+    <!-- Información del usuario actual -->
     <div class="inventory-header__group">
       <img class="inventory-header__icon" src="../../assets/icons/usuario.png" alt="Icono de usuario" />
       <span class="inventory-header__role">Administrador</span>
     </div>
 
+    <!-- Título de la vista -->
     <h1 class="inventory-header__title">COMPRAS</h1>
 
-    <!-- <button -->
+    <!-- Botón para volver al dashboard principal -->
     <a class="logout" href="vista_principal.html" class="inventory-header__logout" type="button"
       aria-label="Cerrar sesion">
       <img src="../../assets/icons/cerrar-sesion.png" alt="Cerrar sesion" class="inventory-header__logout-icon" />
     </a>
-    <!-- </button> -->
   </header>
 
   <main class="inventory-main">

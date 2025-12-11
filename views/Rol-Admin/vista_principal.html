@@ -1,148 +1,132 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Punto de Venta PizzaSoft</title>
 
-    <!-- Tu archivo CSS principal -->
-    <link rel="stylesheet" href="/css/components/vista_principal.css" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="admin-section">
-        <img
-          src="/assets/icons/usuario.png"
-          alt="icono admin"
-          class="admin-section_icon"
-        />
-        <h2 class="admin-section_subtitulo">Admin</h2>
-      </div>
+<head>
+  <!-- =============================================
+         META INFORMACIÓN
+         Configuración básica del documento HTML
+         ============================================= -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Punto de Venta PizzaSoft</title>
 
-      <h1 class="titulo">Administrador</h1>
+  <!-- =============================================
+         ESTILOS CSS
+         Hoja de estilos del dashboard principal
+         ============================================= -->
+  <link rel="stylesheet" href="/css/components/vista_principal.css" />
+</head>
 
-      <a class="logout" href="/views/Rol-Admin/administrador.html">
-        <img
-          src="/assets/icons/cerrar-sesion.png"
-          alt="cerrar sesión"
-          class="icon"
-        />
+<body>
+  <!-- =============================================
+         HEADER - Barra superior
+         Contiene: Info del usuario, título y botón logout
+         ============================================= -->
+  <header class="header">
+    <!-- Sección izquierda: Icono y nombre del rol actual -->
+    <div class="admin-section">
+      <img src="/assets/icons/usuario.png" alt="icono admin" class="admin-section_icon" />
+      <h2 class="admin-section_subtitulo">Admin</h2>
+    </div>
+
+    <!-- Título central del header -->
+    <h1 class="titulo">Administrador</h1>
+
+    <!-- Sección derecha: Botón de cerrar sesión (vuelve al login) -->
+    <a class="logout" href="/views/Rol-Admin/administrador.html">
+      <img src="/assets/icons/cerrar-sesion.png" alt="cerrar sesión" class="icon" />
+    </a>
+  </header>
+
+  <!-- =============================================
+         MAIN - Contenido principal
+         Layout de 3 columnas: Panel izq, Centro, Panel der
+         ============================================= -->
+  <main class="container">
+    <!-- =========================================
+           PANEL IZQUIERDO - Navegación primaria
+           Botones: Pedidos, Inventario, Clientes, Proveedor, Compras
+           ========================================= -->
+    <aside class="left-panel">
+      <!-- Botón: Toma de Pedidos - Accede al módulo de ventas -->
+      <a href="vista_pedido_admin.html" class="btn rojo">
+        <img src="/assets/icons/ordenar-comida (1).png" class="icon-btn" alt="icono-pedidos" />
+        TOMA DE PEDIDOS
       </a>
-    </header>
 
-    <main class="container">
-      <!-- Panel izquierdo -->
-      <aside class="left-panel">
-        <button class="btn rojo">
-          <img
-            src="/assets/icons/ordenar-comida (1).png"
-            class="icon-btn"
-            alt="icono-pedidos"
-          />
-          <a href="/views/Rol-Admin/vista_pedido_admin.html" class="btn rojo"></a>
-          TOMA DE PEDIDOS
-        </button>
+      <!-- Botón: Control Inventario - Gestión de productos -->
+      <a href="Reporte_Inventario.html" class="btn verde">
+        <img src="/assets/icons/lista-de-verificacion.png" class="icon-btn" alt="icono-inventario" />
+        CONTROL INVENTARIO
+      </a>
 
-        <button class="btn verde">
-          <img
-            src="/assets/icons/lista-de-verificacion.png"
-            class="icon-btn"
-            alt="icono-inventario"
-          />
-          <a href="/views/Rol-Admin/Reporte_Inventario.html" class="btn verde"></a>
-          CONTROL INVENTARIO
-        </button>
+      <!-- Botón: Agregar Clientes - Registro de clientes -->
+      <a href="Vista_AgregarClientes.html" class="btn amarillo">
+        <img src="/assets/icons/agregar-cliente.png" class="icon-btn" alt="icono-agregar-cliente" />
+        AGREGAR CLIENTES
+      </a>
 
-        <button class="btn amarillo">
-          <img
-            src="/assets/icons/agregar-cliente.png"
-            class="icon-btn"
-            alt="icono-agregar-cliente"
-          />
-          <a href="/views/Rol-Admin/Vista_AgregarClientes.html" class="btn amarillo"></a>
-          AGREGAR CLIENTES
-        </button>
+      <!-- Botón: Proveedor - Gestión de proveedores -->
+      <a href="Vista-AgregarProveedor.html" class="btn verde2">
+        <img src="/assets/icons/proveedor.png" class="icon-btn" alt="icono-proveedor" />
+        PROVEEDOR
+      </a>
 
-        <button class="btn verde2">
-          <img
-            src="/assets/icons/proveedor.png"
-            class="icon-btn"
-            alt="icono-proveedor"
-          />
-          <a href="/views/Rol-Admin/Vista-AgregarProveedor.html" class="btn verde2"></a>
-          PROVEEDOR
-        </button>
+      <!-- Botón: Compras - Registro de compras a proveedores -->
+      <a href="Vista-Compras.html" class="btn verde-oscuro">
+        <img src="/assets/icons/proveedor.png" class="icon-btn" alt="icono-compras" />
+        COMPRAS
+      </a>
+    </aside>
 
-        <button class="btn verde-oscuro">
-          <img
-            src="/assets/icons/proveedor.png"
-            class="icon-btn"
-            alt="icono-agregar-cliente"
-          />
-          <a href="/views/Rol-Admin/Vista-Compras.html" class="btn verde-oscuro"></a>
-          COMPRAS
-        </button>
+    <!-- =========================================
+           PANEL CENTRAL - Logo e información
+           Muestra el logo de PizzaSoft y créditos
+           ========================================= -->
+    <section class="center-panel">
+      <!-- Logo principal de la aplicación -->
+      <img src="/assets/imagenes/logo.png" alt="PizzaSoft Logo" class="logo" />
 
+      <!-- Información del sistema -->
+      <p class="info">
+        Sistema punto de venta<br />
+        Girón Santander Colombia
+      </p>
 
-      </aside>
+      <!-- Créditos del desarrollador -->
+      <p class="footer">Software creado por Diego Puerto 2025</p>
+    </section>
 
-      <!-- Panel central con logo -->
-      <section class="center-panel">
-        <img
-          src="/assets/imagenes/logo.png"
-          alt="PizzaSoft Logo"
-          class="logo"
-        />
+    <!-- =========================================
+           PANEL DERECHO - Navegación secundaria
+           Botones: Reportes, Gastos, Usuarios, Configuración
+           ========================================= -->
+    <aside class="right-panel">
+      <!-- Botón: Reportes - Estadísticas y análisis -->
+      <a href="Vista-Reportes.html" class="btn azul-claro">
+        <img src="/assets/icons/analitica.png" class="icon-btn" alt="icono-reportes" />
+        REPORTES
+      </a>
 
-        <p class="info">
-          Sistema punto de venta<br />
-          Girón Santander Colombia
-        </p>
+      <!-- Botón: Gastos - Control de gastos operativos -->
+      <a href="Control-Gastos.html" class="btn morado">
+        <img src="/assets/icons/configuracion.png" class="icon-btn" alt="icono-gastos" />
+        GASTOS
+      </a>
 
-        <p class="footer">Software creado por Diego Puerto 2025</p>
-      </section>
+      <!-- Botón: Usuarios - Administración de usuarios del sistema -->
+      <a href="Administrar_usuarios.html" class="btn naranja">
+        <img src="/assets/icons/agregar-usuario.png" class="icon-btn" alt="icono-usuarios" />
+        USUARIOS
+      </a>
 
-      <!-- Panel derecho -->
-      <aside class="right-panel">
-        <button class="btn azul-claro">
-          <img
-            src="/assets/icons/analitica.png"
-            class="icon-btn"
-            alt="icono-reportes"
-          />
-          REPORTES
-        </button>
+      <!-- Botón: Configuración - Ajustes del sistema -->
+      <button class="btn azul-oscuro">
+        <img src="/assets/icons/configuracion.png" class="icon-btn" alt="icono-config" />
+        CONFIGURACIÓN
+      </button>
+    </aside>
+  </main>
+</body>
 
-        
-
-        <button class="btn morado">
-          <img
-            src="/assets/icons/configuracion.png"
-            class="icon-btn"
-            alt="icono-config"
-          />
-          GASTOS
-        </button>
-
-        <button class="btn naranja">
-          <img
-            src="/assets/icons/agregar-usuario.png"
-            class="icon-btn"
-            alt="icono-usuarios"
-          />
-          <a href="/views/Rol-Admin/Administrar_usuarios.html" class="btn naranja"></a>
-          USUARIOS
-        </button>
-
-        <button class="btn azul-oscuro">
-          <img
-            src="/assets/icons/configuracion.png"
-            class="icon-btn"
-            alt="icono-config"
-          />
-          CONFIGURACIÓN
-        </button>
-      </aside>
-    </main>
-  </body>
 </html>

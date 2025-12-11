@@ -1,3 +1,9 @@
+/* =============================================
+   GESTIÓN DE PROVEEDORES - ESTILOS
+   Vista para registro y gestión de proveedores
+   Contiene: Header, acciones, tabla, modales, popup
+   ============================================= */
+
 @import "variablesGlobales/global.css";
 
 .inventory {

@@ -1,5 +1,15 @@
+/* =============================================
+   SELECCIÓN DE ROL - ESTILOS
+   Página de login con selección de rol
+   Contiene: Header, título, botones de rol
+   ============================================= */
+
 @import "variablesGlobales/global.css";
 
+/* -------------------------
+   BODY - Layout flex
+   Fondo con imagen y overlay
+   ------------------------- */
 body {
     font-family: var(--fuente-principal);
     background-image: 

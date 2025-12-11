@@ -1,10 +1,21 @@
+/* =============================================
+   VISTA DE PEDIDOS - CAJA
+   Pantalla de toma de pedidos para cajeros
+   Contiene: Topbar, formulario, tabla, footer
+   ============================================= */
+
 @import "variablesGlobales/global.css";
 
+/* -------------------------
+   BODY - Layout principal
+   ------------------------- */
 body {
   background: var(--color-primary);
   font-family: Arial, Helvetica, sans-serif;
   min-height: 100vh;
 }
+
+/* Clase para elementos de accesibilidad (ocultos visualmente) */
 
 .sr-only {
   position: absolute;

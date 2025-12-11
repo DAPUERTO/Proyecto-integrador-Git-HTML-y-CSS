@@ -1,50 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Sistema PizzaSoft - Seleccione su rol para acceder"
-    />
+<!-- =============================================
+     SELECCIÓN DE ROL
+     Página inicial del sistema PizzaSoft
+     Permite seleccionar entre 3 roles:
+     - Administrador
+     - Punto de Venta (Cajero)
+     - Mesero
+     ============================================= -->
 
-    <title>PizzaSoft - Selección de Rol</title>
+<head>
+  <!-- =============================================
+         META INFORMACIÓN
+         ============================================= -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sistema PizzaSoft - Seleccione su rol para acceder" />
+  <title>PizzaSoft - Selección de Rol</title>
 
-    <link rel="stylesheet" href="../css/components/login.css" />
+  <!-- =============================================
+         ESTILOS CSS
+         ============================================= -->
+  <link rel="stylesheet" href="../css/components/login.css" />
 
-    <!-- Fuentes consolidadas -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- Header minimalista -->
-    <header class="header">
-      <img
-        src="../assets/imagenes/logo.png"
-        alt="Logo de PizzaSoft"
-        class="header__logo"
-      />
-    </header>
+  <!-- =============================================
+         FUENTES DE GOOGLE FONTS
+         Pacifico: Títulos decorativos
+         Poppins: Texto general
+         ============================================= -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;700&display=swap"
+    rel="stylesheet" />
+</head>
 
-    <!-- Main simplificado (sin section innecesaria) -->
-    <main class="page-main">
-      <h1 class="page-main__titulo">pizzasoft</h1>
-      <h2 class="page-main__subtitulo">Seleccione Rol:</h2>
+<body>
+  <!-- =============================================
+         HEADER - Logo de la aplicación
+         ============================================= -->
+  <header class="header">
+    <img src="../assets/imagenes/logo.png" alt="Logo de PizzaSoft" class="header__logo" />
+  </header>
 
-      <!-- Nav semántico para opciones de navegación -->
-      <nav class="roles" aria-label="Selección de rol">
-        <a class="roles__boton" href="Rol-Admin/administrador.html"
-          >Administrador</a
-        >
-        <a class="roles__boton" href="Rol-punto-caja/puntoVenta.html"
-          >Punto de venta</a
-        >
-        <a class="roles__boton" href="Rol-mesero/mesero.html">Mesero</a>
-      </nav>
-    </main>
-  </body>
+  <!-- =============================================
+         MAIN - Contenido principal
+         Contiene título y botones de selección de rol
+         ============================================= -->
+  <main class="page-main">
+    <!-- Título de la aplicación -->
+    <h1 class="page-main__titulo">pizzasoft</h1>
+    <!-- Subtítulo con instrucción -->
+    <h2 class="page-main__subtitulo">Seleccione Rol:</h2>
+
+    <!-- =========================================
+           NAVEGACIÓN DE ROLES
+           Botones para acceder a cada tipo de usuario
+           ========================================= -->
+    <nav class="roles" aria-label="Selección de rol">
+      <!-- Botón: Administrador - Acceso completo al sistema -->
+      <a class="roles__boton" href="Rol-Admin/administrador.html">Administrador</a>
+      <!-- Botón: Punto de Venta - Acceso a caja y ventas -->
+      <a class="roles__boton" href="Rol-punto-caja/puntoVenta.html">Punto de venta</a>
+      <!-- Botón: Mesero - Vista simplificada de pedidos -->
+      <a class="roles__boton" href="Rol-mesero/mesero.html">Mesero</a>
+    </nav>
+  </main>
+</body>
+
 </html>

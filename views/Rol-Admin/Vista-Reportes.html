@@ -1,18 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
+<!-- =============================================
+     DASHBOARD DE REPORTES
+     Vista con tarjetas de diferentes tipos de reportes
+     Contiene: Ventas totales, ganancias, ventas/mes
+     ============================================= -->
+
 <head>
+    <!-- =============================================
+         META INFORMACIÓN Y ESTILOS
+         ============================================= -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reportes - Dashboard</title>
     <link rel="stylesheet" href="/css/components/Vista-Reportes.css">
 </head>
+
 <body>
+    <!-- =============================================
+         HEADER - Barra superior
+         Contiene: Título y botón cerrar
+         ============================================= -->
     <header class="header">
         <h1 class="header__title">REPORTES</h1>
-        <button class="header__close-btn" title="Cerrar ventana">
+        <a href="vista_principal.html" class="header__close-btn" title="Cerrar ventana">
             <img src="/assets/icons/cerrar-sesion.png" alt="Cerrar">
-        </button>
+        </a>
     </header>
+
+    <!-- =============================================
+         MAIN - Contenido principal
+         Grid de tarjetas de reportes
+         ============================================= -->
+
 
     <main class="reports">
         <div class="reports__grid">
@@ -30,7 +50,7 @@
             <article class="report-card">
                 <div class="report-card__icon-container">
                     <div class="report-card__icon">
-                        <img src="/assets/icons/bolsa-de-valores.png" alt="Icono ganancias">
+                        <img src="/assets/icons/reporte-ganancias4.png" alt="Icono ganancias">
                     </div>
                 </div>
                 <h2 class="report-card__title">Reporte de ganancias</h2>
@@ -58,4 +78,5 @@
         </div>
     </main>
 </body>
+
 </html>

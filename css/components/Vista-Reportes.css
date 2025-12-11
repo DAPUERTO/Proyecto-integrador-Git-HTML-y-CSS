@@ -1,3 +1,9 @@
+/* =============================================
+   DASHBOARD DE REPORTES - ESTILOS
+   Vista con tarjetas de diferentes tipos de reportes
+   Contiene: Header, grid de tarjetas, responsive
+   ============================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +12,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #6b8fa3;
+    background: #6386A2;
     min-height: 100vh;
 }
 

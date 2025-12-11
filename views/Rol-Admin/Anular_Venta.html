@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anular Factura</title>
+<!-- =============================================
+     ANULAR VENTA
+     Vista para anular facturas con validación PIN
+     Permite buscar y seleccionar facturas a anular
+     ============================================= -->
 
-    <!-- HOJA DE ESTILOS -->
-    <link rel="stylesheet" href="/css/components/Anular_Venta.css" />
-  </head>
+<head>
+  <!-- =============================================
+       META INFORMACIÓN Y ESTILOS
+       ============================================= -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anular Factura</title>
 
-  <body>
-    <!-- HEADER -->
-    <header class="header">
-      <!-- Espaciador para que el título quede centrado -->
-      <div class="header__spacer"></div>
+  <!-- Estilos específicos de anulación -->
+  <link rel="stylesheet" href="/css/components/Anular_Venta.css" />
+</head>
 
-      <h1 class="header__title">Anular Factura</h1>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <!-- Espaciador para que el título quede centrado -->
+    <div class="header__spacer"></div>
 
-      <!-- Botón de salir -->
-      <!--
+    <h1 class="header__title">Anular Factura</h1>
+
+    <!-- Botón de salir -->
+    <!--
       <button class="header__exit" aria-label="Salir">
         <img
           src="/assets/icons/cerrar-sesion.png"
@@ -28,87 +37,71 @@
       </button>
       -->
 
-      <a class="header__exit" href="vista_pedido_admin.html" aria-label="salir">
-        <img
-          src="/assets/icons/cerrar-sesion.png"
-          alt="Salir"
-          class="header__exit-icon"
-        />
-      </a>
-    </header>
+    <a class="header__exit" href="vista_pedido_admin.html" aria-label="salir">
+      <img src="/assets/icons/cerrar-sesion.png" alt="Salir" class="header__exit-icon" />
+    </a>
+  </header>
 
-    <!-- CONTENIDO PRINCIPAL -->
-    <main class="container">
-      <!-- ==================== FILTRO ==================== -->
-      <section class="filter">
-        <div class="filter__group">
-          <label class="filter__label">Número de Factura:</label>
-          <input type="text" class="filter__input" />
-        </div>
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="container">
+    <!-- ==================== FILTRO ==================== -->
+    <section class="filter">
+      <div class="filter__group">
+        <label class="filter__label">Número de Factura:</label>
+        <input type="text" class="filter__input" />
+      </div>
 
-        <div class="filter__group">
-          <label class="filter__label">Cliente:</label>
-          <input type="text" class="filter__input" />
-        </div>
+      <div class="filter__group">
+        <label class="filter__label">Cliente:</label>
+        <input type="text" class="filter__input" />
+      </div>
 
-        <button class="filter__button">
-          <img
-            src="/assets/icons/filtrar (1).png"
-            alt="filtrar"
-            class="filter__icon"
-          />
-          Filtrar
-        </button>
-      </section>
+      <button class="filter__button">
+        <img src="/assets/icons/filtrar (1).png" alt="filtrar" class="filter__icon" />
+        Filtrar
+      </button>
+    </section>
 
-      <!-- ==================== TABLA ==================== -->
-      <section class="table-container">
-        <table class="table">
-          <thead>
-            <tr>
-              <th class="table__header">Factura</th>
-              <th class="table__header">Cliente</th>
-              <th class="table__header">Total</th>
-              <th class="table__header">Fecha</th>
-              <th class="table__header">Hora</th>
-              <th class="table__header">Cajero</th>
-            </tr>
-          </thead>
+    <!-- ==================== TABLA ==================== -->
+    <section class="table-container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="table__header">Factura</th>
+            <th class="table__header">Cliente</th>
+            <th class="table__header">Total</th>
+            <th class="table__header">Fecha</th>
+            <th class="table__header">Hora</th>
+            <th class="table__header">Cajero</th>
+          </tr>
+        </thead>
 
-          <tbody>
-            <tr class="sales-table__row sales-table__row--empty">
-              <td class="sales-table__cell" colspan="6">
-                <span class="sales-table__empty">No hay registros disponibles.</span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-    </main>
+        <tbody>
+          <tr class="sales-table__row sales-table__row--empty">
+            <td class="sales-table__cell" colspan="6">
+              <span class="sales-table__empty">No hay registros disponibles.</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
 
-    <!-- FOOTER -->
-    <footer class="sales-footer" aria-label="Acciones secundarias">
-      <nav class="sales-pagination" aria-label="Paginación">
-        <button
-          class="sales-pagination__control"
-          type="button"
-          aria-label="Página anterior"
-        >
-          &#8249;
-        </button>
+  <!-- FOOTER -->
+  <footer class="sales-footer" aria-label="Acciones secundarias">
+    <nav class="sales-pagination" aria-label="Paginación">
+      <button class="sales-pagination__control" type="button" aria-label="Página anterior">
+        &#8249;
+      </button>
 
-        <span class="sales-pagination__info">Página 1 de 1</span>
+      <span class="sales-pagination__info">Página 1 de 1</span>
 
-        <button
-          class="sales-pagination__control"
-          type="button"
-          aria-label="Página siguiente"
-        >
-          &#8250;
-        </button>
-      </nav>
-<!--ANULAR VENTA-->
-      <!-- <button class="sales-footer__button" type="button">
+      <button class="sales-pagination__control" type="button" aria-label="Página siguiente">
+        &#8250;
+      </button>
+    </nav>
+    <!--ANULAR VENTA-->
+    <!-- <button class="sales-footer__button" type="button">
         <img
           class="sales-footer__button-icon"
           src="../../assets/icons/anularVenta.png"
@@ -118,38 +111,34 @@
       </button> -->
 
 
-   <a href="#popup-editar" class="sales-footer__button">
-            <img src="/assets/icons/anularVenta.png" alt="ANULAR" class="sales-footer__button-icon" />
-            Anular
-          </a>
+    <a href="#popup-editar" class="sales-footer__button">
+      <img src="/assets/icons/anularVenta.png" alt="ANULAR" class="sales-footer__button-icon" />
+      Anular
+    </a>
 
 
 
 
 
 
-<!--=================================================================-->
+    <!--=================================================================-->
 
 
 
 
 
 
-      <button class="sales-footer__button" type="button">
-        <img
-          class="sales-footer__button-icon"
-          src="/assets/icons/factura.png"
-          alt="Icono Ver ventas"
-        />
-        <span class="sales-footer__button-text">Ver Facturas Anuladas</span>
-      </button>
-    </footer>
+    <a href="/views/Rol-Admin/Facturas_anuladas.html" class="sales-footer__button">
+      <img class="sales-footer__button-icon" src="/assets/icons/factura.png" alt="Icono Ver ventas" />
+      <span class="sales-footer__button-text">Ver Facturas Anuladas</span>
+    </a>
+  </footer>
 
 
-    <!-- ELIMINAR -->
+  <!-- ELIMINAR -->
 
 
-<!-- ========= POPUP ========== -->
+  <!-- ========= POPUP ========== -->
   <div id="popup-editar" class="popup">
     <div class="popup-content">
       <h3>Ingrese pin de seguridad:<br></h3>
@@ -164,5 +153,6 @@
   <!-- ==================================== -->
 
 
-  </body>
+</body>
+
 </html>

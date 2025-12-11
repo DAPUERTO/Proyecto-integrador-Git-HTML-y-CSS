@@ -1,29 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
+<!-- =============================================
+     CONTROL DE GASTOS
+     Vista para registro y gestión de gastos
+     Funcionalidades: Registrar, Editar, Eliminar gastos
+     ============================================= -->
 
 <head>
+  <!-- =============================================
+       META INFORMACIÓN Y ESTILOS
+       ============================================= -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Clientes</title>
+
+  <!-- Variables globales CSS -->
   <link rel="stylesheet" href="../../css/components/variablesGlobales/global.css" />
+  <!-- Estilos específicos de gastos -->
   <link rel="stylesheet" href="/css/components/Control-Gastos.css" />
 </head>
 
 <body class="inventory">
+  <!-- =============================================
+       HEADER - Encabezado
+       Contiene: Rol del usuario, título y botón salir
+       ============================================= -->
   <header class="inventory-header" aria-label="Encabezado de control de inventarios">
+    <!-- Información del usuario actual -->
     <div class="inventory-header__group">
       <img class="inventory-header__icon" src="/assets/icons/usuario.png" alt="Icono de usuario" />
       <span class="inventory-header__role">Administrador</span>
     </div>
 
+    <!-- Título de la vista -->
     <h1 class="inventory-header__title">CONTROL DE GASTO</h1>
 
-    <!-- <button -->
+    <!-- Botón para volver al dashboard principal -->
     <a class="logout" href="vista_principal.html" class="inventory-header__logout" type="button"
       aria-label="Cerrar sesion">
       <img src="/assets/icons/cerrar-sesion.png" alt="Cerrar sesion" class="inventory-header__logout-icon" />
     </a>
-    <!-- </button> -->
   </header>
 
   <main class="inventory-main">
@@ -61,19 +77,19 @@
         </label>
 
 
-<!--=====================================================================================================================-->
-<!-- 
+        <!--=====================================================================================================================-->
+        <!-- 
         <button class="inventory-actions__btn inventory-actions__btn--edit" type="button">
           <img class="inventory-actions__icon" src="../../assets/icons/curriculum.png" alt="Icono editar" />
           <span class="inventory-actions__label">Editar</span>
         </button> -->
 
         <label for="check-edit2" class="inventory-actions__btn inventory-actions__btn--register">
-  <img class="inventory-actions__icon" src="/assets/icons/registro-en-linea.png" alt="Icono editar" />
-  <span class="modal-edit2__label">Editar</span>
-</label>
+          <img class="inventory-actions__icon" src="/assets/icons/registro-en-linea.png" alt="Icono editar" />
+          <span class="modal-edit2__label">Editar</span>
+        </label>
 
-<!--=====================================================================================================================-->
+        <!--=====================================================================================================================-->
 
 
         <!-- <button class="inventory-actions__btn inventory-actions__btn--delete" type="button">
@@ -81,10 +97,10 @@
           <span class="inventory-actions__label">Eliminar</span>
         </button> -->
 
-<a href="#popup-editar" class="inventory-actions__btn inventory-actions__btn--delete">
-            <img src="/assets/icons/eliminar.png" alt="Eliminar" class="inventory-actions__icon" />
-            Eliminar
-          </a>
+        <a href="#popup-editar" class="inventory-actions__btn inventory-actions__btn--delete">
+          <img src="/assets/icons/eliminar.png" alt="Eliminar" class="inventory-actions__icon" />
+          Eliminar
+        </a>
 
 
 
@@ -99,14 +115,14 @@
           placeholder="Buscar por palabra" />
       </form>
     </nav>
-<!--===============================================================================================-->
+    <!--===============================================================================================-->
 
-<!--========================================================================================================-->
+    <!--========================================================================================================-->
     <section class="inventory-table" aria-label="Tabla de inventario">
 
-<!--========================================================================================================-->
- 
-    <div class="inventory-extra">
+      <!--========================================================================================================-->
+
+      <div class="inventory-extra">
         <label class="inventory-extra__label">Concepto:</label>
         <input class="inventory-extra__input" type="text">
 
@@ -117,17 +133,17 @@
         <input class="inventory-extra__input" type="text">
 
         <div class="form-group">
-    <label class="form-group__tittle" for="fecha">Fecha:</label>
-    <div class="date-input-group">
-        <input type="text" id="fecha" readonly value="09-12-2025">
-        <button type="button" class="calendar-btn">📆</button>
-    </div>
-</div>
+          <label class="form-group__tittle" for="fecha">Fecha:</label>
+          <div class="date-input-group">
+            <input type="text" id="fecha" readonly value="09-12-2025">
+            <button type="button" class="calendar-btn">📆</button>
+          </div>
+        </div>
 
-        
-    </div>
 
-<!--======================================================================================================-->
+      </div>
+
+      <!--======================================================================================================-->
       <div class="inventory-table__wrapper">
         <table class="inventory-table__table">
           <thead>
@@ -165,7 +181,7 @@
   </main>
 
   <footer class="inventory-footer" aria-label="Acciones secundarias">
-    
+
 
     <nav class="inventory-pagination" aria-label="Paginacion">
       <button class="inventory-pagination__control" type="button" aria-label="Pagina anterior">
@@ -197,8 +213,8 @@
         <form class="admin-users__form-body">
 
           <div class="admin-users__form-field">
-            <a class="admin-users__form-label">Proveedor agregado correctamente</a>
-            
+            <a class="admin-users__form-label">Gasto agregado correctamente</a>
+
           </div>
 
 
@@ -213,63 +229,63 @@
 
 
   <!-- ====================================================================================== -->
-<!-- Checkbox oculto controlador del modal -->
-<input type="checkbox" id="check-edit2" class="modal-edit2__checker">
+  <!-- Checkbox oculto controlador del modal -->
+  <input type="checkbox" id="check-edit2" class="modal-edit2__checker">
 
-<div class="modal-edit2__overlay">
-  <section class="modal-edit2__window">
+  <div class="modal-edit2__overlay">
+    <section class="modal-edit2__window">
 
-    <header class="modal-edit2__header">
-      <h1 class="modal-edit2__title">Modificar Registro</h1>
+      <header class="modal-edit2__header">
+        <h1 class="modal-edit2__title">Modificar Registro</h1>
 
-      <label for="check-edit2" class="modal-edit2__close-btn">
-        <img class="modal-edit2__close-icon" src="/assets/icons/cerrar-sesion.png" alt="">
-      </label>
-    </header>
+        <label for="check-edit2" class="modal-edit2__close-btn">
+          <img class="modal-edit2__close-icon" src="/assets/icons/cerrar-sesion.png" alt="">
+        </label>
+      </header>
 
-    <main class="modal-edit2__main">
-      <form class="modal-edit2__form">
+      <main class="modal-edit2__main">
+        <form class="modal-edit2__form">
 
-        <div class="modal-edit2__field">
-          <label class="modal-edit2__label-input">Concepto:</label>
-          <input class="modal-edit2__input" type="text" />
-        </div>
+          <div class="modal-edit2__field">
+            <label class="modal-edit2__label-input">Concepto:</label>
+            <input class="modal-edit2__input" type="text" />
+          </div>
 
-        <div class="modal-edit2__field">
-          <label class="modal-edit2__label-input">Valor:</label>
-          <input class="modal-edit2__input" type="text" />
-          </select>
-        </div>
+          <div class="modal-edit2__field">
+            <label class="modal-edit2__label-input">Valor:</label>
+            <input class="modal-edit2__input" type="text" />
+            </select>
+          </div>
 
-        <div class="modal-edit2__field">
-          <label class="modal-edit2__label-input">Entidad:</label>
-          <input class="modal-edit2__input" type="text" />
-        </div>
+          <div class="modal-edit2__field">
+            <label class="modal-edit2__label-input">Entidad:</label>
+            <input class="modal-edit2__input" type="text" />
+          </div>
 
           <div class="form-group">
-    <label class="form-group__tittle" for="fecha">Fecha:</label>
-    <div class="date-input-group">
-        <input type="text" id="fecha" readonly value="09-12-2025">
-        <button type="button" class="calendar-btn">📆</button>
-    </div>
-</div>
+            <label class="form-group__tittle" for="fecha">Fecha:</label>
+            <div class="date-input-group">
+              <input type="text" id="fecha" readonly value="09-12-2025">
+              <button type="button" class="calendar-btn">📆</button>
+            </div>
+          </div>
 
-        <button class="modal-edit2__button">
-          <img class="modal-edit2__button-icon" src="/assets/icons/guardar.png" alt="agregar">
-          <span class="modal-edit2__button-text">Agregar</span>
-        </button>
+          <button class="modal-edit2__button">
+            <img class="modal-edit2__button-icon" src="/assets/icons/guardar.png" alt="agregar">
+            <span class="modal-edit2__button-text">Agregar</span>
+          </button>
 
-      </form>
-    </main>
+        </form>
+      </main>
 
-  </section>
-</div>
-
-
-<!-- ELIMINAR -->
+    </section>
+  </div>
 
 
-<!-- ========= POPUP ========== -->
+  <!-- ELIMINAR -->
+
+
+  <!-- ========= POPUP ========== -->
   <div id="popup-editar" class="popup">
     <div class="popup-content">
       <h3>Ingrese pin de seguridad:<br></h3>
@@ -283,16 +299,8 @@
   </div>
   <!-- ==================================== -->
 
-  
+
 
 </body>
 
 </html>
-
-
-
-
-
-
-
-

@@ -1,3 +1,9 @@
+/* =============================================
+   GESTIÓN DE COMPRAS - ESTILOS
+   Vista para registro de pedidos a proveedores
+   Contiene: Header, acciones, tabla, modales, popup
+   ============================================= */
+
 @import "variablesGlobales/global.css";
 
 .inventory {

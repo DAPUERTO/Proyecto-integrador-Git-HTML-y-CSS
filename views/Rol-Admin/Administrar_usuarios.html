@@ -1,82 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/components/Administrar_usuarios.css" />
-    <link
-      rel="stylesheet"
-      href="/css/components/variablesGlobales/global.css"
-    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=VT323&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Administrar_usuarios</title>
-  </head>
-  <body>
-    <header class="admin-users__header">
-      <h1 class="admin-users__title">Administrar Usuarios</h1>
-      <div class="admin-users__header-group">
-        <span class="admin-users__header-item">Fecha:</span>
-        <span class="admin-users__header-item">3/12/2025</span>
+  <!-- =============================================
+         ESTILOS CSS
+         ============================================= -->
+  <!-- Estilos específicos de esta vista -->
+  <link rel="stylesheet" href="/css/components/Administrar_usuarios.css" />
+  <!-- Variables globales (colores, fuentes, espaciados) -->
+  <link rel="stylesheet" href="/css/components/variablesGlobales/global.css" />
+
+  <!-- =============================================
+         FUENTES DE GOOGLE FONTS
+         ============================================= -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=VT323&display=swap"
+    rel="stylesheet" />
+
+  <title>Administrar_usuarios</title>
+</head>
+
+<body>
+  <!-- =============================================
+         HEADER - Encabezado de la página
+         Contiene: Título, fecha/hora y botón de salir
+         ============================================= -->
+  <header class="admin-users__header">
+    <!-- Título principal de la vista -->
+    <h1 class="admin-users__title">Administrar Usuarios</h1>
+
+    <!-- Grupo de fecha actual -->
+    <div class="admin-users__header-group">
+      <span class="admin-users__header-item">Fecha:</span>
+      <span class="admin-users__header-item">3/12/2025</span>
+    </div>
+
+    <!-- Grupo de hora actual -->
+    <div class="admin-users__header-group">
+      <span class="admin-users__header-item">Hora:</span>
+      <span class="admin-users__header-item">10:39 a.m</span>
+    </div>
+
+    <!-- Botón para volver al dashboard principal -->
+    <a class="admin-users__logo" href="/views/Rol-Admin/vista_principal.html">
+      <img class="admin-users__logo-image" src="/assets/icons/cerrar-sesion.png" alt="Volver al inicio" />
+    </a>
+  </header>
+
+  <!-- =============================================
+         MAIN - Contenido principal
+         Contiene: Tabla de usuarios y botones de acción
+         ============================================= -->
+  <main class="admin-users__main">
+    <!-- =========================================
+           SECCIÓN TABLA DE USUARIOS
+           Muestra la lista de usuarios registrados
+           ========================================= -->
+    <section class="admin-users__stats">
+      <!-- Encabezados de la tabla -->
+      <div class="admin-users__stat-card">
+        <p class="admin-users__stat-text">ID</p>
       </div>
-      <div class="admin-users__header-group">
-        <span class="admin-users__header-item">Hora:</span>
-        <span class="admin-users__header-item">10:39 a.m</span>
+      <div class="admin-users__stat-card">
+        <p class="admin-users__stat-text">Usuario</p>
       </div>
-      <a class="admin-users__logo" href="/views/Rol-Admin/vista_principal.html">
-        <img
-          class="admin-users__logo-image"
-          src="/assets/icons/cerrar-sesion.png"
-          alt=""
-        />
-      </a>
-    </header>
-    <main class="admin-users__main">
-      <section class="admin-users__stats"> <!--clase usada para @media-->
-        <div class="admin-users__stat-card">
-          <p class="admin-users__stat-text">ID</p>
-        </div>
-        <div class="admin-users__stat-card">
-          <p class="admin-users__stat-text">Usuario</p>
-        </div>
-        <div class="admin-users__stat-card">
-          <p class="admin-users__stat-text">Contraseña</p>
-        </div>
-        <div class="admin-users__stat-card">
-          <p class="admin-users__stat-text">Rol Usuario</p>
-        </div>
-      </section>
+      <div class="admin-users__stat-card">
+        <p class="admin-users__stat-text">Contraseña</p>
+      </div>
+      <div class="admin-users__stat-card">
+        <p class="admin-users__stat-text">Rol Usuario</p>
+      </div>
+    </section>
+    </div>
+    </section>
 
-      <section class="admin-users__actions">   <!--clase usada para @media-->
-        <button class="admin-users__action">
-          <label for="check-add">
-            <img
-              class="admin-users__action-icon"
-              src="/assets/icons/agregar-producto (1).png"
-              alt="nuevo-usuraio"
-            />
-            <p class="admin-users__action-label">Nuevo Usuario</p>
-          </label>
-        </button>
+    <section class="admin-users__actions"> <!--clase usada para @media-->
+      <button class="admin-users__action">
+        <label for="check-add">
+          <img class="admin-users__action-icon" src="/assets/icons/agregar-producto (1).png" alt="nuevo-usuraio" />
+          <p class="admin-users__action-label">Nuevo Usuario</p>
+        </label>
+      </button>
 
-        <button class="admin-users__action">
-          <label for="check-modi">
-            <img
-              class="admin-users__action-icon"    
-              src="/assets/icons/actualizar.png"
-              alt="actualizar-usuario"
-            />                                                  <!--clase usada para @media-->
-            <p class="admin-users__action-label">Actualizar</p>
-          </label>
-        </button>
+      <button class="admin-users__action">
+        <label for="check-modi">
+          <img class="admin-users__action-icon" src="/assets/icons/actualizar.png" alt="actualizar-usuario" />
+          <!--clase usada para @media-->
+          <p class="admin-users__action-label">Actualizar</p>
+        </label>
+      </button>
 
-        <!-- <button class="admin-users__action">
+      <!-- <button class="admin-users__action">
           <img
             class="admin-users__action-icon"
             src="/assets/icons/permisos.png"
@@ -84,254 +103,228 @@
           />
           <p class="admin-users__action-label">Permisos</p>
         </button> -->
- <button class="admin-users__action">
-	<label for="check-permissions" class="admin-users__action-icon">
-  <img class="admin-users__action-icon" src="/assets/icons/permisos.png" alt="Icono permisos" />
-  <p class="admin-users__action-label">Configurar Permisos</p>
-</label>
-        </button>
-
-     
+      <button class="admin-users__action">
+        <label for="check-permissions" class="admin-users__action-icon">
+          <img class="admin-users__action-icon" src="/assets/icons/permisos.png" alt="Icono permisos" />
+          <p class="admin-users__action-label">Configurar Permisos</p>
+        </label>
+      </button>
 
 
 
-        
-        <button class="admin-users__action">
-          <img
-            class="admin-users__action-icon"
-            src="/assets/icons/eliminar.png"
-            alt="Eliminar"
-          />
-          <p class="admin-users__action-label">Eliminar</p>
-        </button>
-      </section>
-    </main>
 
-    <!--================================================================================================================= -->
 
-    <input type="checkbox" name="" id="check-add" class="admin-checked__add" />
 
-    <div class="admin-users__form">
-      <section class="admin-users__form-section">
-        <header class="admin-users__form-header">
-          <h1 class="admin-users__form-title">Agregar usuario</h1>
-          <label class="admin-users__form-close" for="check-add">
-            <img
-              class="admin-users__form-close-icon"
-              src="/assets/icons/cerrar-sesion.png"
-              alt=""
-            />
-          </label>
-        </header>
-        <main class="admin-users__form-main">
-          <form class="admin-users__form-body" action="">
-            <div class="admin-users__form-field">
-              <label class="admin-users__form-label" for=""
-                >Nombre de usuario</label
-              >
-              <input class="admin-users__form-input" type="text" />
-            </div>
-            <div class="admin-users__form-field">
-              <label class="admin-users__form-label" for=""> Contraseña</label>
-              <input class="admin-users__form-input" type="text" />
-            </div>
-            <div class="admin-users__form-field">
-              <label class="admin-users__form-label" for="">
-                Rol de usuario</label
-              >
-              <select class="admin-users__form-select" name="" id="">
-                <option class="admin-users__form-option" value=""></option>
-                <option class="admin-users__form-option" value="">
-                  administrador
-                </option>
-                <option class="admin-users__form-option" value="">
-                  cajero
-                </option>
-                <option class="admin-users__form-option" value="">
-                  mesero
-                </option>
-              </select>
-            </div>
-            <button class="admin-users__form-button">
-              <img
-                class="admin-users__form-button-icon"
-                src="/assets/icons/guardar.png"
-                alt=""
-              />
-              <span class="admin-users__form-button-text">agregar</span>
-            </button>
-          </form>
-        </main>
-      </section>
-    </div>
+      <button class="admin-users__action">
+        <img class="admin-users__action-icon" src="/assets/icons/eliminar.png" alt="Eliminar" />
+        <p class="admin-users__action-label">Eliminar</p>
+      </button>
+    </section>
+  </main>
 
-    <!--  ===================================== -->
+  <!--================================================================================================================= -->
 
-    <input type="checkbox" name="" id="check-modi" class="admin-checked__add" />
+  <input type="checkbox" name="" id="check-add" class="admin-checked__add" />
 
-    <div class="admin-users__moddy">
-      <section class="admin-users__form-section">
-        <header class="admin-users__form-header">
-          <h1 class="admin-users__form-title">Modificar Usuario</h1>
-          <label class="admin-users__form-close" for="check-modi">
-            <img
-              class="admin-users__form-close-icon"
-              src="/assets/icons/cerrar-sesion.png"
-              alt=""
-            />
-          </label>
-        </header>
-        <script src="/css/components/main.js"></script>
-        <main class="admin-users__form-main">
-          <form class="admin-users__form-body" action="">
-            <div class="admin-users__form-field">
-              <label class="admin-users__form-label" for=""
-                >Renombrar Usuario</label
-              >
-              <input class="admin-users__form-input" type="text" />
-            </div>
-            <div class="admin-users__form-field">
-              <label class="admin-users__form-label" for="">
-                Nueva Contraseña</label
-              >
-              <input class="admin-users__form-input" type="text" />
-            </div>
-            <div class="admin-users__form-field">
-              <label class="admin-users__form-label" for="">
-                Rol de usuario</label
-              >
-              <select class="admin-users__form-select" name="" id="">
-                <option class="admin-users__form-option" value=""></option>
-                <option class="admin-users__form-option" value="">
-                  administrador
-                </option>
-                <option class="admin-users__form-option" value="">
-                  cajero
-                </option>
-                <option class="admin-users__form-option" value="">
-                  mesero
-                </option>
-              </select>
-            </div>
-            <button class="admin-users__form-button">
-              <img
-                class="admin-users__form-button-icon"
-                src="/assets/icons/guardar.png"
-                alt=""
-              />
-              <span class="admin-users__form-button-text">agregar</span>
-            </button>
-          </form>
-        </main>
-      </section>
-    </div>
-
-    <!--=======================PERMISOS MODAL============================================-->
-
-<!-- Checkbox controlador del modal para configurar permisos (oculto) -->
-<input type="checkbox" id="check-permissions" class="admin-checked__permissions">
-
-<div class="permissions-modal">
-  <section class="permissions-modal__section">
-    <header class="permissions-modal__header">
-      <h1 class="permissions-modal__title">Configurar Permisos para admin</h1>
-
-      <!-- Botón cerrar -->
-      <label for="check-permissions" class="permissions-modal__close">
-        <img class="permissions-modal__close-icon" src="/assets/icons/cerrar-sesion.png" alt="Cerrar">
-      </label>
-    </header>
-
-    <main class="permissions-modal__main">
-      <form class="permissions-modal__form">
-
-        <!-- Grid de permisos -->
-        <div class="permissions-modal__grid">
-          
-          <!-- Columna izquierda -->
-          <div class="permissions-modal__column">
-            
-            <!-- Toma de pedidos -->
-            <div class="permissions-modal__field">
-              <label class="permissions-modal__label">Toma de pedidos</label>
-              <input class="permissions-modal__checkbox" type="checkbox" />
-            </div>
-
-            <!-- Control de inventario -->
-            <div class="permissions-modal__field">
-              <label class="permissions-modal__label">Control de inventario</label>
-              <input class="permissions-modal__checkbox" type="checkbox" />
-            </div>
-
-            <!-- Agregar Clientes -->
-            <div class="permissions-modal__field">
-              <label class="permissions-modal__label">Agregar Clientes</label>
-              <input class="permissions-modal__checkbox" type="checkbox" />
-            </div>
-
-            <!-- Proveedor -->
-            <div class="permissions-modal__field">
-              <label class="permissions-modal__label">Proveedor</label>
-              <input class="permissions-modal__checkbox" type="checkbox" />
-            </div>
-
-            <!-- Clientes -->
-            <div class="permissions-modal__field">
-              <label class="permissions-modal__label">Clientes</label>
-              <input class="permissions-modal__checkbox" type="checkbox" />
-            </div>
-
+  <div class="admin-users__form">
+    <section class="admin-users__form-section">
+      <header class="admin-users__form-header">
+        <h1 class="admin-users__form-title">Agregar usuario</h1>
+        <label class="admin-users__form-close" for="check-add">
+          <img class="admin-users__form-close-icon" src="/assets/icons/cerrar-sesion.png" alt="" />
+        </label>
+      </header>
+      <main class="admin-users__form-main">
+        <form class="admin-users__form-body" action="">
+          <div class="admin-users__form-field">
+            <label class="admin-users__form-label" for="">Nombre de usuario</label>
+            <input class="admin-users__form-input" type="text" />
           </div>
-
-          <!-- Columna derecha -->
-          <div class="permissions-modal__column">
-            
-            <!-- Reportes -->
-            <div class="permissions-modal__field">
-              <label class="permissions-modal__label">Reportes</label>
-              <input class="permissions-modal__checkbox" type="checkbox" />
-            </div>
-
-            <!-- Gastos -->
-            <div class="permissions-modal__field">
-              <label class="permissions-modal__label">Gastos</label>
-              <input class="permissions-modal__checkbox" type="checkbox" />
-            </div>
-
-            <!-- Usuarios -->
-            <div class="permissions-modal__field">
-              <label class="permissions-modal__label">Usuarios</label>
-              <input class="permissions-modal__checkbox" type="checkbox" />
-            </div>
-
-            <!-- Configuracion -->
-            <div class="permissions-modal__field">
-              <label class="permissions-modal__label">Configuracion</label>
-              <input class="permissions-modal__checkbox" type="checkbox" />
-            </div>
-
+          <div class="admin-users__form-field">
+            <label class="admin-users__form-label" for=""> Contraseña</label>
+            <input class="admin-users__form-input" type="text" />
           </div>
-
-        </div>
-
-        <!-- Botones de acción -->
-        <div class="permissions-modal__actions">
-          <button type="button" class="permissions-modal__button permissions-modal__button--save">
-            <img class="permissions-modal__button-icon" src="/assets/icons/guardar.png" alt="guardar">
-            <span class="permissions-modal__button-text">Guardar</span>
+          <div class="admin-users__form-field">
+            <label class="admin-users__form-label" for="">
+              Rol de usuario</label>
+            <select class="admin-users__form-select" name="" id="">
+              <option class="admin-users__form-option" value=""></option>
+              <option class="admin-users__form-option" value="">
+                administrador
+              </option>
+              <option class="admin-users__form-option" value="">
+                cajero
+              </option>
+              <option class="admin-users__form-option" value="">
+                mesero
+              </option>
+            </select>
+          </div>
+          <button class="admin-users__form-button">
+            <img class="admin-users__form-button-icon" src="/assets/icons/guardar.png" alt="" />
+            <span class="admin-users__form-button-text">agregar</span>
           </button>
+        </form>
+      </main>
+    </section>
+  </div>
 
-          <label for="check-permissions" class="permissions-modal__button permissions-modal__button--cancel">
-            <img class="permissions-modal__button-icon" src="/assets/icons/cerrar.png" alt="cancelar">
-            <span class="permissions-modal__button-text">Cancelar</span>
-          </label>
-        </div>
+  <!--  ===================================== -->
 
-      </form>
-    </main>
-  </section>
-</div>
+  <input type="checkbox" name="" id="check-modi" class="admin-checked__add" />
 
-    <!--====================================================================-->
-  </body>
+  <div class="admin-users__moddy">
+    <section class="admin-users__form-section">
+      <header class="admin-users__form-header">
+        <h1 class="admin-users__form-title">Modificar Usuario</h1>
+        <label class="admin-users__form-close" for="check-modi">
+          <img class="admin-users__form-close-icon" src="/assets/icons/cerrar-sesion.png" alt="" />
+        </label>
+      </header>
+      <script src="/css/components/main.js"></script>
+      <main class="admin-users__form-main">
+        <form class="admin-users__form-body" action="">
+          <div class="admin-users__form-field">
+            <label class="admin-users__form-label" for="">Renombrar Usuario</label>
+            <input class="admin-users__form-input" type="text" />
+          </div>
+          <div class="admin-users__form-field">
+            <label class="admin-users__form-label" for="">
+              Nueva Contraseña</label>
+            <input class="admin-users__form-input" type="text" />
+          </div>
+          <div class="admin-users__form-field">
+            <label class="admin-users__form-label" for="">
+              Rol de usuario</label>
+            <select class="admin-users__form-select" name="" id="">
+              <option class="admin-users__form-option" value=""></option>
+              <option class="admin-users__form-option" value="">
+                administrador
+              </option>
+              <option class="admin-users__form-option" value="">
+                cajero
+              </option>
+              <option class="admin-users__form-option" value="">
+                mesero
+              </option>
+            </select>
+          </div>
+          <button class="admin-users__form-button">
+            <img class="admin-users__form-button-icon" src="/assets/icons/guardar.png" alt="" />
+            <span class="admin-users__form-button-text">agregar</span>
+          </button>
+        </form>
+      </main>
+    </section>
+  </div>
+
+  <!--=======================PERMISOS MODAL============================================-->
+
+  <!-- Checkbox controlador del modal para configurar permisos (oculto) -->
+  <input type="checkbox" id="check-permissions" class="admin-checked__permissions">
+
+  <div class="permissions-modal">
+    <section class="permissions-modal__section">
+      <header class="permissions-modal__header">
+        <h1 class="permissions-modal__title">Configurar Permisos para admin</h1>
+
+        <!-- Botón cerrar -->
+        <label for="check-permissions" class="permissions-modal__close">
+          <img class="permissions-modal__close-icon" src="/assets/icons/cerrar-sesion.png" alt="Cerrar">
+        </label>
+      </header>
+
+      <main class="permissions-modal__main">
+        <form class="permissions-modal__form">
+
+          <!-- Grid de permisos -->
+          <div class="permissions-modal__grid">
+
+            <!-- Columna izquierda -->
+            <div class="permissions-modal__column">
+
+              <!-- Toma de pedidos -->
+              <div class="permissions-modal__field">
+                <label class="permissions-modal__label">Toma de pedidos</label>
+                <input class="permissions-modal__checkbox" type="checkbox" />
+              </div>
+
+              <!-- Control de inventario -->
+              <div class="permissions-modal__field">
+                <label class="permissions-modal__label">Control de inventario</label>
+                <input class="permissions-modal__checkbox" type="checkbox" />
+              </div>
+
+              <!-- Agregar Clientes -->
+              <div class="permissions-modal__field">
+                <label class="permissions-modal__label">Agregar Clientes</label>
+                <input class="permissions-modal__checkbox" type="checkbox" />
+              </div>
+
+              <!-- Proveedor -->
+              <div class="permissions-modal__field">
+                <label class="permissions-modal__label">Proveedor</label>
+                <input class="permissions-modal__checkbox" type="checkbox" />
+              </div>
+
+              <!-- Clientes -->
+              <div class="permissions-modal__field">
+                <label class="permissions-modal__label">Clientes</label>
+                <input class="permissions-modal__checkbox" type="checkbox" />
+              </div>
+
+            </div>
+
+            <!-- Columna derecha -->
+            <div class="permissions-modal__column">
+
+              <!-- Reportes -->
+              <div class="permissions-modal__field">
+                <label class="permissions-modal__label">Reportes</label>
+                <input class="permissions-modal__checkbox" type="checkbox" />
+              </div>
+
+              <!-- Gastos -->
+              <div class="permissions-modal__field">
+                <label class="permissions-modal__label">Gastos</label>
+                <input class="permissions-modal__checkbox" type="checkbox" />
+              </div>
+
+              <!-- Usuarios -->
+              <div class="permissions-modal__field">
+                <label class="permissions-modal__label">Usuarios</label>
+                <input class="permissions-modal__checkbox" type="checkbox" />
+              </div>
+
+              <!-- Configuracion -->
+              <div class="permissions-modal__field">
+                <label class="permissions-modal__label">Configuracion</label>
+                <input class="permissions-modal__checkbox" type="checkbox" />
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Botones de acción -->
+          <div class="permissions-modal__actions">
+            <button type="button" class="permissions-modal__button permissions-modal__button--save">
+              <img class="permissions-modal__button-icon" src="/assets/icons/guardar.png" alt="guardar">
+              <span class="permissions-modal__button-text">Guardar</span>
+            </button>
+
+            <label for="check-permissions" class="permissions-modal__button permissions-modal__button--cancel">
+              <img class="permissions-modal__button-icon" src="/assets/icons/cerrar.png" alt="cancelar">
+              <span class="permissions-modal__button-text">Cancelar</span>
+            </label>
+          </div>
+
+        </form>
+      </main>
+    </section>
+  </div>
+
+  <!--====================================================================-->
+</body>
+
 </html>

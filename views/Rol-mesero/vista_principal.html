@@ -1,143 +1,118 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Punto de Venta PizzaSoft</title>
+<!-- =============================================
+     DASHBOARD MESERO
+     Panel principal con navegación a módulos
+     Versión simplificada para el rol Mesero
+     ============================================= -->
 
-    <!-- Tu archivo CSS principal -->
-    <link rel="stylesheet" href="../../css/components/vista_principal.css" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="admin-section">
-        <img
-          src="../../assets/icons/usuario.png"
-          alt="icono admin"
-          class="admin-section_icon"
-        />
-        <h2 class="admin-section_subtitulo">Mesero</h2>
-      </div>
+<head>
+  <!-- =============================================
+         META INFORMACIÓN Y ESTILOS
+         ============================================= -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Punto de Venta PizzaSoft</title>
 
-      <h1 class="titulo">Mesero</h1>
+  <!-- Estilos del dashboard -->
+  <link rel="stylesheet" href="../../css/components/vista_principal.css" />
+</head>
 
-      <a class="logout" href="../Rol-mesero/mesero.html">
-        <img
-          src="../../assets/icons/cerrar-sesion.png"
-          alt="cerrar sesión"
-          class="icon"
-        />
-      </a>
-    </header>
+<body>
+  <!-- =============================================
+         HEADER - Barra superior
+         Contiene: Info del usuario, título y logout
+         ============================================= -->
+  <header class="header">
+    <!-- Sección izquierda: Rol del usuario -->
+    <div class="admin-section">
+      <img src="../../assets/icons/usuario.png" alt="icono admin" class="admin-section_icon" />
+      <h2 class="admin-section_subtitulo">Mesero</h2>
+    </div>
 
-    <main class="container">
-      <!-- Panel izquierdo -->
-      <aside class="left-panel">
-        <button class="btn rojo">
-          <img
-            src="../../assets/icons/ordenar-comida (1).png"
-            class="icon-btn"
-            alt="icono-pedidos"
-          />
-          <a href="../Rol-Admin/vista_pedido_admin.html" class="btn rojo"></a>
-          TOMA DE PEDIDOS
-        </button>
+    <!-- Título central -->
+    <h1 class="titulo">Mesero</h1>
 
-        <button class="btn verde">
-          <img
-            src="../../assets/icons/lista-de-verificacion.png"
-            class="icon-btn"
-            alt="icono-inventario"
-          />
-          CONTROL INVENTARIO
-        </button>
+    <!-- Botón de cerrar sesión -->
+    <a class="logout" href="../Rol-mesero/mesero.html">
+      <img src="../../assets/icons/cerrar-sesion.png" alt="cerrar sesión" class="icon" />
+    </a>
+  </header>
 
-        <button class="btn amarillo">
-          <img
-            src="../../assets/icons/agregar-cliente.png"
-            class="icon-btn"
-            alt="icono-agregar-cliente"
-          />
-          AGREGAR CLIENTES
-        </button>
+  <!-- =============================================
+         MAIN - Contenido principal
+         Layout de 3 columnas: Panel izq, Centro, Panel der
+         ============================================= -->
 
-        <button class="btn verde2">
-          <img
-            src="/assets/icons/proveedor.png"
-            class="icon-btn"
-            alt="icono-agregar-cliente"
-          />
-          PROVEEDOR
-        </button>
+  <main class="container">
+    <!-- Panel izquierdo -->
+    <aside class="left-panel">
+      <button class="btn rojo">
+        <img src="../../assets/icons/ordenar-comida (1).png" class="icon-btn" alt="icono-pedidos" />
+        <a href="../Rol-Admin/vista_pedido_admin.html" class="btn rojo"></a>
+        TOMA DE PEDIDOS
+      </button>
 
-        <button class="btn verde-oscuro">
-          <img
-            src="/assets/icons/proveedor.png"
-            class="icon-btn"
-            alt="icono-agregar-cliente"
-          />
-          COMPRAS
-        </button>
+      <button class="btn verde">
+        <img src="../../assets/icons/lista-de-verificacion.png" class="icon-btn" alt="icono-inventario" />
+        CONTROL INVENTARIO
+      </button>
+
+      <button class="btn amarillo">
+        <img src="../../assets/icons/agregar-cliente.png" class="icon-btn" alt="icono-agregar-cliente" />
+        AGREGAR CLIENTES
+      </button>
+
+      <button class="btn verde2">
+        <img src="/assets/icons/proveedor.png" class="icon-btn" alt="icono-agregar-cliente" />
+        PROVEEDOR
+      </button>
+
+      <button class="btn verde-oscuro">
+        <img src="/assets/icons/proveedor.png" class="icon-btn" alt="icono-agregar-cliente" />
+        COMPRAS
+      </button>
 
 
-      </aside>
+    </aside>
 
-      <!-- Panel central con logo -->
-      <section class="center-panel">
-        <img
-          src="../../assets/imagenes/logo.png"
-          alt="PizzaSoft Logo"
-          class="logo"
-        />
+    <!-- Panel central con logo -->
+    <section class="center-panel">
+      <img src="../../assets/imagenes/logo.png" alt="PizzaSoft Logo" class="logo" />
 
-        <p class="info">
-          Sistema punto de venta<br />
-          Girón Santander Colombia
-        </p>
+      <p class="info">
+        Sistema punto de venta<br />
+        Girón Santander Colombia
+      </p>
 
-        <p class="footer">Software creado por Diego Puerto 2025</p>
-      </section>
+      <p class="footer">Software creado por Diego Puerto 2025</p>
+    </section>
 
-      <!-- Panel derecho -->
-      <aside class="right-panel">
-        <button class="btn azul-claro">
-          <img
-            src="../../assets/icons/analitica.png"
-            class="icon-btn"
-            alt="icono-reportes"
-          />
-          REPORTES
-        </button>
+    <!-- Panel derecho -->
+    <aside class="right-panel">
+      <button class="btn azul-claro">
+        <img src="../../assets/icons/analitica.png" class="icon-btn" alt="icono-reportes" />
+        REPORTES
+      </button>
 
-        
 
-        <button class="btn morado">
-          <img
-            src="../../assets/icons/configuracion.png"
-            class="icon-btn"
-            alt="icono-config"
-          />
-          GASTOS
-        </button>
 
-        <button class="btn naranja">
-          <img
-            src="../../assets/icons/agregar-usuario.png"
-            class="icon-btn"
-            alt="icono-usuarios"
-          />
-          USUARIOS
-        </button>
+      <button class="btn morado">
+        <img src="../../assets/icons/configuracion.png" class="icon-btn" alt="icono-config" />
+        GASTOS
+      </button>
 
-        <button class="btn azul-oscuro">
-          <img
-            src="../../assets/icons/configuracion.png"
-            class="icon-btn"
-            alt="icono-config"
-          />
-          CONFIGURACIÓN
-        </button>
-      </aside>
-    </main>
-  </body>
+      <button class="btn naranja">
+        <img src="../../assets/icons/agregar-usuario.png" class="icon-btn" alt="icono-usuarios" />
+        USUARIOS
+      </button>
+
+      <button class="btn azul-oscuro">
+        <img src="../../assets/icons/configuracion.png" class="icon-btn" alt="icono-config" />
+        CONFIGURACIÓN
+      </button>
+    </aside>
+  </main>
+</body>
+
 </html>

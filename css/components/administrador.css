@@ -1,3 +1,9 @@
+/* =============================================
+   LOGIN ADMINISTRADOR - ESTILOS
+   Página de autenticación del rol Administrador
+   Contiene: Header, formulario login, botones, footer
+   ============================================= */
+
 @import "variablesGlobales/global.css";
 
 /* =========================================
@@ -197,4 +203,150 @@ body {
     padding: 20px 0;
     color: var(--color-texto);
     font-size: 14px;
+}
+
+/* ============================================
+   MEDIA QUERIES - RESPONSIVE DESIGN
+   ============================================ */
+
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .site-header__logo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .login-caja {
+        width: 90%;
+        max-width: 500px;
+        height: auto;
+        padding: 25px;
+    }
+
+    .login-contenedor {
+        width: 90%;
+        max-width: 500px;
+        height: auto;
+    }
+
+    .input-grupo__input {
+        height: 60px;
+        font-size: 15px;
+    }
+
+    .boton {
+        padding: 12px;
+        font-size: 15px;
+    }
+}
+
+/* Celular (hasta 767px) */
+@media (max-width: 767px) {
+    body {
+        padding: 10px;
+    }
+
+    .site-header {
+        padding: 10px 0;
+    }
+
+    .site-header__logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .page-main {
+        gap: 15px;
+        padding: 5px;
+    }
+
+    .page-main__titulo {
+        font-size: clamp(2rem, 8vw, 3rem);
+    }
+
+    .login-caja {
+        width: 95%;
+        max-width: 350px;
+        height: auto;
+        padding: 20px;
+    }
+
+    .login-contenedor {
+        width: 95%;
+        max-width: 350px;
+        height: auto;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .subtitulo {
+        font-size: 14px;
+    }
+
+    .input-grupo__label {
+        font-size: 14px;
+        top: 8px;
+        left: 12px;
+    }
+
+    .input-grupo__input {
+        height: 55px;
+        padding: 25px 12px 8px;
+        font-size: 14px;
+    }
+
+    .boton {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .mi-footer {
+        padding: 15px 0;
+        font-size: 12px;
+    }
+}
+
+/* Celular pequeño (hasta 480px) */
+@media (max-width: 480px) {
+    .site-header__logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .login-caja {
+        max-width: 300px;
+        padding: 15px;
+    }
+
+    .page-main__titulo {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    .subtitulo {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    .input-grupo {
+        margin-top: 8px;
+    }
+
+    .input-grupo__input {
+        height: 50px;
+    }
+
+    .boton {
+        padding: 10px;
+        font-size: 13px;
+    }
 }
