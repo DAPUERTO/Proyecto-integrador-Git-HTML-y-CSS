@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- =============================================
+     GESTIÓN DE PROVEEDORES
+     Vista para registro y edición de proveedores
+     Funcionalidades: Registrar, Editar, Eliminar proveedores
+     ============================================= -->
+
+<head>
+  <!-- =============================================
+       META INFORMACIÓN Y ESTILOS
+       ============================================= -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proveedor</title>
+
+  <!-- Variables globales CSS -->
+  <link rel="stylesheet" href="../../css/components/variablesGlobales/global.css" />
+  <!-- Estilos específicos de proveedores -->
+  <link rel="stylesheet" href="/css/components/VistaAgregarProveedor-caja.css" />
+</head>
+
+<body class="inventory">
+  <!-- =============================================
+       HEADER - Encabezado
+       Contiene: Rol del usuario, título y botón salir
+       ============================================= -->
+  <header class="inventory-header" aria-label="Encabezado de control de inventarios">
+    <!-- Información del usuario actual -->
+    <div class="inventory-header__group">
+      <img class="inventory-header__icon" src="/assets/icons/usuario.png" alt="Icono de usuario" />
+      <span class="inventory-header__role">Caja</span>
+    </div>
+
+    <!-- Título de la vista -->
+    <h1 class="inventory-header__title">PROVEEDORES</h1>
+
+    <!-- Botón para volver al dashboard principal -->
+    <a class="logout" href="/views/Rol-punto-caja/vista_principal.html" class="inventory-header__logout" type="button"
+      aria-label="Cerrar sesion">
+      <img src="/assets/icons/cerrar-sesion.png" alt="Cerrar sesion" class="inventory-header__logout-icon" />
+    </a>
+  </header>
+
+  <!-- =============================================
+       MAIN - Contenido principal
+       Contiene: Metadatos, acciones, formulario y tabla
+       ============================================= -->
+  <main class="inventory-main">
+    <!-- =========================================
+         SECCIÓN DE METADATOS
+         Muestra: Número de factura, fecha y hora
+         ========================================= -->
+    <section class="inventory-meta" aria-label="Informacion de factura">
+      <p class="inventory-meta__item">
+        Factura no : <span class="inventory-meta__value">1</span>
+      </p>
+      <p class="inventory-meta__item__fecha">
+        Fecha:
+        <time datetime="2025-10-31" class="inventory-meta__value">31-10-2025</time>
+      </p>
+      <p class="inventory-meta__item__hora">Hora : 17:32:01</p>
+    </section>
+
+    <!-- =========================================
+         BARRA DE ACCIONES
+         Botones: Registrar, Editar, Eliminar + Búsqueda
+         ========================================= -->
+
+    <nav class="inventory-actions" aria-label="Acciones de inventario">
+      <div class="inventory-actions__buttons">
+
+
+
+        <!-- <button
+            class="inventory-actions__btn inventory-actions__btn--register"
+            type="button"
+          >
+            <img
+              class="inventory-actions__icon"
+              src="../../assets/icons/registro-en-linea.png"
+              alt="Icono registrar"
+            />
+            <span class="inventory-actions__label">Registrar</span>
+          </button>  -->
+
+        <label for="check-add" class="inventory-actions__btn inventory-actions__btn--register">
+          <img class="inventory-actions__icon" src="/assets/icons/registro-en-linea.png" alt="Icono registrar" />
+          <span class="inventory-actions__label">Registrar</span>
+        </label>
+
+
+        <!--=====================================================================================================================-->
+        <!-- 
+        <button class="inventory-actions__btn inventory-actions__btn--edit" type="button">
+          <img class="inventory-actions__icon" src="../../assets/icons/curriculum.png" alt="Icono editar" />
+          <span class="inventory-actions__label">Editar</span>
+        </button> -->
+
+        <label for="check-edit2" class="inventory-actions__btn inventory-actions__btn--register">
+          <img class="inventory-actions__icon" src="/assets/icons/registro-en-linea.png" alt="Icono editar" />
+          <span class="modal-edit2__label">Editar</span>
+        </label>
+
+        <!--=====================================================================================================================-->
+
+
+        <!-- <button class="inventory-actions__btn inventory-actions__btn--delete" type="button">
+          <img class="inventory-actions__icon" src="../../assets/icons/eliminar.png" alt="Icono eliminar" />
+          <span class="inventory-actions__label">Eliminar</span>
+        </button> -->
+
+        <a href="#popup-editar" class="inventory-actions__btn inventory-actions__btn--delete">
+          <img src="/assets/icons/eliminar.png" alt="Eliminar" class="inventory-actions__icon" />
+          Eliminar
+        </a>
+
+
+
+
+
+      </div>
+
+      <form class="inventory-search" role="search" aria-label="Buscar en inventario">
+        <img class="inventory-search__icon" src="/assets/icons/buscar.png" alt="Buscar" />
+        <label class="sr-only" for="buscar-palabra">Buscar por palabra</label>
+        <input id="buscar-palabra" class="inventory-search__input" type="search" name="q"
+          placeholder="Buscar por palabra" />
+      </form>
+    </nav>
+    <!--===============================================================================================-->
+
+    <!--========================================================================================================-->
+    <section class="inventory-table" aria-label="Tabla de inventario">
+
+      <!--========================================================================================================-->
+
+      <div class="inventory-extra">
+        <label class="inventory-extra__label">Nombre:</label>
+        <input class="inventory-extra__input" type="text">
+
+        <label class="inventory-extra__label">Cedula:</label>
+        <input class="inventory-extra__input" type="text">
+
+        <label class="inventory-extra__label">Celular:</label>
+        <input class="inventory-extra__input" type="text">
+
+        <label class="inventory-extra__label">Direccion:</label>
+        <input class="inventory-extra__input" type="text">
+
+        <label class="inventory-extra__label">Correo:</label>
+        <input class="inventory-extra__input" type="text">
+      </div>
+
+      <!--======================================================================================================-->
+      <div class="inventory-table__wrapper">
+        <table class="inventory-table__table">
+          <thead>
+            <tr class="inventory-table__row">
+              <th scope="col" class="inventory-table__cell inventory-table__cell--header">
+                Id
+              </th>
+              <th scope="col" class="inventory-table__cell inventory-table__cell--header">
+                Producto
+              </th>
+              <th scope="col" class="inventory-table__cell inventory-table__cell--header">
+                Proveedor
+              </th>
+              <th scope="col" class="inventory-table__cell inventory-table__cell--header">
+                Precio
+              </th>
+              <th scope="col" class="inventory-table__cell inventory-table__cell--header">
+                Costo
+              </th>
+              <th scope="col" class="inventory-table__cell inventory-table__cell--header">
+                Stock
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="inventory-table__row inventory-table__row--empty">
+              <td class="inventory-table__cell" colspan="6">
+                <span class="inventory-table__empty">No hay registros disponibles.</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="inventory-footer" aria-label="Acciones secundarias">
+
+
+    <nav class="inventory-pagination" aria-label="Paginacion">
+      <button class="inventory-pagination__control" type="button" aria-label="Pagina anterior">
+        &#8249;
+      </button>
+      <span class="inventory-pagination__info">Pagina 1 de 1</span>
+      <button class="inventory-pagination__control" type="button" aria-label="Pagina siguiente">
+        &#8250;
+      </button>
+    </nav>
+  </footer>
+
+  <!--===================================================-->
+  <!-- Checkbox controlador del modal para el boton registrar (oculto) -->
+  <input type="checkbox" id="check-add" class="admin-checked__add">
+
+  <div class="admin-users__form">
+    <section class="admin-users__form-section">
+      <header class="admin-users__form-header">
+        <h1 class="admin-users__form-title">Exito</h1>
+
+        <!-- Botón cerrar-->
+        <label for="check-add" class="admin-users__form-close">
+          <img class="admin-users__form-close-icon" src="/assets/icons/cerrar-sesion.png" alt="">
+        </label>
+      </header>
+
+      <main class="admin-users__form-main">
+        <form class="admin-users__form-body">
+
+          <div class="admin-users__form-field">
+            <a class="admin-users__form-label">Proveedor agregado correctamente</a>
+
+          </div>
+
+
+          <button class="admin-users__form-button">
+            <img class="admin-users__form-button-icon" src="/assets/icons/guardar.png" alt="Aceptar">
+            <span class="admin-users__form-button-text">Aceptar</span>
+          </button>
+        </form>
+      </main>
+    </section>
+  </div>
+
+
+  <!-- ====================================================================================== -->
+  <!-- Checkbox oculto controlador del modal -->
+  <input type="checkbox" id="check-edit2" class="modal-edit2__checker">
+
+  <div class="modal-edit2__overlay">
+    <section class="modal-edit2__window">
+
+      <header class="modal-edit2__header">
+        <h1 class="modal-edit2__title">Modificar Proveedor</h1>
+
+        <label for="check-edit2" class="modal-edit2__close-btn">
+          <img class="modal-edit2__close-icon" src="/assets/icons/cerrar-sesion.png" alt="">
+        </label>
+      </header>
+
+      <main class="modal-edit2__main">
+        <form class="modal-edit2__form">
+
+          <div class="modal-edit2__field">
+            <label class="modal-edit2__label-input">Nombre:</label>
+            <input class="modal-edit2__input" type="text" />
+          </div>
+
+          <div class="modal-edit2__field">
+            <label class="modal-edit2__label-input">Cedula:</label>
+            <input class="modal-edit2__input" type="text" />
+            </select>
+          </div>
+
+          <div class="modal-edit2__field">
+            <label class="modal-edit2__label-input">Celular:</label>
+            <input class="modal-edit2__input" type="text" />
+          </div>
+
+          <div class="modal-edit2__field">
+            <label class="modal-edit2__label-input">Direccion:</label>
+            <input class="modal-edit2__input" type="text" />
+          </div>
+
+          <div class="modal-edit2__field">
+            <label class="modal-edit2__label-input">Correo:</label>
+            <input class="modal-edit2__input" type="text" />
+          </div>
+
+
+
+          <button class="modal-edit2__button">
+            <img class="modal-edit2__button-icon" src="/assets/icons/guardar.png" alt="agregar">
+            <span class="modal-edit2__button-text">Agregar</span>
+          </button>
+
+        </form>
+      </main>
+
+    </section>
+  </div>
+
+
+  <!-- ELIMINAR -->
+
+
+  <!-- ========= POPUP ========== -->
+  <div id="popup-editar" class="popup">
+    <div class="popup-content">
+      <h3>Ingrese pin de seguridad:<br></h3>
+      <input type="password" placeholder="">
+
+      <div class="buttons">
+        <a href="#" class="ok">OK</a>
+        <a href="#" class="cancel">Cancelar</a>
+      </div>
+    </div>
+  </div>
+  <!-- ==================================== -->
+
+
+
+</body>
+
+</html>
