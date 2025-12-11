@@ -60,19 +60,6 @@
     justify-content: end;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .inventory-header__logout {
   justify-self: end;
   background: var(--inventory-btn-delete);
@@ -140,7 +127,7 @@ justify-self: end;
 .inventory-actions {
   background: var(--inventory-surface);
   border-radius: 4px;
-  padding: 1rem;
+  padding: 0.5rem;
   display: grid;
   grid-template-columns: minmax(320px, 2fr) minmax(240px, 1fr);
   gap: 1rem;
@@ -326,7 +313,7 @@ justify-self: end;
  .inventory-extra {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 0.5rem;
   padding: 1rem;
   background: var(--inventory-panel);
   border-radius: 6px;
@@ -382,7 +369,6 @@ justify-self: end;
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
-  gap: 1rem;
   padding: 0.5rem 0.5rem;
   background: var(--inventory-footer-bg);
   color: var(--color-text-light, #fff);
@@ -643,8 +629,8 @@ justify-self: end;
 .modal-edit2__form {
     display: flex;
     flex-direction: column;
-    gap: 35px;
-    padding: 50px 30px 30px 30px;
+    gap: 25px;
+    padding: 40px 30px 30px 30px;
 }
 
 .modal-edit2__field {

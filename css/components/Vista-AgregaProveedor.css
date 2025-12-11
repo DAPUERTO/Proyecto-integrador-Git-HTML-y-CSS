@@ -326,7 +326,7 @@ justify-self: end;
 .inventory-extra {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1rem;
   padding: 1rem;
   background: var(--inventory-panel);
   border-radius: 6px;

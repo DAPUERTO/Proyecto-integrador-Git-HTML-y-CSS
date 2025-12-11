@@ -60,19 +60,6 @@
     justify-content: end;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .inventory-header__logout {
   justify-self: end;
   background: var(--inventory-btn-delete);
@@ -357,7 +344,7 @@ justify-self: end;
   grid-template-columns: auto 1fr;
   align-items: center;
   gap: 1rem;
-  padding: 1rem 1.5rem;
+  padding: 0.5rem 0.5rem;
   background: var(--inventory-footer-bg);
   color: var(--color-text-light, #fff);
 }
@@ -580,8 +567,8 @@ justify-self: end;
 .modal-edit2__window {
     display: flex;
     flex-direction: column;
-    width: 640px;
-    height: 900px;
+    width: 600px;
+    height: 800px;
     background-color: var(--background-main);
     box-shadow: 2px 2px 4px 1px;
 }
@@ -596,7 +583,7 @@ justify-self: end;
 
 .modal-edit2__title {
     font-family: var(--fuente-letra);
-    font-size: 50px;
+    font-size: 35px;
     font-weight: bold;
     align-self: center;
     justify-self: center;
@@ -618,7 +605,7 @@ justify-self: end;
 .modal-edit2__form {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 25px;
     padding: 50px 30px 30px 30px;
 }
 
