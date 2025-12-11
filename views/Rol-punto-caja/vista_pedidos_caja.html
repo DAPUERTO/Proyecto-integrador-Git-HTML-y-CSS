@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
 <!-- =============================================
-     TOMA DE PEDIDOS - CAJA
-     Pantalla de gestión de pedidos para cajeros
-     Contiene: Formulario, tabla de productos, acciones
+     TOMA DE PEDIDOS - ADMINISTRADOR
+     Pantalla principal de gestión de pedidos
+     Contiene: Formulario, tabla, modales de pago
      ============================================= -->
 
 <head>
   <!-- =============================================
-         META INFORMACIÓN Y ESTILOS
-         ============================================= -->
+       META INFORMACIÓN Y ESTILOS
+       ============================================= -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Toma de pedidos</title>
-  <link rel="stylesheet" href="../../css/components/vista_pedidos_caja.css" />
+  <link rel="stylesheet" href="/css/components/vista_pedidos_caja.css" />
 </head>
 
 <body class="app">
   <!-- =============================================
-         HEADER - Barra superior
-         Contiene: Rol, título, fecha/hora, logout
-         ============================================= -->
+       HEADER - Barra superior
+       Contiene: Rol, título, fecha/hora, logout
+       ============================================= -->
   <header class="topbar">
     <!-- Sección izquierda: Rol del usuario -->
     <section class="topbar-left">
-      <img src="../../assets/icons/imagen-user.png" alt="Icono de usuario" class="icon-img" />
+      <img src="/assets/icons/imagen-user.png" alt="Icono de usuario" class="icon-img" />
       <div>
-        <strong>caja</strong>
+        <strong>Caja</strong>
       </div>
     </section>
 
@@ -41,16 +41,16 @@
       </time>
 
       <!-- Botón de cerrar sesión -->
-      <a class="circle-btn" href="../Rol-punto-caja/vista_principal.html">
-        <img src="../../assets/icons/cerrar-sesion.png" alt="cerrar sesión" class="icon-img" />
+      <a class="circle-btn" href="/views/Rol-punto-caja/vista_principal.html">
+        <img src="/assets/icons/cerrar-sesion.png" alt="cerrar sesión" class="icon-img" />
       </a>
     </aside>
   </header>
 
   <!-- =============================================
-         MAIN - Contenido principal
-         Contiene: Info factura, formulario, tabla
-         ============================================= -->
+       MAIN - Contenido principal
+       Contiene: Info factura, formulario, tabla
+       ============================================= -->
 
   <main role="main">
     <section class="header-info" aria-labelledby="factura-actual">
@@ -65,7 +65,9 @@
           <label for="cliente">Cliente:</label>
           <select id="cliente" name="cliente">
             <option>Seleccione...</option>
-            <option>Andres agudelo</option>
+            <option>gustavo petro</option>
+            <option>Alvaro uribe</option>
+            <option>Pablo escobar</option>
           </select>
         </div>
 
@@ -76,41 +78,48 @@
 
         <div class="form-group">
           <label for="producto">Producto:</label>
-
           <select id="producto" name="producto">
             <option>Seleccione...</option>
-            <option>Pizza hawaiana</option>
-            <option>Pizza champinon</option>
-            <option>Pizza campesina</option>
+            <option>Pizza peperoni</option>
+            <option>pizza champiñon</option>
+            <option>pizza hawaiana</option>
+            <option>pizza pollo jamon</option>
           </select>
         </div>
 
         <div class="form-group">
           <label for="disponible">Disponible :</label>
-          <!-- <input type="text" id="disponible" name="disponible" class="small" disabled> -->
-          <select id="producto" name="producto">
-            <option>5</option>
-            <option></option>
-            <option></option>
-            <option></option>
-          </select>
+          <input type="text" id="disponible" name="disponible" class="small" disabled />
         </div>
 
         <nav class="actions" id="acciones-formulario" aria-label="Acciones del pedido">
           <button type="button" class="btn-icon btn-agregar">
-            <img src="../../assets/icons/agregar-producto (1).png" alt="Agregar" class="icon-img" />
+            <img src="/assets/icons/agregar-producto (1).png" alt="Agregar" class="icon-img" />
             Agregar
           </button>
-          <button type="button" class="btn-icon btn-editar">
-            <img src="../../assets/icons/curriculum.png" alt="Editar" class="icon-img" />
+
+
+
+          <!-- <button type="button" class="btn-icon btn-editar">
+              <img
+                src="../../assets/icons/curriculum.png"
+                alt="Editar"
+                class="icon-img"
+              />
+              Editar
+            </button> -->
+
+          <a href="#popup-editar" class="btn-icon btn-editar">
+            <img src="/assets/icons/curriculum.png" alt="Editar" class="icon-img" />
             Editar
-          </button>
+          </a>
+
           <button type="button" class="btn-icon btn-eliminar">
-            <img src="../../assets/icons/eliminar.png" alt="Eliminar" class="icon-img" />
+            <img src="/assets/icons/eliminar.png" alt="Eliminar" class="icon-img" />
             Eliminar
           </button>
           <button type="button" class="btn-icon btn-limpiar">
-            <img src="../../assets/icons/limpieza-de-datos.png" alt="Limpiar" class="icon-img" />
+            <img src="/assets/icons/limpieza-de-datos.png" alt="Limpiar" class="icon-img" />
             Limpiar
           </button>
         </nav>
@@ -140,18 +149,50 @@
   <footer class="footer-bar" aria-labelledby="acciones-finales">
     <h2 id="acciones-finales" class="sr-only">Acciones finales</h2>
     <nav class="footer-actions" aria-label="Gestion de pago">
-      <button type="button" class="btn-footer btn-pagar">
-        <img src="../../assets/icons/billete-de-banco.png" alt="Pagar" class="icon-img-footer" />
+
+      <!--=============================================================================================-->
+      <!-- <button type="button" class="btn-footer btn-pagar">
+        <img src="/assets/icons/billete-de-banco.png" alt="Pagar" class="icon-img-footer" />
         Pagar
-      </button>
-      <button type="button" class="btn-footer btn-ver-ventas">
-        <img src="../../assets/icons/mirar.png" alt="Ver Ventas" class="icon-img-footer" />
+      </button> -->
+
+      <label for="check-payment" class="btn-footer btn-pagar">
+        <img class="icon-img-footer" src="/assets/icons/billete-de-banco.png" alt="Icono pagar" />
+        Pagar
+      </label>
+
+      <!--==============================================================================================-->
+
+
+      <!-- <button type="button" class="btn-footer btn-ver-ventas">
+          <img
+            src="../../assets/icons/mirar.png"
+            alt="Ver Ventas"
+            class="icon-img-footer"
+          />
+          Ver Ventas
+        </button> -->
+
+      <a class="btn-footer btn-ver-ventas" href="/views/Rol-punto-caja/Venta-realizada-caja.html">
+        <img src="/assets/icons/mirar.png" alt="Ver Ventas" class="icon-img-footer" />
         Ver Ventas
-      </button>
-      <button type="button" class="btn-footer btn-anular">
+      </a>
+
+
+
+
+      <!-- <button type="button" class="btn-footer btn-anular">
         <img src="../../assets/icons/anularVenta.png" alt="Anular" class="icon-img-footer" />
         Anular Venta
-      </button>
+      </button> -->
+
+      <a class="btn-footer btn-anular" href="Anular_Venta.html">
+        <img src="/assets/icons/anularVenta.png" alt="Anular" class="icon-img-footer" />
+        Anular Venta
+      </a>
+
+
+
     </nav>
 
     <section class="total-pagar" aria-live="polite">
@@ -159,6 +200,67 @@
       <output name="total" for="cantidad producto">0.00</output>
     </section>
   </footer>
+
+
+
+  <!-- ========= POPUP ========== -->
+  <div id="popup-editar" class="popup">
+    <div class="popup-content">
+      <h3>Ingrese la nueva cantidad:</h3>
+      <input type="number" value="1">
+
+      <div class="buttons">
+        <a href="#" class="ok">OK</a>
+        <a href="#" class="cancel">Cancelar</a>
+      </div>
+    </div>
+  </div>
+  <!-- ==================================== -->
+
+  <!-- ================PAGAR ============================-->
+
+  <!-- Checkbox controlador del modal para el botón realizar pago (oculto) -->
+  <input type="checkbox" id="check-payment" class="admin-checked__payment">
+
+  <div class="payment-modal">
+    <section class="payment-modal__section">
+      <header class="payment-modal__header">
+        <h1 class="payment-modal__title">Realizar pago</h1>
+
+        <!-- Botón cerrar -->
+        <label for="check-payment" class="payment-modal__close">
+          <img class="payment-modal__close-icon" src="/assets/icons/cerrar-sesion.png" alt="Cerrar">
+        </label>
+      </header>
+
+      <main class="payment-modal__main">
+        <form class="payment-modal__form">
+
+          <!-- Total a pagar -->
+          <div class="payment-modal__total-box">
+            <h2 class="payment-modal__total-label">Total a pagar : </h2>
+          </div>
+
+          <!-- Campo de dinero dado -->
+          <div class="payment-modal__field">
+            <label class="payment-modal__label">Ingrese el monto de dinero dado por el cliente</label>
+            <input class="payment-modal__input" type="number" placeholder="0" />
+          </div>
+
+          <!-- Botón confirmar -->
+          <button class="payment-modal__button">
+            <img class="payment-modal__button-icon" src="/assets/icons/billete-de-banco.png" alt="">
+            <span class="payment-modal__button-text">Confirmar Pago</span>
+          </button>
+        </form>
+      </main>
+    </section>
+  </div>
+
+
+  <!-- ==================================================-->
+
+
 </body>
 
 </html>

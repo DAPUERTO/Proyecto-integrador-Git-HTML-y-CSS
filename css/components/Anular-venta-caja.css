@@ -305,7 +305,6 @@ body {
 /*
 ===============================================================================*/
 
-
 /* =============================================
    MEDIA QUERIES RESPONSIVAS - ANULAR VENTA
    Adaptación para Tablet y Móvil
@@ -648,3 +647,143 @@ body {
   }
 }
 
+/* =============================================
+   MÓVIL EXTRA PEQUEÑO (max-width: 375px)
+   ============================================= */
+@media (max-width: 375px) {
+  .header__title {
+    font-size: 1.1rem;
+  }
+
+  .header__spacer,
+  .header__exit {
+    width: 32px;
+    height: 32px;
+  }
+
+  .header__exit-icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .filter {
+    padding: 12px;
+  }
+
+  .filter__label {
+    font-size: 0.85rem;
+  }
+
+  .filter__input {
+    height: 34px;
+    font-size: 0.85rem;
+  }
+
+  .filter__button {
+    padding: 9px 12px;
+    font-size: 0.85rem;
+  }
+
+  .filter__icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .table-container {
+    height: 320px;
+  }
+
+  .table {
+    min-width: 600px;
+    font-size: 0.8rem;
+  }
+
+  .table__header {
+    font-size: 0.8rem;
+    padding: 6px 4px;
+  }
+
+  .table td {
+    padding: 7px 4px;
+    font-size: 0.8rem;
+  }
+
+  .sales-footer__button {
+    padding: 0.65rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .sales-footer__button-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .sales-footer__button-text {
+    font-size: 0.8rem;
+  }
+
+  .sales-pagination {
+    padding: 0.5rem 0.9rem;
+  }
+
+  .sales-pagination__control {
+    width: 32px;
+    height: 32px;
+    font-size: 0.95rem;
+  }
+
+  .sales-pagination__info {
+    font-size: 0.85rem;
+  }
+
+  .popup-content {
+    width: 92%;
+    padding: 15px 18px;
+  }
+
+  .popup-content h3 {
+    font-size: 1rem;
+  }
+
+  .popup-content input {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .ok, .cancel {
+    padding: 9px;
+    font-size: 0.9rem;
+  }
+}
+
+/* =============================================
+   LANDSCAPE MODE - MÓVIL HORIZONTAL
+   ============================================= */
+@media (max-width: 768px) and (orientation: landscape) {
+  .table-container {
+    height: 250px;
+  }
+
+  .filter {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .filter__group {
+    flex: 1 1 150px;
+  }
+
+  .filter__button {
+    width: auto;
+    flex-shrink: 0;
+  }
+
+  .sales-footer {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .sales-pagination {
+    grid-column: 1 / -1;
+    order: -1;
+  }
+}

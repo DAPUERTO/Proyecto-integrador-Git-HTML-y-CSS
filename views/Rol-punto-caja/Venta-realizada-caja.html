@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- =============================================
+     VENTAS REALIZADAS
+     Vista de historial de ventas completadas
+     Permite filtrar y exportar a Excel
+     ============================================= -->
+
+<head>
+  <!-- =============================================
+         META INFORMACIÓN Y ESTILOS
+         ============================================= -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ventas Realizadas</title>
+
+  <!-- Hoja de estilos específica de ventas -->
+  <link rel="stylesheet" href="/css/components/Venta-realizada-caja.css" />
+</head>
+
+<body>
+  <!-- =============================================
+         HEADER - Encabezado
+         Contiene: Título y botón de salir
+         ============================================= -->
+  <header class="header">
+    <!-- Espaciador para centrar el título -->
+    <div class="header__spacer"></div>
+
+    <!-- Título de la vista -->
+    <h1 class="header__title">Ventas Realizadas</h1>
+
+    <!-- Botón: Volver a la vista de pedidos -->
+    <a class="header__exit" href="/views/Rol-punto-caja/vista_pedidos_caja.html" aria-label="salir">
+      <img src="/assets/icons/cerrar-sesion.png" alt="Salir" class="header__exit-icon" />
+    </a>
+  </header>
+
+
+
+
+
+
+
+
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="container">
+    <!-- ==================== FILTRO ==================== -->
+    <section class="filter">
+      <div class="filter__group">
+        <label class="filter__label">Número de Factura:</label>
+        <input type="text" class="filter__input" />
+      </div>
+
+      <div class="filter__group">
+        <label class="filter__label">Cliente:</label>
+        <input type="text" class="filter__input" />
+      </div>
+
+      <button class="filter__button">
+        <img src="/assets/icons/filtrar (1).png" alt="filtrar" class="filter__icon" />
+        Filtrar
+      </button>
+    </section>
+
+    <!-- ==================== TABLA ==================== -->
+    <section class="table-container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="table__header">Factura</th>
+            <th class="table__header">Cliente</th>
+            <th class="table__header">Total</th>
+            <th class="table__header">Fecha</th>
+            <th class="table__header">Hora</th>
+            <th class="table__header">Cajero</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr class="sales-table__row sales-table__row--empty">
+            <td class="sales-table__cell" colspan="6">
+              <span class="sales-table__empty">No hay registros disponibles.</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="sales-footer" aria-label="Acciones secundarias">
+    <button class="sales-footer__button" type="button">
+      <img class="sales-footer__button-icon" src="/assets/icons/excel-logo.png" alt="Icono Excel" />
+      <span class="sales-footer__button-text">editar en excel</span>
+    </button>
+
+    <nav class="sales-pagination" aria-label="Paginacion">
+      <button class="sales-pagination__control" type="button" aria-label="Pagina anterior">
+        &#8249;
+      </button>
+      <span class="sales-pagination__info">Pagina 1 de 1</span>
+      <button class="sales-pagination__control" type="button" aria-label="Pagina siguiente">
+        &#8250;
+      </button>
+    </nav>
+  </footer>
+</body>
+
+</html>

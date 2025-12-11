@@ -45,35 +45,40 @@
          ============================================= -->
 
   <main class="container">
-    <!-- Panel izquierdo -->
+    <!-- =========================================
+           PANEL IZQUIERDO - Navegación primaria
+           Botones: Pedidos, Inventario, Clientes, Proveedor, Compras
+           ========================================= -->
     <aside class="left-panel">
-      <button class="btn rojo">
-        <img src="../../assets/icons/ordenar-comida (1).png" class="icon-btn" alt="icono-pedidos" />
-        <a href="../Rol-Admin/vista_pedido_admin.html" class="btn rojo"></a>
+      <!-- Botón: Toma de Pedidos - Accede al módulo de ventas -->
+      <a href="/views/Rol-punto-caja/vista_pedidos_caja.html" class="btn rojo">
+        <img src="/assets/icons/ordenar-comida (1).png" class="icon-btn" alt="icono-pedidos" />
         TOMA DE PEDIDOS
-      </button>
+      </a>
 
-      <button class="btn verde">
-        <img src="../../assets/icons/lista-de-verificacion.png" class="icon-btn" alt="icono-inventario" />
+      <!-- Botón: Control Inventario - Gestión de productos -->
+      <a href="/views/Rol-punto-caja/Reporte-inventario-caja.html" class="btn verde">
+        <img src="/assets/icons/lista-de-verificacion.png" class="icon-btn" alt="icono-inventario" />
         CONTROL INVENTARIO
-      </button>
+      </a>
 
-      <button class="btn amarillo">
-        <img src="../../assets/icons/agregar-cliente.png" class="icon-btn" alt="icono-agregar-cliente" />
+      <!-- Botón: Agregar Clientes - Registro de clientes -->
+      <a href="Vista_AgregarClientes.html" class="btn amarillo">
+        <img src="/assets/icons/agregar-cliente.png" class="icon-btn" alt="icono-agregar-cliente" />
         AGREGAR CLIENTES
-      </button>
+      </a>
 
-      <button class="btn verde2">
-        <img src="/assets/icons/proveedor.png" class="icon-btn" alt="icono-agregar-cliente" />
+      <!-- Botón: Proveedor - Gestión de proveedores -->
+      <a href="Vista-AgregarProveedor.html" class="btn verde2">
+        <img src="/assets/icons/proveedor.png" class="icon-btn" alt="icono-proveedor" />
         PROVEEDOR
-      </button>
+      </a>
 
-      <button class="btn verde-oscuro">
-        <img src="/assets/icons/proveedor.png" class="icon-btn" alt="icono-agregar-cliente" />
+      <!-- Botón: Compras - Registro de compras a proveedores -->
+      <a href="Vista-Compras.html" class="btn verde-oscuro">
+        <img src="/assets/icons/proveedor.png" class="icon-btn" alt="icono-compras" />
         COMPRAS
-      </button>
-
-
+      </a>
     </aside>
 
     <!-- Panel central con logo -->
