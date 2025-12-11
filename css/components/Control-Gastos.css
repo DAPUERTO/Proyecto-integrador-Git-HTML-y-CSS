@@ -66,19 +66,6 @@
     justify-content: end;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .inventory-header__logout {
   justify-self: end;
   background: var(--inventory-btn-delete);
@@ -759,37 +746,498 @@ justify-self: end;
     
 }
 
-/* Animación */
-@keyframes aparecer {
-    from { transform: scale(0.8); opacity: 0; }
-    to   { transform: scale(1); opacity: 1; }
-}
+/* =============================================
+   MEDIA QUERIES RESPONSIVAS - CONTROL DE GASTOS
+   Adaptación para Tablet y Móvil
+   ============================================= */
 
-/* ========================================================================================= */
-
-@media (max-width: 640px) {
+/* =============================================
+   TABLET (768px - 1024px)
+   ============================================= */
+@media (max-width: 1024px) {
   .inventory-header {
-    padding: 0.75rem 1rem;
+    grid-template-columns: auto 1fr auto;
+    padding: 1rem 1.5rem;
+    gap: 0.75rem;
+  }
+
+  .inventory-header__title {
+    font-size: 1.5rem;
+  }
+
+  .inventory-header__group {
+    font-size: 1rem;
+  }
+
+  .inventory-main {
+    padding: 0 1rem 1rem;
+  }
+
+  .inventory-meta {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    padding: 0.6rem 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  .inventory-actions {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
   }
 
   .inventory-actions__buttons {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.6rem;
+  }
+
+  .inventory-actions__btn {
+    padding: 0.65rem 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .inventory-actions__icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .inventory-actions__label {
+    font-size: 18px;
+  }
+
+  .inventory-table {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  .inventory-extra {
+    grid-column: 1;
+    grid-row: 1;
+    gap: 1rem;
+  }
+
+  .inventory-table__wrapper {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .inventory-extra__input {
+    height: 45px;
+    font-size: 22px;
+  }
+
+  .date-input-group input {
+    padding: 10px 12px;
+    font-size: 15px;
+  }
+
+  .calendar-btn {
+    width: 50px;
+    font-size: 24px;
+  }
+
+  /* Modales en tablet */
+  .admin-users__form-section {
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    min-height: 280px;
+  }
+
+  .admin-users__form-title {
+    font-size: 36px;
+    margin-left: 80px;
+  }
+
+  .admin-users__form-input,
+  .admin-users__form-select,
+  .admin-users__form-button {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .modal-edit2__window {
+    width: 90%;
+    max-width: 550px;
+    height: auto;
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+
+  .modal-edit2__title {
+    font-size: 36px;
+    margin-left: 90px;
+  }
+
+  .modal-edit2__input,
+  .modal-edit2__select,
+  .modal-edit2__button {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .modal-edit2__form {
+    gap: 25px;
+    padding: 40px 25px 25px 25px;
+  }
+
+  .popup-content {
+    width: 280px;
+  }
+}
+
+/* =============================================
+   TABLET PEQUEÑA (640px - 768px)
+   ============================================= */
+@media (max-width: 768px) {
+  .inventory-header {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .inventory-header__group {
+    justify-content: center;
+  }
+
+  .inventory-header__title {
+    font-size: 1.4rem;
+    order: -1;
+  }
+
+  .logout {
+    justify-content: center;
+  }
+
+  .inventory-actions__buttons {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .inventory-actions__label {
+    font-size: 16px;
+  }
+
+  .inventory-extra__input {
+    font-size: 20px;
+    height: 42px;
+  }
+
+  .inventory-extra__label,
+  .form-group__tittle {
+    font-size: 1rem;
+  }
+
+  .date-input-group input {
+    font-size: 14px;
+    padding: 9px 10px;
+  }
+
+  .calendar-btn {
+    width: 46px;
+    font-size: 22px;
   }
 
   .inventory-footer {
     grid-template-columns: 1fr;
     justify-items: center;
-    text-align: center;
+    padding: 0.75rem 1rem;
   }
 
-  .inventory-footer__excel {
-    width: 100%;
-    max-width: 320px;
-    justify-content: center;
+  .inventory-pagination {
+    padding: 0.55rem 1rem;
   }
 }
 
+/* =============================================
+   MÓVIL (320px - 640px)
+   ============================================= */
+@media (max-width: 640px) {
+  .inventory-header {
+    padding: 0.75rem 1rem;
+    gap: 0.5rem;
+  }
 
+  .inventory-header__title {
+    font-size: 1.2rem;
+    letter-spacing: 0.3px;
+  }
+
+  .inventory-header__group {
+    font-size: 0.9rem;
+    gap: 0.5rem;
+  }
+
+  .inventory-header__icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .inventory-header__logout {
+    width: 40px;
+    height: 40px;
+    padding: 0.45rem;
+  }
+
+  .inventory-header__logout-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .inventory-main {
+    padding: 0 0.75rem 0.75rem;
+    gap: 0.75rem;
+  }
+
+  .inventory-meta {
+    grid-template-columns: 1fr;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+    gap: 0.35rem;
+  }
+
+  .inventory-meta__item__fecha,
+  .inventory-meta__item__hora {
+    justify-self: start;
+  }
+
+  .inventory-actions {
+    padding: 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .inventory-actions__buttons {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .inventory-actions__btn {
+    padding: 0.6rem 0.8rem;
+    justify-content: center;
+  }
+
+  .inventory-actions__icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .inventory-actions__label {
+    font-size: 16px;
+  }
+
+  .inventory-search {
+    padding: 0.65rem 0.85rem;
+  }
+
+  .inventory-search__icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .inventory-search__input {
+    font-size: 0.9rem;
+  }
+
+  .inventory-table {
+    grid-template-columns: 1fr;
+  }
+
+  .inventory-extra {
+    gap: 0.8rem;
+    padding: 0.75rem;
+  }
+
+  .inventory-extra__label,
+  .form-group__tittle {
+    font-size: 0.95rem;
+  }
+
+  .inventory-extra__input {
+    height: 38px;
+    font-size: 18px;
+    padding: 0.4rem;
+  }
+
+  .date-input-group {
+    gap: 8px;
+  }
+
+  .date-input-group input {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  .calendar-btn {
+    width: 42px;
+    font-size: 20px;
+  }
+
+  .inventory-table__wrapper {
+    overflow-x: auto;
+  }
+
+  .inventory-table__table {
+    min-width: 600px;
+    font-size: 0.9rem;
+  }
+
+  .inventory-table__cell {
+    padding: 0.6rem 0.4rem;
+  }
+
+  .inventory-footer {
+    padding: 0.65rem 0.75rem;
+  }
+
+  .inventory-pagination {
+    padding: 0.5rem 0.9rem;
+    gap: 0.6rem;
+  }
+
+  .inventory-pagination__control {
+    width: 34px;
+    height: 34px;
+    font-size: 1rem;
+  }
+
+  .inventory-pagination__info {
+    font-size: 0.9rem;
+  }
+
+  /* Modales en móvil */
+  .admin-users__form-section {
+    width: 95%;
+    max-width: 360px;
+    height: auto;
+  }
+
+  .admin-users__form-header {
+    height: 60px;
+    grid-template-columns: 1fr 70px;
+  }
+
+  .admin-users__form-title {
+    font-size: 28px;
+    margin-left: 50px;
+  }
+
+  .admin-users__form-close-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .admin-users__form-body {
+    padding: 30px 15px 20px 15px;
+    gap: 20px;
+  }
+
+  .admin-users__form-label {
+    font-size: 24px;
+  }
+
+  .admin-users__form-input,
+  .admin-users__form-select,
+  .admin-users__form-button {
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .admin-users__form-button-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  /* Modal editar en móvil */
+  .modal-edit2__window {
+    width: 95%;
+    max-width: 360px;
+    height: auto;
+    max-height: 90vh;
+  }
+
+  .modal-edit2__header {
+    height: 60px;
+    grid-template-columns: 1fr 70px;
+  }
+
+  .modal-edit2__title {
+    font-size: 24px;
+    margin-left: 50px;
+  }
+
+  .modal-edit2__close-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .modal-edit2__form {
+    padding: 25px 15px 20px 15px;
+    gap: 18px;
+  }
+
+  .modal-edit2__label-input,
+  .form-group__tittle {
+    font-size: 20px;
+  }
+
+  .modal-edit2__input,
+  .modal-edit2__select,
+  .modal-edit2__button {
+    width: 100%;
+    height: 48px;
+    font-size: 18px;
+  }
+
+  .modal-edit2__button {
+    font-size: 22px;
+  }
+
+  .modal-edit2__button-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  /* Selector de fecha en modal móvil */
+  .modal-edit2__form .date-input-group {
+    margin-top: 5px;
+  }
+
+  .modal-edit2__form .date-input-group input {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .modal-edit2__form .calendar-btn {
+    width: 44px;
+    font-size: 20px;
+  }
+
+  /* Popup eliminar en móvil */
+  .popup-content {
+    width: 90%;
+    max-width: 280px;
+    padding: 18px 20px;
+  }
+
+  .popup-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .popup-content input {
+    width: 100%;
+    padding: 8px;
+    font-size: 0.95rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .ok, .cancel {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+}
 
 
 

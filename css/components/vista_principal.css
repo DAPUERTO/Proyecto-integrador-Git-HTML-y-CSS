@@ -98,7 +98,6 @@ body {
     border-radius: 10px;
     cursor: pointer;
     color: white;
-    
     transition: transform 0.2s ease, box-shadow 0.2s ease; /* efecto hover suave */
 }
 
@@ -121,7 +120,9 @@ body {
 .verde2{
     text-decoration: none;
     background: var(--verde2);} /*PROVEERDOR*/
-.verde-oscuro{background: var(--verde-oscuro);} /*COMPRAS*/
+.verde-oscuro{
+    text-decoration: none;
+    background: var(--verde-oscuro);} /*COMPRAS*/
 .azul-claro{
     text-decoration: none;
     background: var(--azul-claro);} /*REPORTES*/

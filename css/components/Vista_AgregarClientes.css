@@ -711,39 +711,719 @@ justify-self: end;
 /*
 ===============================================================================*/
 
+/* =============================================
+   MEDIA QUERIES - VISTA CLIENTES
+   Diseño responsivo para tablet y celular
+   ============================================= */
 
-
-
-/* Animación */
-@keyframes aparecer {
-    from { transform: scale(0.8); opacity: 0; }
-    to   { transform: scale(1); opacity: 1; }
-}
-
-/* ========================================================================================= */
-
-@media (max-width: 640px) {
+/* =============================================
+   TABLET - 768px a 1024px
+   ============================================= */
+@media (max-width: 1024px) {
   .inventory-header {
-    padding: 0.75rem 1rem;
+    grid-template-columns: auto 1fr auto;
+    padding: 1rem 1.5rem;
+    gap: 0.75rem;
+  }
+
+  .inventory-header__title {
+    font-size: 1.5rem;
+  }
+
+  .inventory-header__group {
+    font-size: 1rem;
+  }
+
+  .inventory-header__icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .inventory-main {
+    padding: 0 1rem 1rem;
+  }
+
+  .inventory-meta {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    font-size: 0.95rem;
+    padding: 0.6rem 0.8rem;
+  }
+
+  .inventory-actions {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 0.75rem;
   }
 
   .inventory-actions__buttons {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  .inventory-footer {
+  .inventory-actions__btn {
+    padding: 0.65rem 0.75rem;
+  }
+
+  .inventory-actions__icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .inventory-actions__label {
+    font-size: 18px;
+  }
+
+  .inventory-table {
     grid-template-columns: 1fr;
-    justify-items: center;
-    text-align: center;
+    gap: 0.75rem;
   }
 
-  .inventory-footer__excel {
-    width: 100%;
-    max-width: 320px;
-    justify-content: center;
+  .inventory-extra {
+    padding: 0.75rem;
+    gap: 1rem;
+  }
+
+  .inventory-extra__label {
+    font-size: 1rem;
+  }
+
+  .inventory-extra__input {
+    height: 45px;
+    font-size: 22px;
+  }
+
+  .inventory-table__wrapper {
+    grid-column: 1;
+  }
+
+  /* Modales - Tablet */
+  .admin-users__form-section {
+    width: 520px;
+    height: auto;
+  }
+
+  .admin-users__form-title {
+    font-size: 42px;
+    margin-left: 90px;
+  }
+
+  .admin-users__form-input,
+  .admin-users__form-select,
+  .admin-users__form-button {
+    width: 400px;
+    height: 55px;
+    font-size: 22px;
+  }
+
+  .modal-edit2__window {
+    width: 540px;
+    height: auto;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .modal-edit2__title {
+    font-size: 32px;
+    margin-left: 90px;
+  }
+
+  .modal-edit2__input,
+  .modal-edit2__select {
+    width: 400px;
+    height: 55px;
+    font-size: 22px;
+  }
+
+  .modal-edit2__button {
+    width: 400px;
+    height: 58px;
+  }
+
+  .popup-content {
+    width: 280px;
   }
 }
 
+/* =============================================
+   TABLET PEQUEÑA - 640px a 768px
+   ============================================= */
+@media (max-width: 768px) {
+  .inventory-header {
+    padding: 0.85rem 1rem;
+  }
+
+  .inventory-header__title {
+    font-size: 1.3rem;
+  }
+
+  .inventory-header__group {
+    font-size: 0.9rem;
+  }
+
+  .inventory-header__icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .inventory-header__logout {
+    width: 40px;
+    height: 40px;
+    padding: 0.45rem;
+  }
+
+  .inventory-header__logout-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .inventory-meta {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .inventory-meta__item__fecha,
+  .inventory-meta__item__hora {
+    justify-self: center;
+  }
+
+  .inventory-actions {
+    padding: 0.6rem;
+  }
+
+  .inventory-actions__buttons {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+  .inventory-actions__label {
+    font-size: 16px;
+  }
+
+  .inventory-search {
+    padding: 0.7rem 0.85rem;
+  }
+
+  .inventory-search__icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .inventory-search__input {
+    font-size: 0.95rem;
+  }
+
+  .inventory-extra {
+    gap: 0.85rem;
+  }
+
+  .inventory-extra__input {
+    height: 42px;
+    font-size: 20px;
+  }
+
+  /* Modales - Tablet pequeña */
+  .admin-users__form-section {
+    width: 90%;
+    max-width: 480px;
+  }
+
+  .admin-users__form-title {
+    font-size: 38px;
+    margin-left: 70px;
+  }
+
+  .admin-users__form-input,
+  .admin-users__form-select,
+  .admin-users__form-button {
+    width: 100%;
+    max-width: 380px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .modal-edit2__window {
+    width: 90%;
+    max-width: 480px;
+  }
+
+  .modal-edit2__title {
+    font-size: 28px;
+    margin-left: 60px;
+  }
+
+  .modal-edit2__form {
+    padding: 35px 25px 25px 25px;
+    gap: 20px;
+  }
+
+  .modal-edit2__input,
+  .modal-edit2__select {
+    width: 100%;
+    max-width: 380px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .modal-edit2__button {
+    width: 100%;
+    max-width: 380px;
+  }
+}
+
+/* =============================================
+   MÓVIL - Menor a 640px
+   ============================================= */
+@media (max-width: 640px) {
+  .inventory {
+    font-size: 14px;
+  }
+
+  .inventory-header {
+    grid-template-columns: 1fr;
+    padding: 0.75rem 1rem;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .inventory-header__group {
+    justify-content: center;
+    font-size: 0.85rem;
+  }
+
+  .inventory-header__icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .inventory-header__title {
+    font-size: 1.2rem;
+    order: -1;
+  }
+
+  .logout {
+    justify-content: center;
+  }
+
+  .inventory-header__logout {
+    width: 38px;
+    height: 38px;
+    padding: 0.4rem;
+  }
+
+  .inventory-header__logout-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .inventory-main {
+    padding: 0 0.75rem 0.75rem;
+    gap: 0.75rem;
+  }
+
+  .inventory-meta {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .inventory-actions {
+    padding: 0.4rem;
+    gap: 0.5rem;
+  }
+
+  .inventory-actions__buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .inventory-actions__btn {
+    padding: 0.6rem 0.7rem;
+    justify-content: center;
+  }
+
+  .inventory-actions__icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .inventory-actions__label {
+    font-size: 16px;
+  }
+
+  .inventory-search {
+    padding: 0.65rem 0.75rem;
+  }
+
+  .inventory-search__icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .inventory-search__input {
+    font-size: 0.9rem;
+  }
+
+  .inventory-extra {
+    padding: 0.65rem;
+    gap: 0.7rem;
+  }
+
+  .inventory-extra__label {
+    font-size: 0.9rem;
+  }
+
+  .inventory-extra__input {
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .inventory-table__wrapper {
+    overflow-x: auto;
+  }
+
+  .inventory-table__table {
+    min-width: 600px;
+  }
+
+  .inventory-table__cell {
+    padding: 0.6rem 0.4rem;
+    font-size: 0.85rem;
+  }
+
+  .inventory-footer {
+    padding: 0.4rem 0.5rem;
+    grid-template-columns: 1fr;
+  }
+
+  .inventory-pagination {
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+  }
+
+  .inventory-pagination__control {
+    width: 34px;
+    height: 34px;
+    font-size: 1rem;
+  }
+
+  .inventory-pagination__info {
+    font-size: 0.85rem;
+  }
+
+  /* Modales - Móvil */
+  .admin-users__form-section {
+    width: 95%;
+    max-width: 360px;
+    height: auto;
+  }
+
+  .admin-users__form-header {
+    height: 70px;
+    grid-template-columns: 1fr 80px;
+  }
+
+  .admin-users__form-title {
+    font-size: 32px;
+    margin-left: 40px;
+  }
+
+  .admin-users__form-close-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .admin-users__form-body {
+    padding: 30px 20px 20px 20px;
+    gap: 20px;
+  }
+
+  .admin-users__form-label {
+    font-size: 22px;
+  }
+
+  .admin-users__form-input,
+  .admin-users__form-select,
+  .admin-users__form-button {
+    width: 100%;
+    height: 48px;
+    font-size: 18px;
+  }
+
+  .admin-users__form-button-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .modal-edit2__window {
+    width: 95%;
+    max-width: 360px;
+    height: auto;
+    max-height: 85vh;
+  }
+
+  .modal-edit2__header {
+    height: 70px;
+    grid-template-columns: 1fr 80px;
+  }
+
+  .modal-edit2__title {
+    font-size: 24px;
+    margin-left: 40px;
+  }
+
+  .modal-edit2__close-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .modal-edit2__main {
+    overflow-y: auto;
+  }
+
+  .modal-edit2__form {
+    padding: 25px 20px 20px 20px;
+    gap: 18px;
+  }
+
+  .modal-edit2__label-input {
+    font-size: 22px;
+  }
+
+  .modal-edit2__input,
+  .modal-edit2__select {
+    width: 100%;
+    height: 48px;
+    font-size: 18px;
+  }
+
+  .modal-edit2__button {
+    width: 100%;
+    height: 54px;
+    font-size: 24px;
+  }
+
+  .modal-edit2__button-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .popup-content {
+    width: 90%;
+    max-width: 280px;
+    padding: 18px 24px;
+  }
+
+  .popup-content h3 {
+    font-size: 1rem;
+  }
+
+  .popup-content input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .ok, .cancel {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+/* =============================================
+   MÓVIL PEQUEÑO - Menor a 480px
+   ============================================= */
+@media (max-width: 480px) {
+  .inventory-header__title {
+    font-size: 1.1rem;
+  }
+
+  .inventory-header__group {
+    font-size: 0.8rem;
+  }
+
+  .inventory-meta {
+    font-size: 0.8rem;
+  }
+
+  .inventory-actions__label {
+    font-size: 14px;
+  }
+
+  .inventory-extra__label {
+    font-size: 0.85rem;
+  }
+
+  .inventory-extra__input {
+    height: 38px;
+    font-size: 16px;
+  }
+
+  .inventory-table__cell {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.3rem;
+  }
+
+  .admin-users__form-title {
+    font-size: 28px;
+    margin-left: 35px;
+  }
+
+  .admin-users__form-label {
+    font-size: 20px;
+  }
+
+  .admin-users__form-input,
+  .admin-users__form-select {
+    height: 44px;
+    font-size: 16px;
+  }
+
+  .modal-edit2__title {
+    font-size: 22px;
+    margin-left: 35px;
+  }
+
+  .modal-edit2__label-input {
+    font-size: 20px;
+  }
+
+  .modal-edit2__input,
+  .modal-edit2__select {
+    height: 44px;
+    font-size: 16px;
+  }
+
+  .modal-edit2__button {
+    font-size: 22px;
+  }
+}
+
+/* =============================================
+   MÓVIL MUY PEQUEÑO - Menor a 360px
+   ============================================= */
+@media (max-width: 360px) {
+  .inventory-header__title {
+    font-size: 1rem;
+  }
+
+  .inventory-actions__label {
+    font-size: 13px;
+  }
+
+  .inventory-extra {
+    padding: 0.5rem;
+  }
+
+  .inventory-extra__label {
+    font-size: 0.8rem;
+  }
+
+  .inventory-extra__input {
+    height: 36px;
+    font-size: 15px;
+  }
+
+  .modal-edit2__form {
+    padding: 20px 15px 15px 15px;
+    gap: 15px;
+  }
+
+  .modal-edit2__title {
+    font-size: 20px;
+    margin-left: 30px;
+  }
+
+  .modal-edit2__label-input {
+    font-size: 18px;
+  }
+
+  .modal-edit2__input,
+  .modal-edit2__select {
+    height: 42px;
+    font-size: 15px;
+  }
+}
+
+/* =============================================
+   ORIENTACIÓN HORIZONTAL (LANDSCAPE)
+   ============================================= */
+@media (max-height: 600px) and (orientation: landscape) {
+  .inventory-header {
+    padding: 0.5rem 1rem;
+  }
+
+  .inventory-header__title {
+    font-size: 1.1rem;
+  }
+
+  .inventory-main {
+    gap: 0.5rem;
+  }
+
+  .inventory-meta {
+    padding: 0.4rem 0.6rem;
+  }
+
+  .inventory-extra {
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .inventory-extra__input {
+    height: 36px;
+  }
+
+  .admin-users__form-section,
+  .modal-edit2__window {
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .admin-users__form-body,
+  .modal-edit2__form {
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .modal-edit2__input,
+  .modal-edit2__select {
+    height: 42px;
+  }
+}
+
+/* =============================================
+   TABLET EN MODO PORTRAIT
+   ============================================= */
+@media (min-width: 641px) and (max-width: 768px) and (orientation: portrait) {
+  .inventory-table {
+    grid-template-columns: 1fr;
+  }
+
+  .inventory-extra {
+    padding: 1rem;
+  }
+}
+
+/* =============================================
+   AJUSTES ESPECIALES PARA CONTENIDO
+   ============================================= */
+@media (max-width: 640px) {
+  /* Asegurar que los inputs sean accesibles en móvil */
+  .inventory-extra__input:focus,
+  .modal-edit2__input:focus,
+  .modal-edit2__select:focus {
+    font-size: 16px; /* Prevenir zoom en iOS */
+  }
+
+  /* Mejorar touch targets */
+  .inventory-actions__btn,
+  .inventory-pagination__control {
+    min-height: 44px;
+  }
+  
+}
 
 
 

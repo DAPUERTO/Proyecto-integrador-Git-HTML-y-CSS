@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- =============================================
+         META INFORMACIÓN
+         Configuración básica del documento
+         ============================================= -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuracion - Dashboard</title>
+    
+    <!-- =============================================
+         ESTILOS CSS
+         ============================================= -->
+    <link rel="stylesheet" href="/css/components/vista_configuracion.css">
+</head>
+
+<body>
+
+    <!-- =============================================
+         HEADER - Encabezado de la configuración
+         Contiene el título y el botón de cerrar
+         ============================================= -->
+    <header class="header">
+        <h1 class="header__title">CONFIGURACIÓN</h1>
+        <!-- Botón para cerrar y volver al menú principal -->
+        <a href="vista_principal.html" class="header__close-btn" title="Cerrar ventana">
+            <img src="/assets/icons/cerrar-sesion.png" alt="Cerrar">
+        </a>
+    </header>
+
+    <!-- =============================================
+         MAIN - Contenido principal
+         Grid de opciones de configuración
+         ============================================= -->
+    <main class="configuracion">
+        <div class="configuracion__grid">
+            
+            <!-- Opción: Copia de seguridad -->
+            <article class="configuracion__card">
+                <div class="configuracion__icon-container">
+                    <div class="configuracion__icon">
+                        <img src="/assets/icons/base-de-datos.png" alt="Icono copia seguridad">
+                    </div>
+                </div>
+                <h2 class="configuracion__card-title">Copia de seguridad BD</h2>
+            </article>
+
+            <!-- Opción: Categorías -->
+            <article class="configuracion__card">
+                <div class="configuracion__icon-container">
+                    <div class="configuracion__icon">
+                        <img src="/assets/icons/categorias.png" alt="Icono categorias">
+                    </div>
+                </div>
+                <h2 class="configuracion__card-title">Categorías</h2>
+            </article>
+
+            <!-- Opción: Restaurar Base de Datos -->
+            <article class="configuracion__card">
+                <div class="configuracion__icon-container">
+                    <div class="configuracion__icon">
+                        <img src="/assets/icons/respaldo (1).png" alt="Icono restaurar BD">
+                    </div>
+                </div>
+                <h2 class="configuracion__card-title">Restaurar DB</h2>
+            </article>
+
+            <!-- Opción: Eliminar Base de Datos -->
+            <article class="configuracion__card">
+                <div class="configuracion__icon-container">
+                    <div class="configuracion__icon">
+                        <img src="/assets/icons/eliminar bd.png" alt="Icono eliminar BD">
+                    </div>
+                </div>
+                <h2 class="configuracion__card-title">Eliminar BD</h2>
+            </article>
+        </div>
+    </main>
+</body>
+
+</html>
